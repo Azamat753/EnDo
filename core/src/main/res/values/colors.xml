@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFFFF</color>
+    <color name="blue_color">#0089B5</color>
+    <color name="start_color_gradient">#5AC4FD</color>
+    <color name="end_color_gradient">#0FA4ED</color>
+    <color name="gray_color">#666666</color>
+    <color name="black_color">#222222</color>
+    <color name="body_color">#969696</color>
+    <color name="light_blue_color">#19A8EF</color>
+</resources>

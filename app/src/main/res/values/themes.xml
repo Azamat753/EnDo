@@ -1,0 +1,12 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.EnDo" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+        <item name="blueColor">@color/blue_color</item>
+        <item name="whiteTextColor">@color/white</item>
+        <item name="hintColor">@color/gray_color</item>
+        <item name="toolbarColor">@color/blue_color</item>
+        <item name="bottomNavColor">@color/white</item>
+    </style>
+
+</resources>

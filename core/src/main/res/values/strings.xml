@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">EnDo</string>
+    <string name="today">Сегодня</string>
+    <string name="learning">Обучение</string>
+    <string name="private_office">Личный кабинет</string>
+    <string name="recently_added_words">Недавно добавленные слова</string>
+</resources>
