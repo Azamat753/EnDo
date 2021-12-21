@@ -10,4 +10,7 @@
     <string name="antonyms">Антонимы</string>
     <string name="learn">Обучение</string>
     <string name="categories">Категории</string>
+    <string name="statistic">Статистика</string>
+    <string name="words_in_dictionary">Слов в словаре</string>
+    <string name="score_experience">Очки опыта</string>
 </resources>
