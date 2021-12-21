@@ -6,7 +6,7 @@ import com.example.db.models.WordsModel
 import com.example.endo.R
 import com.example.endo.databinding.ItemRecentlyAddedWordsBinding
 
-class WordsInTodayAdapter : BaseAdapter<WordsModel, ItemRecentlyAddedWordsBinding>(
+class WordsInDictionaryAdapter : BaseAdapter<WordsModel, ItemRecentlyAddedWordsBinding>(
     R.layout.item_recently_added_words,
     listOf(), ItemRecentlyAddedWordsBinding::inflate
 ) {

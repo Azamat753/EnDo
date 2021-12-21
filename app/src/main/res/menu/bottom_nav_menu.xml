@@ -2,17 +2,17 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/progress_fragment"
+        android:id="@+id/todayFragment"
         android:icon="@drawable/today_selector"
         android:title="@string/today" />
 
     <item
-        android:id="@+id/category_fragment"
+        android:id="@+id/learnFragment"
         android:icon="@drawable/book_open_selector"
         android:title="@string/learning" />
 
     <item
-        android:id="@+id/timetableFragment"
+        android:id="@+id/privateOfficeFragment"
         android:icon="@drawable/user_selector"
         android:title="@string/private_office" />
 

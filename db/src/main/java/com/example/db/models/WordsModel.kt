@@ -7,6 +7,6 @@ import androidx.room.PrimaryKey
 data class WordsModel(
     @PrimaryKey(autoGenerate = true)
     val id: Int? = null,
-    val wordInEnglish: String,
-    val wordInRussian: String
+    var wordInEnglish: String,
+    var wordInRussian: String
 )

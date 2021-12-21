@@ -12,5 +12,29 @@
         tools:layout="@layout/fragment_today" >
 
     </fragment>
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.endo.fragments.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" />
+    <fragment
+        android:id="@+id/dictionaryFragment"
+        android:name="com.example.endo.fragments.dictionaryflow.DictionaryFragment"
+        android:label="DictionaryFragment" />
+    <fragment
+        android:id="@+id/learnFragment"
+        android:name="com.example.endo.fragments.LearnFragment"
+        android:label="fragment_learn"
+        tools:layout="@layout/fragment_learn" />
+    <fragment
+        android:id="@+id/dictionaryCategoryFragment"
+        android:name="com.example.endo.fragments.dictionaryflow.DictionaryCategoryFragment"
+        android:label="fragment_dictionary_category"
+        tools:layout="@layout/fragment_dictionary_category" />
+    <fragment
+        android:id="@+id/myDictionaryFragment"
+        android:name="com.example.endo.fragments.dictionaryflow.MyDictionaryFragment"
+        android:label="fragment_my_dictionary"
+        tools:layout="@layout/fragment_my_dictionary" />
 
 </navigation>

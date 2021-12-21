@@ -1,4 +1,13 @@
 <resources>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="audio_learn">Аудирование</string>
+    <string name="grammar_learn">Грамматика</string>
+    <string name="speaking_learn">Разговорный</string>
+    <string name="dictionary_learn">Словарь</string>
+    <string name="my_dictionary">Мой словарь</string>
+    <string name="synonyms">Синонимы</string>
+    <string name="antonyms">Антонимы</string>
+    <string name="learn">Обучение</string>
+    <string name="categories">Категории</string>
 </resources>

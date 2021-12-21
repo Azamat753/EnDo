@@ -1,49 +1,51 @@
-package com.example.endo.fragments
+package com.example.endo.fragments.dictionaryflow
 
 import android.os.Bundle
-import android.util.Log
+import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.viewModelScope
-import coil.load
-import coil.transform.CircleCropTransformation
+import androidx.navigation.fragment.findNavController
+import com.example.core.CommonFunction.showBottomSheet
 import com.example.core.base.BaseAdapter
 import com.example.core.base.BaseFragment
 import com.example.core.base.showToast
 import com.example.db.models.WordsModel
 import com.example.endo.R
+import com.example.endo.adapters.WordsInDictionaryAdapter
 import com.example.endo.adapters.WordsInTodayAdapter
-import com.example.endo.databinding.FragmentTodayBinding
+import com.example.endo.bottomsheetdialogs.AddWordsSheetDialogFragment
+import com.example.endo.databinding.FragmentDictionaryCategoryBinding
+import com.example.endo.models.CategoryModel
 import com.example.endo.viewmodels.WordsViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
+import java.util.ArrayList
 
 @AndroidEntryPoint
-class TodayFragment : BaseFragment<FragmentTodayBinding>(FragmentTodayBinding::inflate),
+class DictionaryCategoryFragment :
+    BaseFragment<FragmentDictionaryCategoryBinding>(FragmentDictionaryCategoryBinding::inflate),
     BaseAdapter.IBaseAdapterClickListener<WordsModel> {
-    private val adapter = WordsInTodayAdapter()
-    private val TAG = "ololo"
-
+    private val adapter = WordsInDictionaryAdapter()
     private val viewModel: WordsViewModel by viewModels()
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel.insertData(WordsModel(wordInRussian = "Привет", wordInEnglish = "Hello"))
-
-        binding.myImage.load("https://ichef.bbci.co.uk/news/976/cpsprodpb/1852E/production/_121203699_2.63235180.jpg") {
-            crossfade(true)
-            placeholder(R.drawable.blue_gradient)
-            transformations(CircleCropTransformation())
-        }
+        initAdapter()
+        initClickers()
     }
 
     override fun initAdapter() {
         adapter.listener = this
-        binding.recentlyAddedWordsRecycler.adapter = adapter
+        binding.dictionaryCategoryRecycler.adapter = adapter
         viewModel.viewModelScope.launch {
             viewModel.wordsModel.collect {
-                if (it != null)
+                if (it != null) {
                     adapter.setData(it)
+                }
             }
         }
     }
@@ -60,6 +62,8 @@ class TodayFragment : BaseFragment<FragmentTodayBinding>(FragmentTodayBinding::i
     }
 
     override fun initClickers() {
-
+        binding.addWordFab.setOnClickListener {
+            showBottomSheet(AddWordsSheetDialogFragment(), requireActivity())
+        }
     }
 }
