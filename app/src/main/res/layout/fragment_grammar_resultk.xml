@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragments.grammarflow.GrammarResultFragment">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dp_33"
+        android:text="@string/results"
+        android:textColor="@color/black_color"
+        android:textSize="@dimen/sp_24"
+        android:textStyle="bold" />
+
+    <androidx.cardview.widget.CardView
+        style="@style/cardStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginVertical="@dimen/dp_15">
+
+            <TextView
+                android:id="@+id/all_question_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Всего вопросов:"
+                android:textColor="@color/black_color"
+                android:textSize="@dimen/sp_18"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/all_question_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:fontFamily="@font/roboto_medium"
+                android:text="10"
+                android:textColor="@color/black_color"
+                android:textSize="@dimen/sp_18"
+                app:layout_constraintStart_toEndOf="@id/all_question_title"
+                app:layout_constraintTop_toTopOf="@id/all_question_title" />
+
+            <TextView
+                android:id="@+id/right_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Всего вопросов:"
+                android:textColor="@color/black_color"
+                android:textSize="@dimen/sp_18"
+                app:layout_constraintStart_toStartOf="@id/all_question_title"
+                app:layout_constraintTop_toBottomOf="@id/all_question_title" />
+
+            <TextView
+                android:id="@+id/right_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:fontFamily="@font/roboto_medium"
+                android:text="6"
+                android:textColor="@color/black_color"
+                android:textSize="@dimen/sp_18"
+                app:layout_constraintStart_toEndOf="@id/all_question_title"
+                app:layout_constraintTop_toTopOf="@id/right_title" />
+
+            <TextView
+                android:id="@+id/wrong_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Ошибся:"
+                android:textColor="@color/black_color"
+                android:textSize="@dimen/sp_18"
+                app:layout_constraintStart_toStartOf="@id/right_title"
+                app:layout_constraintTop_toBottomOf="@id/right_title" />
+
+            <TextView
+                android:id="@+id/wrong_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:fontFamily="@font/roboto_medium"
+                android:text="6"
+                android:textColor="@color/black_color"
+                android:textSize="@dimen/sp_18"
+                app:layout_constraintStart_toEndOf="@id/wrong_title"
+                app:layout_constraintTop_toTopOf="@id/wrong_title" />
+
+            <TextView
+                android:id="@+id/time_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Время:"
+                android:textColor="@color/black_color"
+                android:textSize="@dimen/sp_18"
+                app:layout_constraintStart_toStartOf="@id/right_title"
+                app:layout_constraintTop_toBottomOf="@id/wrong_title" />
+
+            <TextView
+                android:id="@+id/time_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:fontFamily="@font/roboto_medium"
+                android:text="05:26"
+                android:textColor="@color/black_color"
+                android:textSize="@dimen/sp_18"
+                app:layout_constraintStart_toEndOf="@id/time_title"
+                app:layout_constraintTop_toTopOf="@id/time_title" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/on_main_btn"
+        style="@style/buttonGradientStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="132dp"
+        android:text="На главную"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/time_title" />
+
+</LinearLayout>

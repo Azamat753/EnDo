@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/cardStyle"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.grammarflow.GrammarReadFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_8">
+
+            <TextView
+                android:id="@+id/theme_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Отрицание во Future Simple"
+                android:textColor="@color/black_color"
+                android:textSize="@dimen/sp_20"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/composition_rules"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_14"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Правила составления"
+                android:textColor="@color/blue_color"
+                android:textSize="@dimen/sp_18" />
+
+            <TextView
+                android:id="@+id/composition_rules_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Отрицание во Future Simple образуется
+при помощи добавления после глагола
+will (shall) частицы not.
+
+Конструкцию will not можно  сокращать
+до won’t, a shall not -- до shan’t, однако
+она используется крайне редко"
+                android:textColor="@color/black_color"
+                android:textSize="@dimen/sp_16" />
+
+
+            <TextView
+                android:id="@+id/example_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Примеры"
+                android:textColor="@color/blue_color"
+                android:textSize="@dimen/sp_18" />
+
+            <TextView
+                android:id="@+id/example_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:fontFamily="@font/roboto_medium"
+                android:text="We will not find the hotel -- Мы не найдём
+этот отель.
+He won’t clean this room -- Он не уберёт
+свою комнату."
+                android:textColor="@color/black_color"
+                android:textSize="@dimen/sp_16" />
+
+            <Button
+                android:id="@+id/understood_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingVertical="@dimen/dp_10"
+                android:paddingHorizontal="@dimen/dp_66"
+                android:layout_marginTop="@dimen/dp_27"
+                android:text="@string/understood"
+                android:layout_marginBottom="@dimen/dp_14"
+                android:textSize="@dimen/sp_18" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.cardview.widget.CardView>

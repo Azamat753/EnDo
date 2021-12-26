@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="12dp"
-    tools:context=".fragments.TodayFragment">
+    tools:context=".fragments.todayflow.TodayFragment">
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -31,7 +31,7 @@
                 android:textSize="@dimen/dp_18"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:text="6 декабря" />
+                android:text="6 декабря" />
 
             <TextView
                 android:id="@+id/quote_tv"
@@ -40,7 +40,7 @@
                 android:layout_marginTop="@dimen/dp_9"
                 android:textColor="@color/body_color"
                 app:layout_constraintTop_toBottomOf="@id/date_tv"
-                tools:text="some text" />
+                android:text="some text" />
 
             <TextView
                 android:id="@+id/author_quote_tv"
@@ -123,7 +123,7 @@
                 android:textSize="@dimen/dp_18"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:text="Идиома дня" />
+                android:text="Идиома дня" />
 
             <TextView
                 android:id="@+id/idiom_body"
@@ -132,7 +132,7 @@
                 android:layout_marginTop="@dimen/dp_9"
                 android:textColor="@color/body_color"
                 app:layout_constraintTop_toBottomOf="@id/idiom_title"
-                tools:text="some text" />
+                android:text="some text" />
 
             <TextView
                 android:id="@+id/show_translate_idiom"
@@ -142,7 +142,7 @@
                 android:textColor="@color/light_blue_color"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/idiom_body"
-                tools:text="some text" />
+                android:text="some text" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
