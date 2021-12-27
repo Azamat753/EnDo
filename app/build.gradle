@@ -62,4 +62,9 @@ dependencies {
     kapt "com.google.dagger:hilt-android-compiler:2.38.1"
     //Coil
     implementation "io.coil-kt:coil:1.4.0"
+    //lottie
+    implementation 'com.airbnb.android:lottie:4.2.2'
+    //dotsIndicators
+    implementation 'com.tbuonomo:dotsindicator:4.2'
+
 }

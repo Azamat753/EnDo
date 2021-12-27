@@ -31,4 +31,7 @@
     <dimen name="dp_20">20dp</dimen>
     <dimen name="dp_27">17dp</dimen>
     <dimen name="dp_66">66dp</dimen>
+    <dimen name="dp_77">77dp</dimen>
+    <dimen name="dp_46">46dp</dimen>
+    <dimen name="dp_32">32dp</dimen>
 </resources>

@@ -30,11 +30,6 @@ class TodayFragment : BaseFragment<FragmentTodayBinding>(FragmentTodayBinding::i
         super.onViewCreated(view, savedInstanceState)
         viewModel.insertData(WordsModel(wordInRussian = "Привет", wordInEnglish = "Hello"))
 
-//        binding.myImage.load("https://ichef.bbci.co.uk/news/976/cpsprodpb/1852E/production/_121203699_2.63235180.jpg") {
-//            crossfade(true)
-//            placeholder(R.drawable.blue_gradient)
-//            transformations(CircleCropTransformation())
-//        }
     }
 
     override fun initAdapter() {

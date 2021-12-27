@@ -53,6 +53,9 @@ class MainActivity : AppCompatActivity() {
                 R.id.dictionaryCategoryFragment -> {
                     binding.toolbarMain.title = getString(R.string.categories)
                 }
+                R.id.privateOfficeFragment->{
+                    binding.toolbarMain.title = getString(R.string.private_office)
+                }
             }
         }
     }
@@ -60,7 +63,8 @@ class MainActivity : AppCompatActivity() {
     private fun setupNavigation() {
         navController.addOnDestinationChangedListener { _, destination, _ ->
             if (destination.id in arrayOf(
-                    R.id.splashFragment
+                    R.id.splashFragment,
+                    R.id.onBoardFragment
                 )
             ) {
                 binding.toolbarMain.gone()

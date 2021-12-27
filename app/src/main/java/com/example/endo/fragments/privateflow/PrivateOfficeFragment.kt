@@ -1,20 +1,22 @@
 package com.example.endo.fragments.privateflow
 
+import android.net.Uri
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.viewModels
+import coil.load
+import com.example.core.CacheManager
 import com.example.core.base.BaseFragment
 import com.example.db.models.AchievementsModel
 import com.example.endo.R
 import com.example.endo.adapters.AchievementAdapter
 import com.example.endo.databinding.FragmentPrivateOfficeBinding
-import com.example.endo.models.CategoryModel
 import com.example.endo.viewmodels.WordsViewModel
 import dagger.hilt.android.AndroidEntryPoint
-import java.util.ArrayList
+import okio.ByteString.Companion.toByteString
+import java.util.*
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class PrivateOfficeFragment :
@@ -22,13 +24,41 @@ class PrivateOfficeFragment :
     private val adapter = AchievementAdapter()
     private val viewModel: WordsViewModel by viewModels()
 
+    @Inject
+    lateinit var cacheManager: CacheManager
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
     }
 
-    override fun initClickers() {
-
+    override fun onResume() {
+        super.onResume()
+        checkImage()
     }
+
+    private fun checkImage() {
+        val image = cacheManager.userImage
+        if (image.isNotEmpty()) {
+            binding.userImage.load(image)
+        } else {
+            binding.userImage.load(R.drawable.ic_app_icon_foreground)
+        }
+    }
+
+    override fun initClickers() {
+        binding.userImage.setOnClickListener {
+            getContent.launch("image/*")
+        }
+    }
+
+    private val getContent =
+        registerForActivityResult(ActivityResultContracts.GetContent()) { uri: Uri? ->
+            val image = uri.toString()
+            if (image.isNotEmpty()) {
+                binding.userImage.load(image)
+                cacheManager.saveUserImage(image)
+            }
+        }
 
     override fun initAdapter() {
         binding.achievementsRecycler.adapter = adapter

@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/todayFragment">
+    app:startDestination="@id/splashFragment">
 
     <fragment
         android:id="@+id/todayFragment"
@@ -14,7 +14,7 @@
     </fragment>
     <fragment
         android:id="@+id/splashFragment"
-        android:name="com.example.endo.fragments.SplashFragment"
+        android:name="com.example.endo.fragments.splashflow.SplashFragment"
         android:label="fragment_splash"
         tools:layout="@layout/fragment_splash" />
     <fragment
@@ -56,7 +56,7 @@
         android:label="fragment_grammar_read"
         tools:layout="@layout/fragment_grammar_read" />
     <fragment
-        android:id="@+id/privateOfficeFragment2"
+        android:id="@+id/privateOfficeFragment"
         android:name="com.example.endo.fragments.privateflow.PrivateOfficeFragment"
         android:label="fragment_private_office"
         tools:layout="@layout/fragment_private_office" />
@@ -70,5 +70,10 @@
         android:name="com.example.endo.fragments.grammarflow.GrammarResultFragment"
         android:label="fragment_grammar_resultk"
         tools:layout="@layout/fragment_grammar_resultk" />
+    <fragment
+        android:id="@+id/onBoardFragment"
+        android:name="com.example.endo.fragments.boardingflow.OnBoardFragment"
+        android:label="fragment_on_board"
+        tools:layout="@layout/fragment_on_board" />
 
 </navigation>
