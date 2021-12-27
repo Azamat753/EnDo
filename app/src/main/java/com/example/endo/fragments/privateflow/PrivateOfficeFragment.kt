@@ -1,4 +1,4 @@
-package com.example.endo.fragments
+package com.example.endo.fragments.privateflow
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

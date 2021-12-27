@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/todayFragment"
-        android:name="com.example.endo.fragments.TodayFragment"
+        android:name="com.example.endo.fragments.todayflow.TodayFragment"
         android:label="fragment_today"
-        tools:layout="@layout/fragment_today" >
+        tools:layout="@layout/fragment_today">
 
     </fragment>
     <fragment
@@ -23,7 +23,7 @@
         android:label="DictionaryFragment" />
     <fragment
         android:id="@+id/learnFragment"
-        android:name="com.example.endo.fragments.LearnFragment"
+        android:name="com.example.endo.fragments.learnflow.LearnFragment"
         android:label="fragment_learn"
         tools:layout="@layout/fragment_learn" />
     <fragment
@@ -36,5 +36,39 @@
         android:name="com.example.endo.fragments.dictionaryflow.MyDictionaryFragment"
         android:label="fragment_my_dictionary"
         tools:layout="@layout/fragment_my_dictionary" />
+    <fragment
+        android:id="@+id/addWordsSheetDialogFragment"
+        android:name="com.example.endo.bottomsheetdialogs.AddWordsSheetDialogFragment"
+        android:label="AddWordsSheetDialogFragment" />
+    <fragment
+        android:id="@+id/grammarFragment"
+        android:name="com.example.endo.fragments.grammarflow.GrammarFragment"
+        android:label="fragment_grammar"
+        tools:layout="@layout/fragment_grammar" />
+    <fragment
+        android:id="@+id/grammarDetailFragment"
+        android:name="com.example.endo.fragments.grammarflow.GrammarDetailFragment"
+        android:label="fragment_grammar_detail"
+        tools:layout="@layout/fragment_grammar_detail" />
+    <fragment
+        android:id="@+id/grammarReadFragment"
+        android:name="com.example.endo.fragments.grammarflow.GrammarReadFragment"
+        android:label="fragment_grammar_read"
+        tools:layout="@layout/fragment_grammar_read" />
+    <fragment
+        android:id="@+id/privateOfficeFragment2"
+        android:name="com.example.endo.fragments.privateflow.PrivateOfficeFragment"
+        android:label="fragment_private_office"
+        tools:layout="@layout/fragment_private_office" />
+    <fragment
+        android:id="@+id/checkGrammarFragment"
+        android:name="com.example.endo.fragments.grammarflow.CheckGrammarFragment"
+        android:label="fragment_check_grammar"
+        tools:layout="@layout/fragment_check_grammar" />
+    <fragment
+        android:id="@+id/grammarResultFragment"
+        android:name="com.example.endo.fragments.grammarflow.GrammarResultFragment"
+        android:label="fragment_grammar_resultk"
+        tools:layout="@layout/fragment_grammar_resultk" />
 
 </navigation>

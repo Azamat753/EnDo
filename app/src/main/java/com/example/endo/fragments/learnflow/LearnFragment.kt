@@ -1,4 +1,4 @@
-package com.example.endo.fragments
+package com.example.endo.fragments.learnflow
 
 import android.os.Bundle
 import android.view.View
@@ -30,6 +30,7 @@ class LearnFragment : BaseFragment<FragmentLearnBinding>(FragmentLearnBinding::i
     override fun onClick(model: CategoryModel, position: Int) {
         when (model.category) {
             getString(R.string.dictionary_learn) -> findNavController().navigate(R.id.dictionaryFragment)
+            getString(R.string.grammar_learn)->findNavController().navigate(R.id.grammarFragment)
         }
     }
 

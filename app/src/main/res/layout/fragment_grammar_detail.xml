@@ -4,14 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.learnflow.LearnFragment">
+    tools:context=".fragments.grammarflow.GrammarDetailFragment">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/learn_recycler"
+        android:id="@+id/grammar_detail_recycler"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:listitem="@layout/item_buttons"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
-
 </LinearLayout>
