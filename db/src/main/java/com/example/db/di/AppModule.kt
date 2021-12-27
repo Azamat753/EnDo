@@ -24,5 +24,7 @@ object AppModule {
     @Singleton
     fun provideWordsDao(appDataBase: AppDataBase) = appDataBase.wordsDao()
 
-//    fun provideAchievementDao(appDataBase: AppDataBase) = a
+    @Provides
+    @Singleton
+    fun provideAchievementDao(appDataBase: AppDataBase) = appDataBase.achievementDao()
 }

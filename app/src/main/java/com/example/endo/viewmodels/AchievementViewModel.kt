@@ -29,7 +29,7 @@ class AchievementViewModel @Inject constructor(
         viewModelScope.launch(Dispatchers.IO) { repositories.update(model) }
 
     init {
-        getData()
+//        getData()
     }
 
     private fun getData() {
