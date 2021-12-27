@@ -16,4 +16,9 @@
     <dimen name="dp_10">10dp</dimen>
     <dimen name="dp_6">6dp</dimen>
     <dimen name="dp_121">121dp</dimen>
+    <dimen name="dp_15">15dp</dimen>
+    <dimen name="dp_105">105dp</dimen>
+    <dimen name="dp_4">4dp</dimen>
+    <dimen name="dp_25">25dp</dimen>
+    <dimen name="dp_11">11dp</dimen>
 </resources>
