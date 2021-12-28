@@ -34,9 +34,10 @@ class AddWordsBottomSheetDialog :
     override fun initClickers() {
         binding.applyButton.setOnClickListener {
             val wordInEnglish = binding.titleEditText.text.toString()
-            if (image.isNotEmpty()){
+//            if (image.isNotEmpty()){
                 viewModel.insertData(WordsModel(wordInEnglish = wordInEnglish, image =image, category =tag.toString(), wordInRussian = "russian"))
-            }
+//            }
+            dismiss()
         }
     }
 }

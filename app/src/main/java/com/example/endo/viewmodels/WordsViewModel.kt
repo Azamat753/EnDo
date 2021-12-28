@@ -29,6 +29,10 @@ class WordsViewModel @Inject constructor(
     fun updateData(model: WordsModel) =
         viewModelScope.launch(Dispatchers.IO) { repositories.update(model) }
 
+    init {
+        getData("Animals")
+    }
+
      fun getData(category:String) {
         viewModelScope.launch {
             repositories.getData(category).collect {
