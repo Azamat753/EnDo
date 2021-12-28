@@ -10,9 +10,8 @@
     <style name="createButton">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">60dp</item>
-        <item name="cornerRadius">8dp</item>
+        <item name="android:layout_marginHorizontal" tools:targetApi="o">77dp</item>
         <item name="android:layout_margin">10dp</item>
-        <item name="android:elevation">12dp</item>
         <item name="android:text">Создать</item>
         <item name="textAllCaps">false</item>
         <item name="android:textSize">18sp</item>

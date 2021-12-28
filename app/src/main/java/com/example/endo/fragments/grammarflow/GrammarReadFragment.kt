@@ -16,4 +16,9 @@ class GrammarReadFragment :
     override fun initClickers() {
         binding.understoodBtn.setOnClickListener { findNavController().navigate(R.id.checkGrammarFragment)}
     }
+
+    override fun initObserver() {
+
+
+    }
 }

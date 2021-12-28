@@ -99,4 +99,9 @@ class PrivateOfficeFragment :
         )
         return list
     }
+
+    override fun initObserver() {
+
+
+    }
 }

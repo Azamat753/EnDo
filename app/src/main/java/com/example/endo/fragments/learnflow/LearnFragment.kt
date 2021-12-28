@@ -47,4 +47,8 @@ class LearnFragment : BaseFragment<FragmentLearnBinding>(FragmentLearnBinding::i
 
 
     }
+
+    override fun initObserver() {
+
+    }
 }

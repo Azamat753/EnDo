@@ -30,10 +30,12 @@ abstract class BaseFragment<T : ViewBinding>(private val inflate: (LayoutInflate
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        initAdapter()
         initClickers()
+        initObserver()
+        initAdapter()
     }
 
+    abstract fun initObserver()
     abstract fun initClickers()
     open fun initAdapter(){
 

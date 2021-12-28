@@ -17,4 +17,9 @@ class GrammarResultFragment :
         binding.onMainBtn.setOnClickListener { findNavController().navigate(R.id.todayFragment) }
     }
 
+    override fun initObserver() {
+
+
+    }
+
 }

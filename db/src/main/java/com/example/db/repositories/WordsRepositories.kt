@@ -10,7 +10,7 @@ class WordsRepositories @Inject constructor(
     private val dao: WordsDao
 ) {
 
-    fun getData(): Flow<List<WordsModel>> = dao.getData()
+    fun getData(category:String): Flow<List<WordsModel>> = dao.getData(category)
 
     suspend fun insert(model: WordsModel) = dao.insertData(model)
     suspend fun update(model: WordsModel) = dao.update(model)

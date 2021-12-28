@@ -44,4 +44,9 @@ class SplashFragment : BaseFragment<FragmentSplashBinding>(FragmentSplashBinding
     override fun initClickers() {
 
     }
+
+    override fun initObserver() {
+
+
+    }
 }

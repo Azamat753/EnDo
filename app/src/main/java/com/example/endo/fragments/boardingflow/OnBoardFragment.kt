@@ -63,4 +63,10 @@ class OnBoardFragment : BaseFragment<FragmentOnBoardBinding>(FragmentOnBoardBind
         findNavController().popBackStack(R.id.splashFragment,true)
         findNavController().navigate(R.id.todayFragment)
     }
+
+    override fun initObserver() {
+
+    }
+
+
 }

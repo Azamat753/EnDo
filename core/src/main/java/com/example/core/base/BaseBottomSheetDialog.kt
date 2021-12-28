@@ -37,4 +37,11 @@ abstract class BaseBottomSheetDialog<T : ViewBinding>(private val inflate: (Layo
         bottomSheet.backgroundTintList = ColorStateList.valueOf(Color.TRANSPARENT)
         bottomSheet.setBackgroundColor(Color.TRANSPARENT)
     }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        initClickers()
+    }
+
+    abstract fun initClickers()
 }

@@ -43,4 +43,9 @@ class GrammarFragment : BaseFragment<FragmentGrammarBinding>(FragmentGrammarBind
     override fun onClick(model: CategoryModel, position: Int) {
         findNavController().navigate(R.id.grammarDetailFragment)
     }
+
+    override fun initObserver() {
+
+
+    }
 }

@@ -14,7 +14,10 @@ import com.example.db.models.WordsModel
 import com.example.endo.R
 import com.example.endo.adapters.WordsInTodayAdapter
 import com.example.endo.databinding.FragmentTodayBinding
+import com.example.endo.viewmodels.PixabayViewModel
 import com.example.endo.viewmodels.WordsViewModel
+import com.example.network.models.Hit
+import com.example.network.models.ImageResult
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
@@ -24,23 +27,23 @@ class TodayFragment : BaseFragment<FragmentTodayBinding>(FragmentTodayBinding::i
     BaseAdapter.IBaseAdapterClickListener<WordsModel> {
     private val adapter = WordsInTodayAdapter()
     private val TAG = "ololo"
-
+    private var image = ""
     private val viewModel: WordsViewModel by viewModels()
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel.insertData(WordsModel(wordInRussian = "Привет", wordInEnglish = "Hello"))
-
     }
 
     override fun initAdapter() {
         adapter.listener = this
         binding.recentlyAddedWordsRecycler.adapter = adapter
-        viewModel.viewModelScope.launch {
-            viewModel.wordsModel.collect {
-                if (it != null)
-                    adapter.setData(it)
-            }
-        }
+
+        // TODO: 28.12.2021 рабочий
+//        viewModel.viewModelScope.launch {
+//            viewModel.wordsModel.collect {
+//                if (it != null)
+//                    adapter.setData(it)
+//            }
+//        }
     }
 
     override fun onClick(model: WordsModel, position: Int) {
@@ -55,6 +58,10 @@ class TodayFragment : BaseFragment<FragmentTodayBinding>(FragmentTodayBinding::i
     }
 
     override fun initClickers() {
+
+    }
+
+    override fun initObserver() {
 
     }
 }

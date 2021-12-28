@@ -45,4 +45,9 @@ class GrammarDetailFragment :
         findNavController().navigate(R.id.grammarReadFragment)
     }
 
+    override fun initObserver() {
+
+
+    }
+
 }

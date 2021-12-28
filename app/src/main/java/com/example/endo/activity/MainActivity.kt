@@ -14,7 +14,7 @@ import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityMainBinding
+     lateinit var binding: ActivityMainBinding
     private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -42,7 +42,6 @@ class MainActivity : AppCompatActivity() {
                 }
                 R.id.learnFragment -> {
                     binding.toolbarMain.title = getString(R.string.learn)
-
                 }
                 R.id.dictionaryFragment -> {
                     binding.toolbarMain.title = getString(R.string.dictionary_learn)

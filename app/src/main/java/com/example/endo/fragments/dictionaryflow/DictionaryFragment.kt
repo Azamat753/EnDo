@@ -43,4 +43,8 @@ class DictionaryFragment :
     override fun initClickers() {
 
     }
+
+    override fun initObserver() {
+
+    }
 }

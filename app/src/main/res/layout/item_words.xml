@@ -32,6 +32,7 @@
                 tools:text="Перевод слова" />
             
             <ImageView
+                android:id="@+id/association_image"
                 android:layout_width="115dp"
                 android:layout_height="78dp"
                 android:src="@drawable/ic_launcher_background"
@@ -46,6 +47,7 @@
 
         <Button
             android:id="@+id/word_btn"
+            android:visibility="visible"
             android:layout_width="match_parent"
             android:layout_height="123dp"
             android:background="@color/white"

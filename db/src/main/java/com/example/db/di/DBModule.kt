@@ -27,4 +27,10 @@ object DBModule {
     @Provides
     @Singleton
     fun provideAchievementDao(appDataBase: AppDataBase) = appDataBase.achievementDao()
+
+    @Provides
+    @Singleton
+    fun provideDictionaryCategoryDao(appDataBase: AppDataBase) = appDataBase.dictionaryDao()
+
+
 }

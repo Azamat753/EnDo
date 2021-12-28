@@ -14,4 +14,9 @@ class CheckGrammarFragment : BaseFragment<FragmentCheckGrammarBinding>(FragmentC
     override fun initClickers() {
 
     }
+
+    override fun initObserver() {
+
+
+    }
 }

@@ -47,4 +47,9 @@ class MyDictionaryFragment :
 
     override fun initClickers() {
     }
+
+    override fun initObserver() {
+
+
+    }
 }

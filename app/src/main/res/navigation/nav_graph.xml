@@ -30,7 +30,11 @@
         android:id="@+id/dictionaryCategoryFragment"
         android:name="com.example.endo.fragments.dictionaryflow.DictionaryCategoryFragment"
         android:label="fragment_dictionary_category"
-        tools:layout="@layout/fragment_dictionary_category" />
+        tools:layout="@layout/fragment_dictionary_category">
+        <action
+            android:id="@+id/action_dictionaryCategoryFragment_to_wordsFragment"
+            app:destination="@id/wordsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/myDictionaryFragment"
         android:name="com.example.endo.fragments.dictionaryflow.MyDictionaryFragment"
@@ -38,7 +42,7 @@
         tools:layout="@layout/fragment_my_dictionary" />
     <fragment
         android:id="@+id/addWordsSheetDialogFragment"
-        android:name="com.example.endo.bottomsheetdialogs.AddWordsSheetDialogFragment"
+        android:name="com.example.endo.bottomsheetdialogs.AddDictionaryCategorySheetDialogFragment"
         android:label="AddWordsSheetDialogFragment" />
     <fragment
         android:id="@+id/grammarFragment"
@@ -75,5 +79,16 @@
         android:name="com.example.endo.fragments.boardingflow.OnBoardFragment"
         android:label="fragment_on_board"
         tools:layout="@layout/fragment_on_board" />
+    <fragment
+        android:id="@+id/wordsFragment"
+        android:name="com.example.endo.fragments.dictionaryflow.WordsFragment"
+        android:label="fragment_words"
+        tools:layout="@layout/fragment_words">
+
+        <argument
+            android:name="dictionaryCategoryModel"
+            app:argType="com.example.db.models.DictionaryCategoryModel" />
+
+    </fragment>
 
 </navigation>

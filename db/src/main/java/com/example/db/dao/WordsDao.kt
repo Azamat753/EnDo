@@ -13,8 +13,8 @@ interface WordsDao {
     @Insert
     suspend fun insertData(model: WordsModel)
 
-    @Query("SELECT * FROM words_table")
-    fun getData(): Flow<List<WordsModel>>
+    @Query("SELECT * FROM words_table WHERE category=:category ")
+    fun getData(category:String): Flow<List<WordsModel>>
 
     @Update
     suspend fun update(model: WordsModel)
