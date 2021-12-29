@@ -1,6 +1,7 @@
 package com.example.endo.fragments.dictionaryflow
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.viewModelScope
@@ -26,6 +27,8 @@ class WordsFragment : BaseFragment<FragmentWordsBinding>(FragmentWordsBinding::i
     private val viewModel: WordsViewModel by viewModels()
     private val adapter = WordsAdapter()
     private var categoryName = ""
+    private var isClicked = false
+    private var position = -1
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         changeToolbarTitle()
@@ -66,13 +69,20 @@ class WordsFragment : BaseFragment<FragmentWordsBinding>(FragmentWordsBinding::i
     }
 
     override fun onClick(model: WordsModel, position: Int) {
-        val isClicked = false
-        if (isClicked) {
+        showTranslate(position, model)
+    }
+
+    private fun showTranslate(position: Int, model: WordsModel) {
+        this.position = position
+        if (this.position != position) {
+            isClicked = false
+        }
+        isClicked = if (isClicked) {
             adapter.changeWordToEnglish(model)
-            requireContext().showToast(position.toString() + "true")
+            false
         } else {
-            requireContext().showToast(position.toString() + "false")
             adapter.changeWordToRussian(model)
+            true
         }
     }
 }

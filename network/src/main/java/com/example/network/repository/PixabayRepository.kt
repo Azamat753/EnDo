@@ -1,7 +1,7 @@
-package com.example.network
+package com.example.network.repository
 
-import com.example.network.models.ImageResult
-import retrofit2.Response
+import com.example.core.ResultWrapper
+import com.example.network.api.PixabayApi
 import javax.inject.Inject
 
 class PixabayRepository @Inject constructor(

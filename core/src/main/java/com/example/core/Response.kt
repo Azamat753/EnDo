@@ -1,6 +1,9 @@
-package com.example.network
+package com.example.core
 
 import android.accounts.NetworkErrorException
+import com.example.core.extensions.launchWhenStarted
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.onEach
 import retrofit2.HttpException
 import java.io.IOException
 import java.net.ConnectException
@@ -36,6 +39,7 @@ sealed class Response<out R> {
             is Loading -> "Loading"
         }
     }
+
 }
 
 class ApiException(val response: retrofit2.Response<*>? = null) : Exception(response?.message())

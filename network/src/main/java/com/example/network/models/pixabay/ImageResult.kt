@@ -1,6 +1,5 @@
-package com.example.network.models
+package com.example.network.models.pixabay
 
-import com.example.network.models.Hit
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 

@@ -1,11 +1,13 @@
-package com.example.network
+package com.example.core.base
 
 import androidx.lifecycle.ViewModel
+import com.example.core.Response
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 
-open class BaseNetworkViewModel :ViewModel(){
+
+open class BaseNetworkViewModel : ViewModel(){
 
     private val _loadingState: MutableStateFlow<Boolean> =
         MutableStateFlow(false)

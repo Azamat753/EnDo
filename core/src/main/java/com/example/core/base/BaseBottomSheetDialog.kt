@@ -8,8 +8,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.lifecycleScope
 import androidx.viewbinding.ViewBinding
+import com.example.core.Response
+import com.example.core.extensions.launchWhenStarted
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.onEach
 
 abstract class BaseBottomSheetDialog<T : ViewBinding>(private val inflate: (LayoutInflater, ViewGroup?, Boolean) -> T) :
     BottomSheetDialogFragment() {
@@ -29,6 +34,7 @@ abstract class BaseBottomSheetDialog<T : ViewBinding>(private val inflate: (Layo
         super.onDestroyView()
         _binding = null
     }
+
     @SuppressLint("UseRequireInsteadOfGet")
     override fun onStart() {
         super.onStart()
@@ -41,6 +47,23 @@ abstract class BaseBottomSheetDialog<T : ViewBinding>(private val inflate: (Layo
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initClickers()
+    }
+
+    fun <T> observeResponse(
+        stateFlow: StateFlow<Response<T>?>,
+        onLoading: (Boolean) -> Unit = {},
+        onError: (Response.Error) -> Unit = {},
+        onSuccess: (T?) -> Unit = {}
+    ) {
+        stateFlow.onEach {
+            if (it != null) {
+                onLoading.invoke(it is Response.Loading)
+                when (it) {
+                    is Response.Error -> onError.invoke(it)
+                    is Response.Success -> onSuccess.invoke(it.data)
+                }
+            }
+        }.launchWhenStarted(lifecycleScope)
     }
 
     abstract fun initClickers()

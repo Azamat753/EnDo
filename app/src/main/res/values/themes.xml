@@ -4,9 +4,11 @@
         <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
         <item name="blueColor">@color/blue_color</item>
         <item name="whiteTextColor">@color/white</item>
+        <item name="android:windowBackground">@drawable/blue_gradient</item>
         <item name="hintColor">@color/gray_color</item>
         <item name="toolbarColor">@color/blue_color</item>
         <item name="bottomNavColor">@color/white</item>
+        <item name="android:statusBarColor">@color/end_color_gradient</item>
     </style>
 
 </resources>

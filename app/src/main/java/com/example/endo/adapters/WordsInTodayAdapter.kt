@@ -11,24 +11,6 @@ class WordsInTodayAdapter : BaseAdapter<WordsModel, ItemRecentlyAddedWordsBindin
     listOf(), ItemRecentlyAddedWordsBinding::inflate
 ) {
     override fun onBind(binding: ItemRecentlyAddedWordsBinding, model: WordsModel) {
-        binding.wordBtn.text = model.wordInEnglish
-    }
-
-    @SuppressLint("UseCompatLoadingForDrawables", "ResourceAsColor")
-    fun changeWordToRussian(model: WordsModel) {
-        with(binding) {
-            wordBtn.text = model.wordInRussian
-            wordCard.background = binding.wordCard.context.getDrawable(R.drawable.blue_gradient)
-            wordBtn.setTextColor(R.color.white)
-        }
-    }
-
-    @SuppressLint("ResourceAsColor")
-    fun changeWordToEnglish(model: WordsModel) {
-        with(binding) {
-            wordBtn.text = model.wordInEnglish
-            wordCard.setCardBackgroundColor(R.color.white)
-            wordBtn.setTextColor(R.color.black_color)
-        }
+        binding.wordEnglish.text = model.wordInEnglish
     }
 }

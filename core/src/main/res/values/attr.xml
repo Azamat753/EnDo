@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<attr name="toolbarColor" format="color"/>
-    <attr name="whiteTextColor" format="color"/>
-    <attr name="blueColor" format="color"/>
-    <attr name="hintColor" format="color"/>
-    <attr name="bottomNavColor" format="color"/>
+    <attr name="toolbarColor" format="color" />
+    <attr name="whiteTextColor" format="color" />
+    <attr name="blueColor" format="color" />
+    <attr name="hintColor" format="color" />
+    <attr name="bottomNavColor" format="color" />
 
 </resources>

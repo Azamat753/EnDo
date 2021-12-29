@@ -1,14 +1,12 @@
 package com.example.endo.adapters
 
 import android.annotation.SuppressLint
-import androidx.core.view.isVisible
 import coil.load
 import com.example.core.base.BaseAdapter
 import com.example.core.base.gone
 import com.example.core.base.visible
 import com.example.db.models.WordsModel
 import com.example.endo.R
-import com.example.endo.databinding.ItemRecentlyAddedWordsBinding
 import com.example.endo.databinding.ItemWordsBinding
 
 class WordsAdapter : BaseAdapter<WordsModel, ItemWordsBinding>(
@@ -16,31 +14,34 @@ class WordsAdapter : BaseAdapter<WordsModel, ItemWordsBinding>(
     listOf(), ItemWordsBinding::inflate
 ) {
     override fun onBind(binding: ItemWordsBinding, model: WordsModel) {
-        binding.wordBtn.text = model.wordInEnglish
+        binding.wordTv.text = model.wordInEnglish
     }
 
     fun changeWordToRussian(model: WordsModel) {
         with(binding) {
-            detectCard(true)
-            wordBtn.text = model.wordInRussian
+            changeViewCard(true)
+            wordTv.text = model.wordInRussian
+            associationImage.load(model.image)
         }
     }
 
     fun changeWordToEnglish(model: WordsModel) {
         with(binding) {
-            detectCard(false)
-            wordBtn.text = model.wordInEnglish
-            associationImage.load(model.image)
+            changeViewCard(false)
+            wordTv.text = model.wordInEnglish
         }
     }
 
-    private fun detectCard(isRussian: Boolean) {
-        if (isRussian) {
-            binding.wordBtn.isVisible
-            binding.translateWrapper.gone()
+    @SuppressLint("ResourceAsColor")
+    private fun changeViewCard(isWithImage: Boolean) {
+        if (isWithImage) {
+            binding.translateWrapper.setBackgroundResource(R.drawable.blue_gradient)
+            binding.wordTv.setTextColor(R.color.white)
+            binding.associationImage.visible()
         } else {
-            binding.wordBtn.gone()
-            binding.translateWrapper.visible()
+            binding.translateWrapper.setBackgroundResource(R.color.white)
+            binding.wordTv.setTextColor(R.color.black_color)
+            binding.associationImage.gone()
         }
     }
 }

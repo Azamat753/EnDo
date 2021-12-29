@@ -19,11 +19,16 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setupWindowBackgroundColor()
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         initBottomNavigation()
         setupNavigation()
         changeTitleToolbar()
+    }
+
+    private fun setupWindowBackgroundColor() {
+        window.setBackgroundDrawableResource(R.color.white)
     }
 
     private fun initBottomNavigation() {

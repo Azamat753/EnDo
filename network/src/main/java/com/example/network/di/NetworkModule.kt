@@ -1,7 +1,8 @@
 package com.example.network.di
 
 import com.example.core.Constants
-import com.example.network.PixabayApi
+import com.example.network.api.PixabayApi
+import com.example.network.api.TranslationApi
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -18,6 +19,12 @@ object NetworkModule {
     @Provides
     fun providePixabayApi(): PixabayApi {
         return Retrofit.Builder().addConverterFactory(GsonConverterFactory.create())
-            .baseUrl(Constants.BASE_URL).build().create(PixabayApi::class.java)
+            .baseUrl(Constants.PIXABAY_BASE_URL).build().create(PixabayApi::class.java)
+    }
+    @Singleton
+    @Provides
+    fun provideTranslationApi(): TranslationApi {
+        return Retrofit.Builder().addConverterFactory(GsonConverterFactory.create())
+            .baseUrl(Constants.TRANSLATION_BASE_URL).build().create(TranslationApi::class.java)
     }
 }

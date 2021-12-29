@@ -1,7 +1,7 @@
-package com.example.network
+package com.example.network.api
 
 import com.example.core.Constants
-import com.example.network.models.ImageResult
+import com.example.network.models.pixabay.ImageResult
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query

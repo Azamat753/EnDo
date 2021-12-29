@@ -6,12 +6,13 @@
     android:id="@+id/word_card"
     android:layout_height="wrap_content">
 
-    <Button
-        android:id="@+id/word_btn"
+    <TextView
+        android:id="@+id/word_english"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/white"
         android:padding="@dimen/dp_13"
+        android:textAlignment="center"
         android:textColor="@color/black_color"
         android:textSize="@dimen/dp_16"
         android:textStyle="bold"

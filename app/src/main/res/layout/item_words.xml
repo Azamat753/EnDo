@@ -1,59 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/word_card"
-    android:orientation="vertical"
+    style="@style/cardStyle"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="123dp"
+    android:background="?android:attr/selectableItemBackground">
 
-    <androidx.cardview.widget.CardView
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/translate_wrapper"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        style="@style/cardStyle"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/translate_wrapper"
-            android:layout_width="match_parent"
-            android:visibility="gone"
-            android:layout_height="123dp"
-            android:background="@drawable/blue_gradient">
-
-            <TextView
-                android:id="@+id/word_tv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:layout_marginTop="@dimen/dp_22"
-                android:layout_marginStart="@dimen/dp_26"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:text="Перевод слова" />
-            
-            <ImageView
-                android:id="@+id/association_image"
-                android:layout_width="115dp"
-                android:layout_height="78dp"
-                android:src="@drawable/ic_launcher_background"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                android:layout_marginEnd="47dp"/>
-            
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-        <Button
-            android:id="@+id/word_btn"
-            android:visibility="visible"
-            android:layout_width="match_parent"
-            android:layout_height="123dp"
-            android:background="@color/white"
+        <TextView
+            android:id="@+id/word_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_26"
+            android:layout_marginTop="@dimen/dp_22"
             android:textColor="@color/black_color"
-            android:textStyle="bold"
-            tools:text="some word" />
-    </androidx.cardview.widget.CardView>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Перевод слова" />
 
-</LinearLayout>
+        <ImageView
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:id="@+id/association_image"
+            android:layout_width="115dp"
+            android:layout_height="78dp"
+            android:layout_marginEnd="@dimen/dp_46"
+            android:layout_marginVertical="23dp"
+            android:src="@drawable/ic_launcher_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
