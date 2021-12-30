@@ -7,9 +7,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.viewbinding.ViewBinding
-import com.example.core.Response
+import com.example.core.utils.Response
 import com.example.core.extensions.launchWhenStarted
-import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.onEach
 

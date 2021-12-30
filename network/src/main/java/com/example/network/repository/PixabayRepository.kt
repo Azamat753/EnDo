@@ -1,6 +1,6 @@
 package com.example.network.repository
 
-import com.example.core.ResultWrapper
+import com.example.core.utils.ResultWrapper
 import com.example.network.api.PixabayApi
 import javax.inject.Inject
 

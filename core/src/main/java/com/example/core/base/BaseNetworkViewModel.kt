@@ -1,7 +1,7 @@
 package com.example.core.base
 
 import androidx.lifecycle.ViewModel
-import com.example.core.Response
+import com.example.core.utils.Response
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow

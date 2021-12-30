@@ -6,9 +6,9 @@ import android.view.View
 import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
 import com.example.core.base.BaseBottomSheetDialog
-import com.example.core.base.gone
 import com.example.core.base.showToast
 import com.example.core.base.visible
+import com.example.core.extensions.removeBrackets
 import com.example.db.models.WordsModel
 import com.example.endo.databinding.FragmentAddWordsSheetDiaolgBinding
 import com.example.endo.viewmodels.PixabayViewModel
@@ -51,12 +51,12 @@ class AddWordsBottomSheetDialog :
     private fun imageObserve() {
         observeResponse(
             pixabayViewModel.imageResultModel,
-            onLoading = {binding.progressBar.isVisible =it },
+            onLoading = { binding.progressBar.isVisible = it },
             onError = { requireContext().showToast(it.exception.toString()) },
             onSuccess = {
                 if (it != null) {
                     image = it.hits?.get(0)?.largeImageURL.toString()
-                    isImageReady=true
+                    isImageReady = true
                     checkOnComplete()
                 }
             })
@@ -65,12 +65,26 @@ class AddWordsBottomSheetDialog :
     private fun translateObserve() {
         observeResponse(
             translateViewModel.translateModel,
-            onLoading = {binding.progressBar.isVisible = it},
+            onLoading = { binding.progressBar.isVisible = it },
             onError = { Log.e("onError", "initObserve: $it") },
             onSuccess = {
                 if (it != null) {
-                    wordInRussian = it.responseData?.translatedText.toString()
-                    isTranslateReady=true
+                    val translateWords = arrayOf(
+                        it.matches?.get(0)?.translation.toString(),
+                        it.matches?.get(1)?.translation.toString(),
+                        it.matches?.get(2)?.translation.toString()
+                    )
+                    var filtredTranslateWords = emptyArray<String>()
+                    for (element in translateWords) {
+                        val regex = Regex("[^А-Яа-я0-9 ]")
+                        val numberOnlyRegex = Regex("[^0-9 ]")
+                        val filtredOnLatinLetters = element.replace(regex, "")
+                        if (filtredOnLatinLetters.isNotEmpty()) {
+                            filtredTranslateWords += filtredOnLatinLetters.lowercase()
+                        }
+                    }
+                    wordInRussian = filtredTranslateWords.toSet().toString().removeBrackets()
+                    isTranslateReady = true
                     checkOnComplete()
                 }
             }

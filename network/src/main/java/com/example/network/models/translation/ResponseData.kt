@@ -8,6 +8,6 @@ data class ResponseData(
     var translatedText: String? = null,
     @SerializedName("match")
     @Expose
-    var match: Int? = null
+    var match: Double? = null
 
 )

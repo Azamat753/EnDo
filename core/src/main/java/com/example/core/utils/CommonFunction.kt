@@ -1,4 +1,4 @@
-package com.example.core
+package com.example.core.utils
 
 import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.lifecycleScope

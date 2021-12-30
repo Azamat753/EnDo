@@ -1,4 +1,4 @@
-package com.example.core
+package com.example.core.utils
 
 object Constants {
     const val SHARED_PACKAGE = "base_shared_preferences"

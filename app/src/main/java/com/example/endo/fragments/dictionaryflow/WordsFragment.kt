@@ -1,16 +1,20 @@
 package com.example.endo.fragments.dictionaryflow
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
+import android.widget.Button
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.viewModelScope
 import androidx.navigation.fragment.navArgs
-import com.example.core.CommonFunction
+import coil.load
+import com.example.core.utils.CommonFunction
 import com.example.core.base.BaseAdapter
 import com.example.core.base.BaseFragment
-import com.example.core.base.showToast
+import com.example.core.extensions.getDialog
 import com.example.db.models.WordsModel
+import com.example.endo.R
 import com.example.endo.activity.MainActivity
 import com.example.endo.adapters.WordsAdapter
 import com.example.endo.bottomsheetdialogs.AddWordsBottomSheetDialog
@@ -27,8 +31,6 @@ class WordsFragment : BaseFragment<FragmentWordsBinding>(FragmentWordsBinding::i
     private val viewModel: WordsViewModel by viewModels()
     private val adapter = WordsAdapter()
     private var categoryName = ""
-    private var isClicked = false
-    private var position = -1
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         changeToolbarTitle()
@@ -54,7 +56,7 @@ class WordsFragment : BaseFragment<FragmentWordsBinding>(FragmentWordsBinding::i
 
     override fun initAdapter() {
         binding.wordsRecycler.adapter = adapter
-        adapter.listener =this
+        adapter.listener = this
     }
 
     override fun initObserver() {
@@ -69,20 +71,14 @@ class WordsFragment : BaseFragment<FragmentWordsBinding>(FragmentWordsBinding::i
     }
 
     override fun onClick(model: WordsModel, position: Int) {
-        showTranslate(position, model)
-    }
+        val dialog = requireContext().getDialog(R.layout.translate_with_image_dialog)
+        val image = dialog.findViewById<ImageView>(R.id.image)
+        val closeBtn = dialog.findViewById<Button>(R.id.close_btn)
+        val translateWord = dialog.findViewById<TextView>(R.id.translate_word)
 
-    private fun showTranslate(position: Int, model: WordsModel) {
-        this.position = position
-        if (this.position != position) {
-            isClicked = false
-        }
-        isClicked = if (isClicked) {
-            adapter.changeWordToEnglish(model)
-            false
-        } else {
-            adapter.changeWordToRussian(model)
-            true
-        }
+        image.load(model.image)
+        translateWord.text = model.wordInRussian
+        closeBtn.setOnClickListener { dialog.dismiss() }
+        dialog.show()
     }
 }

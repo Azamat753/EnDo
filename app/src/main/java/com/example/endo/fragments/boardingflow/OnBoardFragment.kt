@@ -3,7 +3,7 @@ package com.example.endo.fragments.boardingflow
 import android.os.Bundle
 import android.view.View
 import androidx.navigation.fragment.findNavController
-import com.example.core.CacheManager
+import com.example.core.utils.CacheManager
 import com.example.core.base.BaseFragment
 import com.example.endo.R
 import com.example.endo.databinding.FragmentOnBoardBinding
