@@ -1,6 +1,6 @@
 package com.example.network.di
 
-import com.example.core.Constants
+import com.example.core.utils.Constants
 import com.example.network.api.PixabayApi
 import com.example.network.api.TranslationApi
 import dagger.Module

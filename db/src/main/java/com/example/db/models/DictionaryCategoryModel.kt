@@ -7,7 +7,6 @@ import androidx.room.PrimaryKey
 import androidx.versionedparcelable.ParcelField
 import kotlinx.parcelize.Parcelize
 
-
 @Parcelize
 @Entity(tableName = "dictionary_category_table")
 data class DictionaryCategoryModel(

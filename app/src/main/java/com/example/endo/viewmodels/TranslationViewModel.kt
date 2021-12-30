@@ -1,7 +1,7 @@
 package com.example.endo.viewmodels
 
 import androidx.lifecycle.viewModelScope
-import com.example.core.Response
+import com.example.core.utils.Response
 import com.example.core.base.BaseNetworkViewModel
 import com.example.network.repository.TranslationRepository
 import com.example.network.models.translation.TranslationModel
@@ -20,9 +20,9 @@ class TranslationViewModel @Inject constructor(
         MutableStateFlow(null)
     val translateModel = _translateModel.asStateFlow()
 
-    fun getTranslate(image: String) {
+    fun getTranslate(wordInEnglish: String) {
         viewModelScope.launch(Dispatchers.IO) {
-            val response = repository.getTranslate(image)
+            val response = repository.getTranslate(wordInEnglish)
             _translateModel.emit(response)
         }
     }

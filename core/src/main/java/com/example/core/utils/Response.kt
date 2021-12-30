@@ -1,9 +1,6 @@
-package com.example.core
+package com.example.core.utils
 
 import android.accounts.NetworkErrorException
-import com.example.core.extensions.launchWhenStarted
-import kotlinx.coroutines.flow.StateFlow
-import kotlinx.coroutines.flow.onEach
 import retrofit2.HttpException
 import java.io.IOException
 import java.net.ConnectException

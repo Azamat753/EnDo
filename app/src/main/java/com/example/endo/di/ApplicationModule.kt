@@ -2,7 +2,7 @@ package com.example.endo.di
 
 import android.content.Context
 import android.content.SharedPreferences
-import com.example.core.Constants.SHARED_PACKAGE
+import com.example.core.utils.Constants.SHARED_PACKAGE
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

@@ -21,6 +21,7 @@
         android:id="@+id/dictionaryFragment"
         android:name="com.example.endo.fragments.dictionaryflow.DictionaryFragment"
         android:label="DictionaryFragment" />
+
     <fragment
         android:id="@+id/learnFragment"
         android:name="com.example.endo.fragments.learnflow.LearnFragment"
@@ -33,6 +34,15 @@
         tools:layout="@layout/fragment_dictionary_category">
         <action
             android:id="@+id/action_dictionaryCategoryFragment_to_wordsFragment"
+            app:destination="@id/wordsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/synonymsCategoryFragment"
+        android:name="com.example.endo.fragments.synonyms.SynonymsCategoryFragment"
+        android:label="fragment_dictionary_category"
+        tools:layout="@layout/fragment_dictionary_category">
+        <action
+            android:id="@+id/action_dictionaryCategorySynonymsFragment_to_wordsFragment"
             app:destination="@id/wordsFragment" />
     </fragment>
     <fragment
@@ -89,6 +99,22 @@
             android:name="dictionaryCategoryModel"
             app:argType="com.example.db.models.DictionaryCategoryModel" />
 
+
     </fragment>
+    <fragment
+        android:id="@+id/synonymsFragment"
+        android:name="com.example.endo.fragments.synonyms.SynonymsFragment"
+        android:label="SynonymsFragment"
+        tools:layout="@layout/fragment_synonyms_category"
+        />
+    <fragment
+        android:id="@+id/antonymsFragment"
+        android:name="com.example.endo.fragments.antonyms.AntonymsFragment"
+        android:label="AntonymsFragment"
+        tools:layout="@layout/fragment_antonyms_category"/>
+    <fragment
+        android:id="@+id/antonymsCategoryFragment"
+        android:name="com.example.endo.fragments.antonyms.AntonymsCategoryFragment"
+        android:label="AntonymsCategoryFragment" />
 
 </navigation>

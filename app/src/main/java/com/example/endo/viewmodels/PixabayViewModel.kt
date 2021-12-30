@@ -1,7 +1,7 @@
 package com.example.endo.viewmodels
 
 import androidx.lifecycle.viewModelScope
-import com.example.core.Response
+import com.example.core.utils.Response
 import com.example.core.base.BaseNetworkViewModel
 import com.example.network.repository.PixabayRepository
 import com.example.network.models.pixabay.ImageResult
@@ -18,6 +18,7 @@ class PixabayViewModel @Inject constructor(
 ) : BaseNetworkViewModel() {
     private val _imageResultModel: MutableStateFlow<Response<ImageResult>?> = MutableStateFlow(null)
     val imageResultModel = _imageResultModel.asStateFlow()
+
     fun getImage(image: String) {
         viewModelScope.launch(Dispatchers.IO) {
             val response = repository.getImages(image)

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/cardStyle"
+    android:layout_width="wrap_content"
+    android:background="?android:attr/selectableItemBackground"
+    android:id="@+id/word_card"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/synonyms_category_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:textColor="@color/black_color"
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="@dimen/dp_16"
+        android:layout_marginVertical="@dimen/dp_42"
+        android:textStyle="bold"
+        tools:text="some word" />
+
+</androidx.cardview.widget.CardView>
