@@ -90,5 +90,25 @@
             app:argType="com.example.db.models.DictionaryCategoryModel" />
 
     </fragment>
+    <fragment
+        android:id="@+id/audioMaterialsFragment"
+        android:name="com.example.endo.fragments.listeningflow.AudioMaterialsFragment"
+        android:label="fragment_audio_materials"
+        tools:layout="@layout/fragment_audio_materials" />
+    <fragment
+        android:id="@+id/musicFragment"
+        android:name="com.example.endo.fragments.listeningflow.MusicFragment"
+        android:label="fragment_music"
+        tools:layout="@layout/fragment_music" />
+    <fragment
+        android:id="@+id/movieFragment"
+        android:name="com.example.endo.fragments.listeningflow.MovieFragment"
+        android:label="fragment_movie"
+        tools:layout="@layout/fragment_movie" />
+    <fragment
+        android:id="@+id/audioBooksFragment"
+        android:name="com.example.endo.fragments.listeningflow.AudioBooksFragment"
+        android:label="fragment_audio_books"
+        tools:layout="@layout/fragment_audio_books" />
 
 </navigation>
