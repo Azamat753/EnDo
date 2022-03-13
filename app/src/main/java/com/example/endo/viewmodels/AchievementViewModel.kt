@@ -17,7 +17,8 @@ class AchievementViewModel @Inject constructor(
     private val repositories: AchievementRepositories
 ) : ViewModel() {
 
-    private val _achievementModel: MutableStateFlow<List<AchievementsModel>?> = MutableStateFlow(null)
+    private val _achievementModel: MutableStateFlow<List<AchievementsModel>?> =
+        MutableStateFlow(null)
     val achievementsModel = _achievementModel.asStateFlow()
 
     fun insertData(model: AchievementsModel) =

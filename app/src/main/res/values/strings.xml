@@ -19,4 +19,8 @@
     <string name="music">Песни</string>
     <string name="films">Фильмы</string>
     <string name="books">Книги</string>
+    <string name="understand">Понял</string>
+    <string name="got_it">Got it</string>
+    <string name="play_audio_material">play audio material</string>
+    <string name="pause_audio_material">pause audio material</string>
 </resources>

@@ -11,8 +11,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:listitem="@layout/item_dictionary_category"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-        app:spanCount="3"/>
+        app:spanCount="3"
+        tools:listitem="@layout/item_dictionary_category" />
 
 </LinearLayout>

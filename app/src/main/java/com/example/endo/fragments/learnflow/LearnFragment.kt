@@ -5,11 +5,10 @@ import android.view.View
 import androidx.navigation.fragment.findNavController
 import com.example.core.base.BaseAdapter
 import com.example.core.base.BaseFragment
-import com.example.endo.models.CategoryModel
 import com.example.endo.R
 import com.example.endo.adapters.CategoryAdapter
 import com.example.endo.databinding.FragmentLearnBinding
-import java.util.ArrayList
+import com.example.endo.models.CategoryModel
 
 class LearnFragment : BaseFragment<FragmentLearnBinding>(FragmentLearnBinding::inflate),
     BaseAdapter.IBaseAdapterClickListener<CategoryModel> {
@@ -29,7 +28,8 @@ class LearnFragment : BaseFragment<FragmentLearnBinding>(FragmentLearnBinding::i
     override fun onClick(model: CategoryModel, position: Int) {
         when (model.category) {
             getString(R.string.dictionary_learn) -> findNavController().navigate(R.id.dictionaryFragment)
-            getString(R.string.grammar_learn)->findNavController().navigate(R.id.grammarFragment)
+            getString(R.string.grammar_learn) -> findNavController().navigate(R.id.grammarFragment)
+            getString(R.string.audio_learn) -> findNavController().navigate(R.id.audioMaterialsFragment)
         }
     }
 

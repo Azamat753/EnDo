@@ -80,11 +80,11 @@ He won’t clean this room -- Он не уберёт
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:paddingVertical="@dimen/dp_10"
-                android:paddingHorizontal="@dimen/dp_66"
                 android:layout_marginTop="@dimen/dp_27"
-                android:text="@string/understood"
                 android:layout_marginBottom="@dimen/dp_14"
+                android:paddingHorizontal="@dimen/dp_66"
+                android:paddingVertical="@dimen/dp_10"
+                android:text="@string/understood"
                 android:textSize="@dimen/sp_18" />
 
         </LinearLayout>
