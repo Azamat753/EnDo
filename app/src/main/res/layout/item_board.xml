@@ -26,10 +26,10 @@
     <TextView
         android:id="@+id/description"
         android:layout_width="wrap_content"
-        android:paddingHorizontal="@dimen/dp_27"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="@dimen/dp_46"
+        android:paddingHorizontal="@dimen/dp_27"
         android:text="Учим английский прослушивая отрывки из книг,фильмов и песен"
         android:textAlignment="center"
         android:textColor="@color/black_color"
@@ -37,13 +37,13 @@
 
     <Button
         android:id="@+id/start_btn"
+        style="@style/buttonGradientStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:visibility="gone"
+        android:layout_marginTop="@dimen/dp_32"
         android:background="@drawable/blue_gradient"
-        style="@style/buttonGradientStyle"
         android:text="Let's do it"
         android:textAllCaps="false"
-        android:layout_marginTop="@dimen/dp_32"/>
+        android:visibility="gone" />
 
 </LinearLayout>

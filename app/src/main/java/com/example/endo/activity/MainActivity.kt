@@ -1,10 +1,9 @@
 package com.example.endo.activity
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
 import com.example.core.base.gone
 import com.example.core.base.visible
@@ -14,7 +13,7 @@ import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
-     lateinit var binding: ActivityMainBinding
+    lateinit var binding: ActivityMainBinding
     private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -57,8 +56,20 @@ class MainActivity : AppCompatActivity() {
                 R.id.dictionaryCategoryFragment -> {
                     binding.toolbarMain.title = getString(R.string.categories)
                 }
-                R.id.privateOfficeFragment->{
+                R.id.privateOfficeFragment -> {
                     binding.toolbarMain.title = getString(R.string.private_office)
+                }
+                R.id.audioMaterialsFragment -> {
+                    binding.toolbarMain.title = getString(R.string.audio_learn)
+                }
+                R.id.movieFragment -> {
+                    binding.toolbarMain.title = getString(R.string.films)
+                }
+                R.id.musicFragment -> {
+                    binding.toolbarMain.title = getString(R.string.music)
+                }
+                R.id.audioBooksFragment -> {
+                    binding.toolbarMain.title = getString(R.string.books)
                 }
             }
         }
