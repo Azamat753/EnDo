@@ -2,19 +2,18 @@ package com.example.endo.fragments.listeningflow
 
 import android.content.res.ColorStateList
 import android.graphics.Color
-import android.media.MediaPlayer
 import androidx.fragment.app.viewModels
-import androidx.navigation.fragment.findNavController
 import com.example.core.base.BaseFragment
+import com.example.core.extensions.requireAudioPermission
 import com.example.endo.R
 import com.example.endo.databinding.FragmentMovieBinding
 import com.example.endo.viewmodels.MovieViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
+
 @AndroidEntryPoint
 class MovieFragment : BaseFragment<FragmentMovieBinding>(FragmentMovieBinding::inflate) {
     private val viewModel: MovieViewModel by viewModels()
-
 
     override fun initObserver() {
     }
@@ -22,14 +21,20 @@ class MovieFragment : BaseFragment<FragmentMovieBinding>(FragmentMovieBinding::i
     override fun initClickers() = with(binding) {
         btnPlay.setOnClickListener {
             btnContinue.backgroundTintList = ColorStateList.valueOf(Color.parseColor("#12aaf0"))
-            viewModel.play(requireContext(), R.raw.john_wick)
-            if (MediaPlayer().audioSessionId != -1)
-                visualizerBar.setAudioSessionId(MediaPlayer().audioSessionId)
+
+            requireActivity().requireAudioPermission(requireContext(), requireActivity())
+
+            visualizerBar.isEnabled
+            visualizerBar.setColor(Color.parseColor("#1DAAF0"))
+            visualizerBar.setDensity(65F)
+            visualizerBar.setPlayer(viewModel.play(requireContext(), R.raw.john_wick))
 
         }
+
         btnStop.setOnClickListener {
 
             viewModel.pause()
+            visualizerBar.release()
 
 
         }
@@ -41,9 +46,9 @@ class MovieFragment : BaseFragment<FragmentMovieBinding>(FragmentMovieBinding::i
 
     }
 
-    override fun onDestroy() {
+    override fun onDestroy() = with(binding) {
         super.onDestroy()
-        binding.visualizerBar.release()
+        visualizerBar.release()
         viewModel.releasePlayer()
     }
 
