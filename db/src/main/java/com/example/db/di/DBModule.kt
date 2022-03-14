@@ -3,7 +3,6 @@ package com.example.db.di
 import android.content.Context
 import androidx.room.Room
 import com.example.db.AppDataBase
-import com.example.db.repositories.MovieRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

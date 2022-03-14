@@ -1,7 +1,7 @@
 package com.example.db.di
 
 import android.media.MediaPlayer
-import com.example.db.repositories.MovieRepository
+import com.example.db.repositories.PlayerRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -20,8 +20,8 @@ object RepositoryModule {
     }
     @Singleton
     @Provides
-    fun provideMovieRepository(mediaPlayer: MediaPlayer): MovieRepository {
-        return MovieRepository(mediaPlayer)
+    fun provideMovieRepository(mediaPlayer: MediaPlayer): PlayerRepository {
+        return PlayerRepository(mediaPlayer)
     }
 }
 

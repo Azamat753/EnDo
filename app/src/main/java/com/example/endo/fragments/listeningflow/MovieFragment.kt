@@ -3,6 +3,7 @@ package com.example.endo.fragments.listeningflow
 import android.content.res.ColorStateList
 import android.graphics.Color
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.example.core.base.BaseFragment
 import com.example.core.extensions.requireAudioPermission
 import com.example.endo.R
@@ -16,6 +17,7 @@ class MovieFragment : BaseFragment<FragmentMovieBinding>(FragmentMovieBinding::i
     private val viewModel: MovieViewModel by viewModels()
 
     override fun initObserver() {
+
     }
 
     override fun initClickers() = with(binding) {
@@ -39,8 +41,8 @@ class MovieFragment : BaseFragment<FragmentMovieBinding>(FragmentMovieBinding::i
 
         }
         btnContinue.setOnClickListener {
+            findNavController().navigate(R.id.)
 
-//            findNavController().navigate(R.id.)
         }
 
 
