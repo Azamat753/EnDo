@@ -2,26 +2,26 @@ package com.example.endo.viewmodels
 
 import android.content.Context
 import androidx.lifecycle.ViewModel
-import com.example.db.repositories.MovieRepository
+import com.example.db.repositories.PlayerRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import javax.inject.Inject
 
 @HiltViewModel
 class MovieViewModel @Inject constructor(
-    private val movieRepository: MovieRepository
+    private val playerRepository: PlayerRepository
 
 ) : ViewModel() {
     fun play(@ApplicationContext context: Context, audio: Int): Int {
-        return movieRepository.playAMovie(context, audio)
+        return playerRepository.playAMovie(context, audio)
     }
 
     fun pause() {
-        movieRepository.pauseAMovie()
+        playerRepository.pauseAMovie()
     }
 
     fun releasePlayer() {
-        movieRepository.releasePlayer()
+        playerRepository.releasePlayer()
     }
 
 

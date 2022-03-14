@@ -1,16 +1,16 @@
 package com.example.endo.fragments.listeningflow
 
 import com.example.core.base.BaseFragment
-import com.example.endo.databinding.FragmentMovieResultBinding
+import com.example.endo.databinding.FragmentAudioTestBinding
 
 
-class MovieResultFragment :
-    BaseFragment<FragmentMovieResultBinding>(FragmentMovieResultBinding::inflate) {
+class AudioTestFragment :
+    BaseFragment<FragmentAudioTestBinding>(FragmentAudioTestBinding::inflate) {
     override fun initObserver() {
+
     }
 
     override fun initClickers() {
     }
-
 
 }

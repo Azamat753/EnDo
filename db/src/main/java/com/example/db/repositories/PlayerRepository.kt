@@ -5,7 +5,7 @@ import android.media.MediaPlayer
 import dagger.hilt.android.qualifiers.ApplicationContext
 import javax.inject.Inject
 
-class MovieRepository @Inject constructor(
+class PlayerRepository @Inject constructor(
     private var mediaPlayer: MediaPlayer?
 ) {
     fun playAMovie(@ApplicationContext context: Context, audio: Int): Int {
