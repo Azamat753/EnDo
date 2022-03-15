@@ -74,5 +74,8 @@ dependencies {
     // Audio visualizer chibde
     implementation 'com.chibde:audiovisualizer:2.2.0'
 
+    // Kotlin serialization
+    implementation "org.jetbrains.kotlinx:kotlinx-serialization-runtime:0.20.0"
+
 
 }

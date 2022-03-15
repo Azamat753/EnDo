@@ -8,9 +8,26 @@ class AudioTestFragment :
     BaseFragment<FragmentAudioTestBinding>(FragmentAudioTestBinding::inflate) {
     override fun initObserver() {
 
+
     }
 
-    override fun initClickers() {
+    override fun initClickers() = with(binding) {
+        btnAnswer1.setOnClickListener {
+
+
+        }
+        btnAnswer2.setOnClickListener {
+
+        }
+        btnAnswer3.setOnClickListener {
+
+        }
+        btnAnswer4.setOnClickListener {
+
+        }
+
+
     }
+
 
 }
