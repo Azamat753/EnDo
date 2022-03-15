@@ -62,10 +62,11 @@
         <entry key="..\:/Users/Clar1fy/AndroidStudioProjects/EnDo/app/src/main/res/drawable/blue_gradient_without_corners.xml" value="0.1" />
         <entry key="..\:/Users/Clar1fy/AndroidStudioProjects/EnDo/app/src/main/res/drawable/button_rectangle_gradient_background.xml" value="0.1" />
         <entry key="..\:/Users/Clar1fy/AndroidStudioProjects/EnDo/app/src/main/res/drawable/ic_player_stop.xml" value="0.1" />
+        <entry key="..\:/Users/Clar1fy/AndroidStudioProjects/EnDo/app/src/main/res/drawable/test_button_background_no_corners.xml" value="0.1125" />
         <entry key="..\:/Users/Clar1fy/AndroidStudioProjects/EnDo/app/src/main/res/layout/activity_main.xml" value="0.14074074074074075" />
         <entry key="..\:/Users/Clar1fy/AndroidStudioProjects/EnDo/app/src/main/res/layout/fragment_add_words_sheet_diaolg.xml" value="0.18564102564102564" />
         <entry key="..\:/Users/Clar1fy/AndroidStudioProjects/EnDo/app/src/main/res/layout/fragment_audio_materials.xml" value="0.18854166666666666" />
-        <entry key="..\:/Users/Clar1fy/AndroidStudioProjects/EnDo/app/src/main/res/layout/fragment_audio_test.xml" value="0.18854166666666666" />
+        <entry key="..\:/Users/Clar1fy/AndroidStudioProjects/EnDo/app/src/main/res/layout/fragment_audio_test.xml" value="0.33" />
         <entry key="..\:/Users/Clar1fy/AndroidStudioProjects/EnDo/app/src/main/res/layout/fragment_check_grammar.xml" value="0.1" />
         <entry key="..\:/Users/Clar1fy/AndroidStudioProjects/EnDo/app/src/main/res/layout/fragment_learn.xml" value="0.14074074074074075" />
         <entry key="..\:/Users/Clar1fy/AndroidStudioProjects/EnDo/app/src/main/res/layout/fragment_listening_bottom_sheet_dialog.xml" value="0.22" />

@@ -38,6 +38,8 @@ class MovieFragment : BaseFragment<FragmentMovieBinding>(FragmentMovieBinding::i
         }
         btnContinue.setOnClickListener {
             findNavController().navigate(R.id.audioTestFragment)
+            viewModel.pause()
+            visualizerBar.release()
 
         }
 
