@@ -118,6 +118,10 @@
         android:id="@+id/audioTestFragment"
         android:name="com.example.endo.fragments.listeningflow.AudioTestFragment"
         android:label="fragment_audio_test"
-        tools:layout="@layout/fragment_audio_test" />
+        tools:layout="@layout/fragment_audio_test" >
+        <argument
+            android:name="model"
+            app:argType="com.example.endo.models.QuestionModel" />
+    </fragment>
 
 </navigation>
