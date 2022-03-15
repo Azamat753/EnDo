@@ -23,12 +23,8 @@ class MovieFragment : BaseFragment<FragmentMovieBinding>(FragmentMovieBinding::i
     override fun initClickers() = with(binding) {
         btnPlay.setOnClickListener {
             btnContinue.backgroundTintList = ColorStateList.valueOf(Color.parseColor("#12aaf0"))
-
             requireActivity().requireAudioPermission(requireContext(), requireActivity())
-
-            visualizerBar.isEnabled
             visualizerBar.setColor(Color.parseColor("#1DAAF0"))
-            visualizerBar.setDensity(65F)
             visualizerBar.setPlayer(viewModel.play(requireContext(), R.raw.john_wick))
 
         }
@@ -41,10 +37,9 @@ class MovieFragment : BaseFragment<FragmentMovieBinding>(FragmentMovieBinding::i
 
         }
         btnContinue.setOnClickListener {
-            findNavController().navigate(R.id.)
+            findNavController().navigate(R.id.audioTestFragment)
 
         }
-
 
     }
 
