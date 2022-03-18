@@ -7,6 +7,7 @@ import javax.inject.Inject
 
 class PlayerRepository @Inject constructor(
     private var mediaPlayer: MediaPlayer?,
+    private var questionModel : QuestionModel
 ) {
     fun playAMovie(@ApplicationContext context: Context, audio: Int): Int {
         mediaPlayer = MediaPlayer.create(context, audio)
@@ -22,6 +23,7 @@ class PlayerRepository @Inject constructor(
         mediaPlayer?.release()
         mediaPlayer = null
     }
+
 
 
 }
