@@ -104,7 +104,7 @@
         android:id="@+id/movieFragment"
         android:name="com.example.endo.fragments.listeningflow.MovieFragment"
         android:label="fragment_movie"
-        tools:layout="@layout/fragment_movie" >
+        tools:layout="@layout/fragment_movie">
         <action
             android:id="@+id/action_movieFragment_to_audioTestFragment"
             app:destination="@id/audioTestFragment" />
@@ -118,7 +118,7 @@
         android:id="@+id/audioTestFragment"
         android:name="com.example.endo.fragments.listeningflow.AudioTestFragment"
         android:label="fragment_audio_test"
-        tools:layout="@layout/fragment_audio_test" >
+        tools:layout="@layout/fragment_audio_test">
 
         <argument
             android:name="audioFromMovieFragment"

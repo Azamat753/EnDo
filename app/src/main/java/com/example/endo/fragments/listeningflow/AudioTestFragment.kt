@@ -1,8 +1,5 @@
 package com.example.endo.fragments.listeningflow
 
-import android.view.MotionEvent
-import android.view.View
-import android.widget.Toast
 import androidx.navigation.fragment.navArgs
 import com.example.core.base.BaseFragment
 import com.example.endo.R
@@ -12,39 +9,59 @@ import com.example.endo.databinding.FragmentAudioTestBinding
 class AudioTestFragment :
     BaseFragment<FragmentAudioTestBinding>(FragmentAudioTestBinding::inflate) {
     private val args: AudioTestFragmentArgs by navArgs()
-    override fun initObserver() {
-//        if (args.audioFromMovieFragment == R.raw.john_wick)
-//            Toast.makeText(requireContext(), "Fuck you!", Toast.LENGTH_SHORT)
-//        else {
-//            Toast.makeText(
-//                requireContext(),
-//                "Nothing has been sent through safe-args",
-//                Toast.LENGTH_SHORT
-//            )
-//
-//        }
+    override fun setupViews() {
+        getArgs()
+
+    }
+
+    private fun getArgs() {
         when (args.audioFromMovieFragment) {
             R.raw.john_wick -> {
-                Toast.makeText(requireContext(), "Int has been successfully sent ", Toast.LENGTH_SHORT)
-                binding.btnAnswer1.text = "fuck you"
+                binding.tvQuestion.text = getString(R.string.questionForJohnWick)
+
+                binding.btnAnswer1.text = getString(R.string.firstAnswerForJohnWick)
+                binding.btnAnswer2.text = getString(R.string.secondAnswerForJohnWick)
+                binding.btnAnswer3.text = getString(R.string.thirdAnswerForJohnWick)
+                binding.btnAnswer4.text = getString(R.string.fourthAnswerForJohnWick)
             }
             R.raw.dentist -> {
-                Toast.makeText(requireContext(), "Fuck You", Toast.LENGTH_SHORT)
-                binding.btnAnswer2.text = "slave"
+                binding.tvQuestion.text = getString(R.string.questionForDentist)
+
+                binding.btnAnswer1.text = getString(R.string.firstAnswerForDentist)
+                binding.btnAnswer2.text = getString(R.string.secondAnswerForDentist)
+                binding.btnAnswer3.text = getString(R.string.thirdAnswerForDentist)
+                binding.btnAnswer4.text = getString(R.string.fourthAnswerForDentist)
+
             }
             R.raw.wonder -> {
-                Toast.makeText(requireContext(), "Fuck You", Toast.LENGTH_SHORT)
+                binding.tvQuestion.text = getString(
+                    R.string.questionForWonder
+                )
+                binding.btnAnswer1.text = getString(R.string.firstAnswerForWonder)
+                binding.btnAnswer2.text = getString(R.string.secondAnswerForWonder)
+                binding.btnAnswer3.text = getString(R.string.thirdAnswerForWonder)
+                binding.btnAnswer4.text = getString(R.string.fourthAnswerForWonder)
             }
             R.raw.harry_potter -> {
-                Toast.makeText(requireContext(), "Fuck You", Toast.LENGTH_SHORT)
+                binding.tvQuestion.text = getString(R.string.questionForHarryPotter)
+                binding.btnAnswer1.text = getString(R.string.firstAnswerForHarryPotter)
+                binding.btnAnswer2.text = getString(R.string.secondAnswerForHarryPotter)
+                binding.btnAnswer3.text = getString(R.string.thirdAnswerForHarryPotter)
+                binding.btnAnswer4.text = getString(R.string.fourthAnswerForHarryPotter)
             }
 
         }
 
+    }
+
+    override fun initObserver() {
 
     }
 
     override fun initClickers() = with(binding) {
+        btnAnswer1.setOnClickListener {
+
+        }
         btnAnswer2.setOnClickListener {
 
 
@@ -55,16 +72,6 @@ class AudioTestFragment :
         btnAnswer4.setOnClickListener {
 
         }
-        btnAnswer1.setOnTouchListener(object : View.OnTouchListener {
-            override fun onTouch(p0: View?, p1: MotionEvent?): Boolean {
-                btnAnswer1.isPressed = true
-                btnAnswer2.background.alpha = 50
-                btnAnswer3.background.alpha = 50
-                btnAnswer4.background.alpha = 50
-
-                return true
-            }
-        })
 
 
     }
