@@ -25,4 +25,28 @@
     <string name="pause_audio_material">pause audio material</string>
     <string name="answer">Answer</string>
     <string name="icon">icon</string>
+    <string name="questionForJohnWick">Что значит фраза "You stabbed the devil in the back"?</string>
+    <string name="firstAnswerForJohnWick">Пустить ему нож в спину</string>
+    <string name="secondAnswerForJohnWick">Попытаться убить демона</string>
+    <string name="thirdAnswerForJohnWick">Вы ударили демона в спину</string>
+    <string name="fourthAnswerForJohnWick">Убить демона</string>
+
+    <string name="questionForDentist">Как переводится "Sir,there is no need for violence"</string>
+    <string name="firstAnswerForDentist">Сэр,здесь нету отсутствует нужда в насилии</string>
+    <string name="secondAnswerForDentist">Сэр,тут нету нужды в насилии</string>
+    <string name="thirdAnswerForDentist">Сэр,нужда в насилиии есть</string>
+    <string name="fourthAnswerForDentist">Сэр,насилии в нужда есть</string>
+
+    <string name="questionForWonder">Что значит "Excuse me, do you mind, everywhere else is full"</string>
+    <string name="firstAnswerForWonder">Извините,вы не против,везде все переполнено</string>
+    <string name="secondAnswerForWonder">Простите,вы против,все уже полно</string>
+    <string name="thirdAnswerForWonder">Не прощаю,все не заполнено</string>
+    <string name="fourthAnswerForWonder">Прощаю,все полно</string>
+
+    <string name="questionForHarryPotter">Что значит "Who is it that I aspire to be"?</string>
+    <string name="firstAnswerForHarryPotter">Кем я желаю стать</string>
+    <string name="secondAnswerForHarryPotter">Что бы я хотел делать</string>
+    <string name="thirdAnswerForHarryPotter">Почему я хочу им быть</string>
+    <string name="fourthAnswerForHarryPotter">Потому что я хочу им быть</string>
+
 </resources>

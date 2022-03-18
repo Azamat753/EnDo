@@ -25,12 +25,12 @@ class ListeningBottomSheetDialogFragment : DialogFragment(
     }
 
     private fun initListeners() = with(binding) {
-        btnContinue.setOnClickListener{
+        btnContinue.setOnClickListener {
             dismiss()
 
         }
 
-        btnHaveARest.setOnClickListener{
+        btnHaveARest.setOnClickListener {
 
         }
 

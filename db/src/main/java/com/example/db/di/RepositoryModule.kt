@@ -1,6 +1,7 @@
 package com.example.db.di
 
 import android.media.MediaPlayer
+import com.example.db.models.AudioModel
 import com.example.db.repositories.PlayerRepository
 import dagger.Module
 import dagger.Provides
@@ -18,10 +19,17 @@ object RepositoryModule {
     fun provideMediaPlayer(): MediaPlayer {
         return MediaPlayer()
     }
+
     @Singleton
     @Provides
-    fun provideMovieRepository(mediaPlayer: MediaPlayer): PlayerRepository {
-        return PlayerRepository(mediaPlayer)
+    fun provideMovieRepository(mediaPlayer: MediaPlayer, audioModel: AudioModel): PlayerRepository {
+        return PlayerRepository(mediaPlayer, audioModel)
+    }
+
+    @Singleton
+    @Provides
+    fun provideAudioModel(audio: Int): AudioModel {
+        return AudioModel(audio)
     }
 
 }

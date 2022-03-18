@@ -39,9 +39,13 @@ abstract class BaseFragment<T : ViewBinding>(private val inflate: (LayoutInflate
         setArgsValue()
         initObserver()
         initAdapter()
+        setupViews()
     }
 
     open fun setArgsValue() {
+
+    }
+    open fun setupViews() {
 
     }
 
