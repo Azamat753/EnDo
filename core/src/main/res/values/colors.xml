@@ -9,4 +9,5 @@
     <color name="body_color">#969696</color>
     <color name="light_blue_color">#19A8EF</color>
     <color name="green_color">#13B938</color>
+    <color name="visualizer_bar_color">"#1DAAF0"</color>
 </resources>

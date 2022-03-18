@@ -61,6 +61,7 @@ class AudioTestFragment :
     override fun initClickers() = with(binding) {
         btnAnswer1.setOnClickListener {
 
+
         }
         btnAnswer2.setOnClickListener {
 

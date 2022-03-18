@@ -33,5 +33,4 @@ object DBModule {
     fun provideDictionaryCategoryDao(appDataBase: AppDataBase) = appDataBase.dictionaryDao()
 
 
-
 }

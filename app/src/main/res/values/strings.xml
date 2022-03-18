@@ -37,16 +37,16 @@
     <string name="thirdAnswerForDentist">Сэр,нужда в насилиии есть</string>
     <string name="fourthAnswerForDentist">Сэр,насилии в нужда есть</string>
 
-    <string name="questionForWonder">Что значит "Excuse me, do you mind, everywhere else is full"</string>
-    <string name="firstAnswerForWonder">Извините,вы не против,везде все переполнено</string>
-    <string name="secondAnswerForWonder">Простите,вы против,все уже полно</string>
-    <string name="thirdAnswerForWonder">Не прощаю,все не заполнено</string>
-    <string name="fourthAnswerForWonder">Прощаю,все полно</string>
+    <string name="questionForHarryPotter">Что значит "Excuse me, do you mind, everywhere else is full"</string>
+    <string name="firstAnswerForHarryPotter">Извините,вы не против,везде все переполнено</string>
+    <string name="secondAnswerForHarryPotter">Простите,вы против,все уже полно</string>
+    <string name="thirdAnswerForHarryPotter">Не прощаю,все не заполнено</string>
+    <string name="fourthAnswerForHarryPotter">Прощаю,все полно</string>
 
-    <string name="questionForHarryPotter">Что значит "Who is it that I aspire to be"?</string>
-    <string name="firstAnswerForHarryPotter">Кем я желаю стать</string>
-    <string name="secondAnswerForHarryPotter">Что бы я хотел делать</string>
-    <string name="thirdAnswerForHarryPotter">Почему я хочу им быть</string>
-    <string name="fourthAnswerForHarryPotter">Потому что я хочу им быть</string>
+    <string name="questionForWonder">Что значит "Who is it that I aspire to be"?</string>
+    <string name="firstAnswerForWonder">Кем я желаю стать</string>
+    <string name="secondAnswerForWonder">Что бы я хотел делать</string>
+    <string name="thirdAnswerForWonder">Почему я хочу им быть</string>
+    <string name="fourthAnswerForWonder">Потому что я хочу им быть</string>
 
 </resources>
