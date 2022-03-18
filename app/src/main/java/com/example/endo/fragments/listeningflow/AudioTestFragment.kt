@@ -1,15 +1,45 @@
 package com.example.endo.fragments.listeningflow
 
-import android.graphics.RenderEffect
 import android.view.MotionEvent
 import android.view.View
+import android.widget.Toast
+import androidx.navigation.fragment.navArgs
 import com.example.core.base.BaseFragment
+import com.example.endo.R
 import com.example.endo.databinding.FragmentAudioTestBinding
 
 
 class AudioTestFragment :
     BaseFragment<FragmentAudioTestBinding>(FragmentAudioTestBinding::inflate) {
+    private val args: AudioTestFragmentArgs by navArgs()
     override fun initObserver() {
+//        if (args.audioFromMovieFragment == R.raw.john_wick)
+//            Toast.makeText(requireContext(), "Fuck you!", Toast.LENGTH_SHORT)
+//        else {
+//            Toast.makeText(
+//                requireContext(),
+//                "Nothing has been sent through safe-args",
+//                Toast.LENGTH_SHORT
+//            )
+//
+//        }
+        when (args.audioFromMovieFragment) {
+            R.raw.john_wick -> {
+                Toast.makeText(requireContext(), "Int has been successfully sent ", Toast.LENGTH_SHORT)
+                binding.btnAnswer1.text = "fuck you"
+            }
+            R.raw.dentist -> {
+                Toast.makeText(requireContext(), "Fuck You", Toast.LENGTH_SHORT)
+                binding.btnAnswer2.text = "slave"
+            }
+            R.raw.wonder -> {
+                Toast.makeText(requireContext(), "Fuck You", Toast.LENGTH_SHORT)
+            }
+            R.raw.harry_potter -> {
+                Toast.makeText(requireContext(), "Fuck You", Toast.LENGTH_SHORT)
+            }
+
+        }
 
 
     }
@@ -35,7 +65,6 @@ class AudioTestFragment :
                 return true
             }
         })
-
 
 
     }

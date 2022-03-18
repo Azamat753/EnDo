@@ -9,7 +9,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class MovieViewModel @Inject constructor(
-    private val playerRepository: PlayerRepository
+    private val playerRepository: PlayerRepository,
 
 ) : ViewModel() {
     fun play(@ApplicationContext context: Context, audio: Int): Int {
