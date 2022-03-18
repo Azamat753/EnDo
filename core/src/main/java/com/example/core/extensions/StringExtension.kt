@@ -11,6 +11,7 @@ import android.view.Window
 fun String.removeBrackets(): String {
     return this.replace("[", "").replace("]", "")
 }
+
 fun Context.getDialog(layout: Int): Dialog {
     val inflater: LayoutInflater = LayoutInflater.from(this)
     val view: View = inflater.inflate(layout, null)

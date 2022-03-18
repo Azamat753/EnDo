@@ -9,6 +9,6 @@ data class WordsModel(
     val id: Int? = null,
     var wordInEnglish: String,
     var wordInRussian: String,
-    var category:String,
-    var image:String
+    var category: String,
+    var image: String
 )

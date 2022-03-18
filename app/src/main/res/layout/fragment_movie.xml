@@ -69,6 +69,7 @@
                 android:src="@drawable/ic_player_play"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -88,6 +89,7 @@
         android:background="@drawable/button_rectangle_gradient_background"
         android:backgroundTint="#666666"
         android:text="@string/got_it"
+        android:textAllCaps="false"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
