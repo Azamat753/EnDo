@@ -1,15 +1,12 @@
 package com.example.endo.models
 
-import android.os.Parcelable
-import kotlinx.android.parcel.Parcelize
-import kotlinx.serialization.Serializable
-import kotlinx.serialization.Serializer
+import android.content.Context
+import java.io.Serializable
+import javax.inject.Inject
 
 
-@Parcelize
-data class QuestionModel(
-     var id: Int,
-     val question: String
-): Parcelable {
+data class QuestionModel @Inject constructor(
+    val audio: Int
+)  {
 
 }

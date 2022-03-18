@@ -6,7 +6,7 @@ import dagger.hilt.android.qualifiers.ApplicationContext
 import javax.inject.Inject
 
 class PlayerRepository @Inject constructor(
-    private var mediaPlayer: MediaPlayer?
+    private var mediaPlayer: MediaPlayer?,
 ) {
     fun playAMovie(@ApplicationContext context: Context, audio: Int): Int {
         mediaPlayer = MediaPlayer.create(context, audio)

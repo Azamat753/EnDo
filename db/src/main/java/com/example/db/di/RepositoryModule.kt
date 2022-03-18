@@ -23,6 +23,7 @@ object RepositoryModule {
     fun provideMovieRepository(mediaPlayer: MediaPlayer): PlayerRepository {
         return PlayerRepository(mediaPlayer)
     }
+
 }
 
 
