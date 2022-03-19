@@ -26,7 +26,6 @@ class AudioTestFragment :
             }
             R.raw.dentist -> {
                 binding.tvQuestion.text = getString(R.string.questionForDentist)
-
                 binding.btnAnswer1.text = getString(R.string.firstAnswerForDentist)
                 binding.btnAnswer2.text = getString(R.string.secondAnswerForDentist)
                 binding.btnAnswer3.text = getString(R.string.thirdAnswerForDentist)
