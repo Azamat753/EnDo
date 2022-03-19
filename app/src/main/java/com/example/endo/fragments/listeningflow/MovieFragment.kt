@@ -52,9 +52,9 @@ class MovieFragment : BaseFragment<FragmentMovieBinding>(FragmentMovieBinding::i
     }
 
 
-    override fun onDestroy() = with(binding) {
+    override fun onDestroy() {
         super.onDestroy()
-        visualizerBar.release()
+        binding.visualizerBar.release()
         viewModel.releasePlayer()
     }
 
