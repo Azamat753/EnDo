@@ -29,6 +29,8 @@ class DictionaryFragment :
     override fun onClick(model: CategoryModel, position: Int) {
         when (model.category) {
             getString(R.string.my_dictionary) -> findNavController().navigate(R.id.myDictionaryFragment)
+            getString(R.string.synonyms)-> findNavController().navigate(R.id.myDictionaryFragment)
+            getString(R.string.antonyms)-> findNavController().navigate(R.id.myDictionaryFragment)
         }
     }
 

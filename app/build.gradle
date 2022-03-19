@@ -68,6 +68,4 @@ dependencies {
     //dotsIndicators
     implementation 'com.tbuonomo:dotsindicator:4.2'
 
-
-
 }
