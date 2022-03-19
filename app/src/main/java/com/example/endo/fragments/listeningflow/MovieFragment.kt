@@ -41,7 +41,7 @@ class MovieFragment : BaseFragment<FragmentMovieBinding>(FragmentMovieBinding::i
 
         }
         btnContinue.setOnClickListener {
-            findNavController().navigate(R.id.)
+            findNavController().navigate(R.id.audioMaterialsFragment)
 
         }
 
