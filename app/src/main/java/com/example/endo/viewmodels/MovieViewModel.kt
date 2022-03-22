@@ -24,8 +24,8 @@ class MovieViewModel @Inject constructor(
         playerRepository.releasePlayer()
     }
 
-//    fun getAudio(): Int {
-//        return playerRepository.getAudio()
+//    fun getMoviesAudio(): Int {
+//        return playerRepository.getMoviesAudio()
 //    }
 
 

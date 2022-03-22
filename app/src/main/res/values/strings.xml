@@ -25,6 +25,7 @@
     <string name="pause_audio_material">pause audio material</string>
     <string name="answer">Answer</string>
     <string name="icon">icon</string>
+
     <string name="questionForJohnWick">Что значит фраза "You stabbed the devil in the back"?</string>
     <string name="firstAnswerForJohnWick">Пустить ему нож в спину</string>
     <string name="secondAnswerForJohnWick">Попытаться убить демона</string>
@@ -48,5 +49,7 @@
     <string name="secondAnswerForWonder">Что бы я хотел делать</string>
     <string name="thirdAnswerForWonder">Почему я хочу им быть</string>
     <string name="fourthAnswerForWonder">Потому что я хочу им быть</string>
+    <string name="have_a_rest">На сегодня хватит</string>
+    <string name="of_course">Конечно!</string>
 
 </resources>

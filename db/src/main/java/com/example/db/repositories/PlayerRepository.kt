@@ -25,7 +25,7 @@ class PlayerRepository @Inject constructor(
         mediaPlayer = null
     }
 
-//    fun getAudio(): Int {
+//    fun getMoviesAudio(): Int {
 //        return audioModel.audio
 //
 //    }
