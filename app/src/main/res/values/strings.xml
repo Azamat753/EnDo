@@ -49,5 +49,7 @@
     <string name="secondAnswerForWonder">Что бы я хотел делать</string>
     <string name="thirdAnswerForWonder">Почему я хочу им быть</string>
     <string name="fourthAnswerForWonder">Потому что я хочу им быть</string>
+    <string name="have_a_rest">На сегодня хватит</string>
+    <string name="of_course">Конечно!</string>
 
 </resources>
