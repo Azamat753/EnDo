@@ -121,7 +121,7 @@
         tools:layout="@layout/fragment_audio_test">
 
         <argument
-            android:name="audioFromMovieFragment"
+            android:name="positionFromMovieFragment"
             app:argType="integer" />
     </fragment>
     <fragment

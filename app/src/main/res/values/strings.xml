@@ -25,6 +25,7 @@
     <string name="pause_audio_material">pause audio material</string>
     <string name="answer">Answer</string>
     <string name="icon">icon</string>
+
     <string name="questionForJohnWick">Что значит фраза "You stabbed the devil in the back"?</string>
     <string name="firstAnswerForJohnWick">Пустить ему нож в спину</string>
     <string name="secondAnswerForJohnWick">Попытаться убить демона</string>
