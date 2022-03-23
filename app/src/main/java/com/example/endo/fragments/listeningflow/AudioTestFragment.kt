@@ -11,13 +11,13 @@ import dagger.hilt.android.AndroidEntryPoint
 class AudioTestFragment :
     BaseFragment<FragmentAudioTestBinding>(FragmentAudioTestBinding::inflate) {
     val dialog = CustomListeningDialogFragment()
-    private var currentPos =0
+    private var currentPos = 0
     private val args: AudioTestFragmentArgs by navArgs()
 
 
     override fun setupViews() {
         getArgs()
-        args.positionFromMovieFragment == currentPos +1
+        args.positionFromMovieFragment + 1
 
     }
 
@@ -92,21 +92,22 @@ class AudioTestFragment :
             btnAnswer1.setOnClickListener {
                 if (Client().getMoviesAudio()[args.positionFromMovieFragment].firstAnswer == Client().getMoviesAudio()[args.positionFromMovieFragment].correctAnswer)
                     dialog.show(parentFragmentManager, "dialog opened")
-
+                AudioTestFragmentDirections.actionAudioTestFragmentToMovieFragment(args.positionFromMovieFragment)
             }
             btnAnswer2.setOnClickListener {
                 if (Client().getMoviesAudio()[args.positionFromMovieFragment].secondAnswer == Client().getMoviesAudio()[args.positionFromMovieFragment].correctAnswer)
-                    dialog.show(parentFragmentManager, "dialog opened")
+                    AudioTestFragmentDirections.actionAudioTestFragmentToMovieFragment(args.positionFromMovieFragment)
+                dialog.show(parentFragmentManager, "dialog opened")
 
             }
             btnAnswer3.setOnClickListener {
                 if (Client().getMoviesAudio()[args.positionFromMovieFragment].thirdAnswer == Client().getMoviesAudio()[args.positionFromMovieFragment].correctAnswer)
                     dialog.show(parentFragmentManager, "dialog opened")
-
+                AudioTestFragmentDirections.actionAudioTestFragmentToMovieFragment(args.positionFromMovieFragment)
             }
             btnAnswer4.setOnClickListener {
                 if (Client().getMoviesAudio()[args.positionFromMovieFragment].fourthAnswer == Client().getMoviesAudio()[args.positionFromMovieFragment].correctAnswer)
-
+                    AudioTestFragmentDirections.actionAudioTestFragmentToMovieFragment(args.positionFromMovieFragment)
                     dialog.show(parentFragmentManager, "dialog opened")
 
 

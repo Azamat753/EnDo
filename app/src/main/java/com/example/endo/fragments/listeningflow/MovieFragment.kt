@@ -2,7 +2,7 @@ package com.example.endo.fragments.listeningflow
 
 import android.content.res.ColorStateList
 import android.graphics.Color
-import androidx.fragment.app.activityViewModels
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.core.base.BaseFragment
@@ -15,7 +15,9 @@ import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class MovieFragment : BaseFragment<FragmentMovieBinding>(FragmentMovieBinding::inflate) {
-    private val viewModel: MovieViewModel by activityViewModels()
+    private val viewModel: MovieViewModel by viewModels()
+
+    private val args: MovieFragmentArgs by navArgs()
     private var currentPos = 0
 
     override fun initObserver() {
@@ -35,9 +37,10 @@ class MovieFragment : BaseFragment<FragmentMovieBinding>(FragmentMovieBinding::i
             visualizerBar.setPlayer(
                 viewModel.play(
                     requireContext(),
-                    Client().getMoviesAudio()[currentPos].audio
+                    Client().getMoviesAudio()[0].audio
                 )
             )
+
 
         }
 

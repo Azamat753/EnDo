@@ -111,6 +111,7 @@
         <argument
             android:name="positionFromDialog"
             app:argType="integer" />
+
     </fragment>
     <fragment
         android:id="@+id/audioBooksFragment"
@@ -139,7 +140,7 @@
         android:id="@+id/customListeningDialogFragment"
         android:name="com.example.endo.dialogs.CustomListeningDialogFragment"
         android:label="fragment_listening_bottom_sheet_dialog"
-        tools:layout="@layout/fragment_listening_bottom_sheet_dialog" >
+        tools:layout="@layout/fragment_listening_bottom_sheet_dialog">
         <action
             android:id="@+id/action_customListeningDialogFragment_to_movieFragment"
             app:destination="@id/movieFragment" />

@@ -24,6 +24,7 @@
         android:id="@+id/visualizerBar"
         android:layout_width="match_parent"
         android:layout_height="240dp"
+
         app:layout_constraintBottom_toTopOf="@id/cardview"
         app:layout_constraintTop_toBottomOf="@id/tv_film_chunk" />
 

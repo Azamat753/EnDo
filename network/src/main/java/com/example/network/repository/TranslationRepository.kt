@@ -8,7 +8,9 @@ class TranslationRepository @Inject constructor(
     private val translationApi: TranslationApi
 ) : ResultWrapper() {
     suspend fun getTranslate(wordInEnglish: String) =
-        getResult { translationApi.searchTranslation(
-             wordInEnglish = wordInEnglish
-        ) }
+        getResult {
+            translationApi.searchTranslation(
+                wordInEnglish = wordInEnglish
+            )
+        }
 }

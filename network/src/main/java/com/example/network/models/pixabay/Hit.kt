@@ -47,7 +47,7 @@ data class Hit(
 
     @SerializedName("largeImageURL")
     @Expose
-     val largeImageURL: String? = null,
+    val largeImageURL: String? = null,
 
     @SerializedName("imageWidth")
     @Expose
