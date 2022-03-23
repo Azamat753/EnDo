@@ -125,9 +125,14 @@
             app:argType="integer" />
     </fragment>
     <fragment
-        android:id="@+id/movieResultFragment"
+        android:id="@+id/audioResultFragment"
         android:name="com.example.endo.fragments.listeningflow.AudioResultFragment"
         android:label="fragment_movie_result"
-        tools:layout="@layout/fragment_movie_result" />
+        tools:layout="@layout/fragment_audio_result" />
+    <dialog
+        android:id="@+id/customListeningDialogFragment"
+        android:name="com.example.endo.dialogs.CustomListeningDialogFragment"
+        android:label="fragment_listening_bottom_sheet_dialog"
+        tools:layout="@layout/fragment_listening_bottom_sheet_dialog" />
 
 </navigation>
