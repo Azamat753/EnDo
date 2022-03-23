@@ -5,11 +5,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
+import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
+import com.example.endo.R
 import com.example.endo.databinding.FragmentListeningBottomSheetDialogBinding
+import com.example.endo.viewmodels.MovieViewModel
 
-class ListeningBottomSheetDialogFragment : DialogFragment(
+class CustomListeningDialogFragment : DialogFragment(
 ) {
     private lateinit var binding: FragmentListeningBottomSheetDialogBinding
+    private val viewModel: MovieViewModel by activityViewModels()
+    private val args: CustomListeningDialogFragmentArgs by navArgs()
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -27,10 +34,18 @@ class ListeningBottomSheetDialogFragment : DialogFragment(
     private fun initListeners() = with(binding) {
         btnContinue.setOnClickListener {
             dismiss()
+            findNavController().navigate(
+                CustomListeningDialogFragmentDirections.actionCustomListeningDialogFragmentToMovieFragment(
+                    args.positionFromAudioTest
+                )
+            )
+
 
         }
 
         btnHaveARest.setOnClickListener {
+            dismiss()
+            findNavController().navigate(R.id.audioResultFragment)
 
         }
 

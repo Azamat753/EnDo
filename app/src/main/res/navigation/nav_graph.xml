@@ -108,6 +108,10 @@
         <action
             android:id="@+id/action_movieFragment_to_audioTestFragment"
             app:destination="@id/audioTestFragment" />
+        <argument
+            android:name="positionFromDialog"
+            app:argType="integer" />
+
     </fragment>
     <fragment
         android:id="@+id/audioBooksFragment"
@@ -123,11 +127,26 @@
         <argument
             android:name="positionFromMovieFragment"
             app:argType="integer" />
+        <action
+            android:id="@+id/action_audioTestFragment_to_movieFragment"
+            app:destination="@id/movieFragment" />
     </fragment>
     <fragment
-        android:id="@+id/movieResultFragment"
-        android:name="com.example.endo.fragments.listeningflow.MovieResultFragment"
+        android:id="@+id/audioResultFragment"
+        android:name="com.example.endo.fragments.listeningflow.AudioResultFragment"
         android:label="fragment_movie_result"
-        tools:layout="@layout/fragment_movie_result" />
+        tools:layout="@layout/fragment_audio_result" />
+    <dialog
+        android:id="@+id/customListeningDialogFragment"
+        android:name="com.example.endo.dialogs.CustomListeningDialogFragment"
+        android:label="fragment_listening_bottom_sheet_dialog"
+        tools:layout="@layout/fragment_listening_bottom_sheet_dialog">
+        <action
+            android:id="@+id/action_customListeningDialogFragment_to_movieFragment"
+            app:destination="@id/movieFragment" />
+        <argument
+            android:name="positionFromAudioTest"
+            app:argType="integer" />
+    </dialog>
 
 </navigation>

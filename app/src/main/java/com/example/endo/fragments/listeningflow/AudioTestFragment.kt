@@ -1,74 +1,81 @@
 package com.example.endo.fragments.listeningflow
 
-import android.widget.Toast
 import androidx.navigation.fragment.navArgs
 import com.example.core.base.BaseFragment
 import com.example.endo.databinding.FragmentAudioTestBinding
+import com.example.endo.dialogs.CustomListeningDialogFragment
 import com.example.endo.local.Client
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class AudioTestFragment :
     BaseFragment<FragmentAudioTestBinding>(FragmentAudioTestBinding::inflate) {
+    val dialog = CustomListeningDialogFragment()
+    private var currentPos = 0
     private val args: AudioTestFragmentArgs by navArgs()
+
+
     override fun setupViews() {
         getArgs()
+        args.positionFromMovieFragment + 1
 
     }
 
     private fun getArgs() {
         when (args.positionFromMovieFragment) {
+
             0 -> {
                 binding.tvQuestion.text =
-                    Client().getMoviesAudio()[args.positionFromMovieFragment].question
+                    Client().getMoviesAudio()[0].question
 
                 binding.btnAnswer1.text =
-                    Client().getMoviesAudio()[args.positionFromMovieFragment].firstAnswer
+                    Client().getMoviesAudio()[0].firstAnswer
                 binding.btnAnswer2.text =
-                    Client().getMoviesAudio()[args.positionFromMovieFragment].secondAnswer
+                    Client().getMoviesAudio()[0].secondAnswer
                 binding.btnAnswer3.text =
-                    Client().getMoviesAudio()[args.positionFromMovieFragment].thirdAnswer
+                    Client().getMoviesAudio()[0].thirdAnswer
                 binding.btnAnswer4.text =
-                    Client().getMoviesAudio()[args.positionFromMovieFragment].fourthAnswer
+                    Client().getMoviesAudio()[0].fourthAnswer
             }
             1 -> {
                 binding.tvQuestion.text =
-                    Client().getMoviesAudio()[args.positionFromMovieFragment].question
+                    Client().getMoviesAudio()[1].question
                 binding.btnAnswer1.text =
-                    Client().getMoviesAudio()[args.positionFromMovieFragment].firstAnswer
+                    Client().getMoviesAudio()[1].firstAnswer
                 binding.btnAnswer2.text =
-                    Client().getMoviesAudio()[args.positionFromMovieFragment].secondAnswer
+                    Client().getMoviesAudio()[1].secondAnswer
                 binding.btnAnswer3.text =
-                    Client().getMoviesAudio()[args.positionFromMovieFragment].thirdAnswer
+                    Client().getMoviesAudio()[1].thirdAnswer
                 binding.btnAnswer4.text =
-                    Client().getMoviesAudio()[args.positionFromMovieFragment].fourthAnswer
+                    Client().getMoviesAudio()[1].fourthAnswer
 
             }
             2 -> {
                 binding.tvQuestion.text =
 
-                    Client().getMoviesAudio()[args.positionFromMovieFragment].question
+                    Client().getMoviesAudio()[2].question
 
 
                 binding.btnAnswer1.text =
-                    Client().getMoviesAudio()[args.positionFromMovieFragment].firstAnswer
+                    Client().getMoviesAudio()[2].firstAnswer
                 binding.btnAnswer2.text =
-                    Client().getMoviesAudio()[args.positionFromMovieFragment].secondAnswer
+                    Client().getMoviesAudio()[2].secondAnswer
                 binding.btnAnswer3.text =
-                    Client().getMoviesAudio()[args.positionFromMovieFragment].thirdAnswer
+                    Client().getMoviesAudio()[2].thirdAnswer
                 binding.btnAnswer4.text =
-                    Client().getMoviesAudio()[args.positionFromMovieFragment].fourthAnswer
+                    Client().getMoviesAudio()[2].fourthAnswer
             }
             3 -> {
                 binding.tvQuestion.text =
-                    Client().getMoviesAudio()[args.positionFromMovieFragment].question
+                    Client().getMoviesAudio()[3].question
                 binding.btnAnswer1.text =
-                    Client().getMoviesAudio()[args.positionFromMovieFragment].firstAnswer
+                    Client().getMoviesAudio()[3].firstAnswer
                 binding.btnAnswer2.text =
-                    Client().getMoviesAudio()[args.positionFromMovieFragment].secondAnswer
+                    Client().getMoviesAudio()[3].secondAnswer
                 binding.btnAnswer3.text =
-                    Client().getMoviesAudio()[args.positionFromMovieFragment].thirdAnswer
+                    Client().getMoviesAudio()[3].thirdAnswer
                 binding.btnAnswer4.text =
-                    Client().getMoviesAudio()[args.positionFromMovieFragment].fourthAnswer
+                    Client().getMoviesAudio()[3].fourthAnswer
             }
 
         }
@@ -79,32 +86,44 @@ class AudioTestFragment :
 
     }
 
-    override fun initClickers() = with(binding) {
-        btnAnswer1.setOnClickListener {
 
-            if (btnAnswer1.text == Client().getMoviesAudio()[args.positionFromMovieFragment].correctAnswer)
+    override fun initClickers() {
+        binding.apply {
+            btnAnswer1.setOnClickListener {
+                if (Client().getMoviesAudio()[args.positionFromMovieFragment].firstAnswer == Client().getMoviesAudio()[args.positionFromMovieFragment].correctAnswer)
+                    dialog.show(parentFragmentManager, "dialog opened")
+                AudioTestFragmentDirections.actionAudioTestFragmentToMovieFragment(args.positionFromMovieFragment)
+            }
+            btnAnswer2.setOnClickListener {
+                if (Client().getMoviesAudio()[args.positionFromMovieFragment].secondAnswer == Client().getMoviesAudio()[args.positionFromMovieFragment].correctAnswer)
+                    AudioTestFragmentDirections.actionAudioTestFragmentToMovieFragment(args.positionFromMovieFragment)
+                dialog.show(parentFragmentManager, "dialog opened")
 
-                Toast.makeText(requireContext(), "Congratulations", Toast.LENGTH_SHORT)
+            }
+            btnAnswer3.setOnClickListener {
+                if (Client().getMoviesAudio()[args.positionFromMovieFragment].thirdAnswer == Client().getMoviesAudio()[args.positionFromMovieFragment].correctAnswer)
+                    dialog.show(parentFragmentManager, "dialog opened")
+                AudioTestFragmentDirections.actionAudioTestFragmentToMovieFragment(args.positionFromMovieFragment)
+            }
+            btnAnswer4.setOnClickListener {
+                if (Client().getMoviesAudio()[args.positionFromMovieFragment].fourthAnswer == Client().getMoviesAudio()[args.positionFromMovieFragment].correctAnswer)
+                    AudioTestFragmentDirections.actionAudioTestFragmentToMovieFragment(args.positionFromMovieFragment)
+                    dialog.show(parentFragmentManager, "dialog opened")
+
+
+            }
         }
-        btnAnswer2.setOnClickListener {
-
-            if (btnAnswer2.text == Client().getMoviesAudio()[args.positionFromMovieFragment].correctAnswer)
-                Toast.makeText(requireContext(), "Nice", Toast.LENGTH_SHORT)
-
-        }
-        btnAnswer3.setOnClickListener {
-
-            if (btnAnswer3.text == Client().getMoviesAudio()[args.positionFromMovieFragment].correctAnswer)
-                Toast.makeText(requireContext(), "Nice", Toast.LENGTH_SHORT)
-        }
-        btnAnswer4.setOnClickListener {
-
-            if (btnAnswer4.text == Client().getMoviesAudio()[args.positionFromMovieFragment].correctAnswer)
-                Toast.makeText(requireContext(), "Nice", Toast.LENGTH_SHORT)
-        }
-
 
     }
 
 
 }
+
+
+
+
+
+
+
+
+

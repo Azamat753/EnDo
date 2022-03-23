@@ -2,4 +2,5 @@
 <resources>
     <color name="test_button_color">#3EB9E1</color>
     <color name="visualizer_bar_color">#12aaf0</color>
+    <color name="pidr">#1DAAF0</color>
 </resources>

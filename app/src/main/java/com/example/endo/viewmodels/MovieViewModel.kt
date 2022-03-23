@@ -12,9 +12,10 @@ class MovieViewModel @Inject constructor(
     private val playerRepository: PlayerRepository,
 
     ) : ViewModel() {
-    fun play(@ApplicationContext context: Context, audio: Int): Int {
-        return playerRepository.playAMovie(context, audio)
-    }
+    fun play(@ApplicationContext context: Context, audio: Int): Int =
+
+        playerRepository.playAMovie(context, audio)
+
 
     fun pause() {
         playerRepository.pauseAMovie()
@@ -23,10 +24,6 @@ class MovieViewModel @Inject constructor(
     fun releasePlayer() {
         playerRepository.releasePlayer()
     }
-
-//    fun getMoviesAudio(): Int {
-//        return playerRepository.getMoviesAudio()
-//    }
 
 
 }
