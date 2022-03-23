@@ -126,7 +126,7 @@
     </fragment>
     <fragment
         android:id="@+id/movieResultFragment"
-        android:name="com.example.endo.fragments.listeningflow.MovieResultFragment"
+        android:name="com.example.endo.fragments.listeningflow.AudioResultFragment"
         android:label="fragment_movie_result"
         tools:layout="@layout/fragment_movie_result" />
 

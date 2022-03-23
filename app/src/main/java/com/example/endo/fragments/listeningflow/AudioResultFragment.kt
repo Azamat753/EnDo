@@ -4,7 +4,7 @@ import com.example.core.base.BaseFragment
 import com.example.endo.databinding.FragmentMovieResultBinding
 
 
-class MovieResultFragment :
+class AudioResultFragment :
     BaseFragment<FragmentMovieResultBinding>(FragmentMovieResultBinding::inflate) {
 
     override fun initObserver() {

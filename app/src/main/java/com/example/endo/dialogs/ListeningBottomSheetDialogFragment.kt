@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
+import androidx.navigation.fragment.findNavController
 import com.example.endo.databinding.FragmentListeningBottomSheetDialogBinding
 
 class ListeningBottomSheetDialogFragment : DialogFragment(
@@ -27,10 +28,13 @@ class ListeningBottomSheetDialogFragment : DialogFragment(
     private fun initListeners() = with(binding) {
         btnContinue.setOnClickListener {
             dismiss()
+//            findNavController().navigate()
 
         }
 
         btnHaveARest.setOnClickListener {
+ //           findNavController().navigate()
+            dismiss()
 
         }
 
