@@ -32,8 +32,8 @@ class CustomListeningDialogFragment : DialogFragment(
     private fun initListeners() = with(binding) {
         btnContinue.setOnClickListener {
             dismiss()
-            viewModel.putCount(viewModel.getCount()!!)
             findNavController().navigate(R.id.audioTestFragment)
+
 
 
         }
