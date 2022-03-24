@@ -2,6 +2,7 @@ package com.example.endo.fragments.listeningflow
 
 import androidx.navigation.fragment.navArgs
 import com.example.core.base.BaseFragment
+import com.example.core.utils.CommonFunction
 import com.example.endo.databinding.FragmentAudioTestBinding
 import com.example.endo.dialogs.CustomListeningDialogFragment
 import com.example.endo.local.Client
@@ -17,7 +18,6 @@ class AudioTestFragment :
 
     override fun setupViews() {
         getArgs()
-        args.positionFromMovieFragment + 1
 
     }
 
@@ -91,24 +91,39 @@ class AudioTestFragment :
         binding.apply {
             btnAnswer1.setOnClickListener {
                 if (Client().getMoviesAudio()[args.positionFromMovieFragment].firstAnswer == Client().getMoviesAudio()[args.positionFromMovieFragment].correctAnswer)
-                    dialog.show(parentFragmentManager, "dialog opened")
-                AudioTestFragmentDirections.actionAudioTestFragmentToMovieFragment(args.positionFromMovieFragment)
+
+                    CommonFunction.showCustomDialog(
+                        CustomListeningDialogFragment(),
+                        requireActivity(), "opened"
+                    )
+
             }
             btnAnswer2.setOnClickListener {
                 if (Client().getMoviesAudio()[args.positionFromMovieFragment].secondAnswer == Client().getMoviesAudio()[args.positionFromMovieFragment].correctAnswer)
-                    AudioTestFragmentDirections.actionAudioTestFragmentToMovieFragment(args.positionFromMovieFragment)
-                dialog.show(parentFragmentManager, "dialog opened")
+
+                    CommonFunction.showCustomDialog(
+                        CustomListeningDialogFragment(),
+                        requireActivity(),
+                        "opened"
+                    )
 
             }
             btnAnswer3.setOnClickListener {
                 if (Client().getMoviesAudio()[args.positionFromMovieFragment].thirdAnswer == Client().getMoviesAudio()[args.positionFromMovieFragment].correctAnswer)
-                    dialog.show(parentFragmentManager, "dialog opened")
-                AudioTestFragmentDirections.actionAudioTestFragmentToMovieFragment(args.positionFromMovieFragment)
+                    CommonFunction.showCustomDialog(
+                        CustomListeningDialogFragment(),
+                        requireActivity(),
+                        "opened"
+                    )
+
             }
             btnAnswer4.setOnClickListener {
                 if (Client().getMoviesAudio()[args.positionFromMovieFragment].fourthAnswer == Client().getMoviesAudio()[args.positionFromMovieFragment].correctAnswer)
-                    AudioTestFragmentDirections.actionAudioTestFragmentToMovieFragment(args.positionFromMovieFragment)
-                    dialog.show(parentFragmentManager, "dialog opened")
+                    CommonFunction.showCustomDialog(
+                        CustomListeningDialogFragment(),
+                        requireActivity(),
+                        "opened"
+                    )
 
 
             }
