@@ -24,7 +24,6 @@ class CustomListeningDialogFragment : DialogFragment(
 
         dialog?.requestWindowFeature(Window.FEATURE_NO_TITLE)
         dialog?.setCancelable(false)
-        dialog?.window
         binding = FragmentListeningBottomSheetDialogBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -33,6 +32,12 @@ class CustomListeningDialogFragment : DialogFragment(
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initListeners()
+        iconReplacementDependingOnArgs()
+    }
+
+    private fun iconReplacementDependingOnArgs() {
+
+
     }
 
     private fun initListeners() = with(binding) {

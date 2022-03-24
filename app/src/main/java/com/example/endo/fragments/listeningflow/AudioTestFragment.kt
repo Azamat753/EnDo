@@ -3,7 +3,6 @@ package com.example.endo.fragments.listeningflow
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.core.base.BaseFragment
-import com.example.core.utils.CommonFunction
 import com.example.endo.R
 import com.example.endo.databinding.FragmentAudioTestBinding
 import com.example.endo.dialogs.CustomListeningDialogFragment
@@ -15,6 +14,9 @@ class AudioTestFragment :
     BaseFragment<FragmentAudioTestBinding>(FragmentAudioTestBinding::inflate) {
     val dialog = CustomListeningDialogFragment()
     private var currentPos = 0
+    private var rightAnswers = 0
+    private var mistakes = 0
+    private var time = 0
     private val args: AudioTestFragmentArgs by navArgs()
 
 
@@ -93,34 +95,43 @@ class AudioTestFragment :
         binding.apply {
             btnAnswer1.setOnClickListener {
                 if (Client().getMoviesAudio()[args.positionFromMovieFragment].firstAnswer == Client().getMoviesAudio()[args.positionFromMovieFragment].correctAnswer)
+                    rightAnswers + 1
 
 
-                    findNavController().navigate(R.id.customListeningDialogFragment)
+                findNavController().navigate(R.id.customListeningDialogFragment)
 
             }
             btnAnswer2.setOnClickListener {
-                if (Client().getMoviesAudio()[args.positionFromMovieFragment].secondAnswer == Client().getMoviesAudio()[args.positionFromMovieFragment].correctAnswer)
+                if (Client().getMoviesAudio()[args.positionFromMovieFragment].secondAnswer == Client().getMoviesAudio()[args.positionFromMovieFragment].correctAnswer) {
+                    rightAnswers + 1
+                    findNavController().navigate(AudioTestFragmentDirections.actionAudioTestFragmentToCustomListeningDialogFragment())
 
-                    CommonFunction.showCustomDialog(
-                        CustomListeningDialogFragment(),
-                        requireActivity(),
-                        "opened"
-                    )
+                } else {
+                    mistakes + 1
+                    findNavController().navigate(AudioTestFragmentDirections.actionAudioTestFragmentToCustomListeningDialogFragment())
+                }
 
             }
             btnAnswer3.setOnClickListener {
-                if (Client().getMoviesAudio()[args.positionFromMovieFragment].thirdAnswer == Client().getMoviesAudio()[args.positionFromMovieFragment].correctAnswer)
+                if (Client().getMoviesAudio()[args.positionFromMovieFragment].thirdAnswer == Client().getMoviesAudio()[args.positionFromMovieFragment].correctAnswer) {
+
+                    rightAnswers + 1
+                    findNavController().navigate(AudioTestFragmentDirections.actionAudioTestFragmentToCustomListeningDialogFragment())
+                } else {
+                    mistakes + 1
+                    findNavController().navigate(AudioTestFragmentDirections.actionAudioTestFragmentToCustomListeningDialogFragment())
+                }
 
 
-                    findNavController().navigate(R.id.customListeningDialogFragment)
             }
             btnAnswer4.setOnClickListener {
-                if (Client().getMoviesAudio()[args.positionFromMovieFragment].fourthAnswer == Client().getMoviesAudio()[args.positionFromMovieFragment].correctAnswer)
-                    CommonFunction.showCustomDialog(
-                        CustomListeningDialogFragment(),
-                        requireActivity(),
-                        "opened"
-                    )
+                if (Client().getMoviesAudio()[args.positionFromMovieFragment].fourthAnswer == Client().getMoviesAudio()[args.positionFromMovieFragment].correctAnswer) {
+                    rightAnswers + 1
+                    findNavController().navigate(AudioTestFragmentDirections.actionAudioTestFragmentToCustomListeningDialogFragment())
+                } else {
+                    mistakes + 1
+                    findNavController().navigate(AudioTestFragmentDirections.actionAudioTestFragmentToCustomListeningDialogFragment())
+                }
 
 
             }
