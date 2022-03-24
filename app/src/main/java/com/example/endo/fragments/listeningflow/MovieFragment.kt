@@ -4,7 +4,6 @@ import android.content.res.ColorStateList
 import android.graphics.Color
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import androidx.navigation.fragment.navArgs
 import com.example.core.base.BaseFragment
 import com.example.core.extensions.requireAudioPermission
 import com.example.endo.databinding.FragmentMovieBinding
@@ -17,7 +16,6 @@ import dagger.hilt.android.AndroidEntryPoint
 class MovieFragment : BaseFragment<FragmentMovieBinding>(FragmentMovieBinding::inflate) {
     private val viewModel: MovieViewModel by viewModels()
 
-    private val args: MovieFragmentArgs by navArgs()
     private var currentPos = 0
 
     override fun initObserver() {
@@ -53,7 +51,7 @@ class MovieFragment : BaseFragment<FragmentMovieBinding>(FragmentMovieBinding::i
         btnContinue.setOnClickListener {
             findNavController().navigate(
                 MovieFragmentDirections.actionMovieFragmentToAudioTestFragment(
-                    currentPos
+                    currentPos, currentPos
                 )
             )
 
@@ -61,10 +59,6 @@ class MovieFragment : BaseFragment<FragmentMovieBinding>(FragmentMovieBinding::i
             visualizerBar.release()
 
         }
-
-    }
-
-    override fun setArgsValue() {
 
     }
 

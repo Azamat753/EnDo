@@ -112,6 +112,7 @@
             android:name="positionFromDialog"
             app:argType="integer" />
 
+
     </fragment>
     <fragment
         android:id="@+id/audioBooksFragment"
@@ -130,12 +131,30 @@
         <action
             android:id="@+id/action_audioTestFragment_to_movieFragment"
             app:destination="@id/movieFragment" />
+        <argument
+            android:name="amountOfAudioListenedTo"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_audioTestFragment_to_customListeningDialogFragment"
+            app:destination="@id/customListeningDialogFragment" />
     </fragment>
     <fragment
         android:id="@+id/audioResultFragment"
         android:name="com.example.endo.fragments.listeningflow.AudioResultFragment"
         android:label="fragment_movie_result"
-        tools:layout="@layout/fragment_audio_result" />
+        tools:layout="@layout/fragment_audio_result" >
+        <argument
+            android:name="audioListenedTo"
+            app:argType="integer" />
+        <argument android:name="time"
+            app:argType="integer" />
+        <argument
+            android:name="amountOfRightAnswers"
+            app:argType="integer" />
+        <argument
+            android:name="amountOfMistakes"
+            app:argType="integer" />
+    </fragment>
     <dialog
         android:id="@+id/customListeningDialogFragment"
         android:name="com.example.endo.dialogs.CustomListeningDialogFragment"
@@ -146,6 +165,19 @@
             app:destination="@id/movieFragment" />
         <argument
             android:name="positionFromAudioTest"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_customListeningDialogFragment_to_audioResultFragment"
+            app:destination="@id/audioResultFragment" />
+        <argument
+            android:name="timeFromTests"
+            app:argType="integer" />
+        <argument android:name="amountOfRightAnswers"
+            app:argType="integer" />
+        <argument android:name="amountOfMistakes"
+            app:argType="integer" />
+        <argument
+            android:name="totalAudioListened"
             app:argType="integer" />
     </dialog>
 
