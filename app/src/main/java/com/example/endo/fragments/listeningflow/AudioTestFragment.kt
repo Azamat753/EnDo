@@ -1,8 +1,10 @@
 package com.example.endo.fragments.listeningflow
 
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.core.base.BaseFragment
 import com.example.core.utils.CommonFunction
+import com.example.endo.R
 import com.example.endo.databinding.FragmentAudioTestBinding
 import com.example.endo.dialogs.CustomListeningDialogFragment
 import com.example.endo.local.Client
@@ -92,10 +94,8 @@ class AudioTestFragment :
             btnAnswer1.setOnClickListener {
                 if (Client().getMoviesAudio()[args.positionFromMovieFragment].firstAnswer == Client().getMoviesAudio()[args.positionFromMovieFragment].correctAnswer)
 
-                    CommonFunction.showCustomDialog(
-                        CustomListeningDialogFragment(),
-                        requireActivity(), "opened"
-                    )
+
+                    findNavController().navigate(R.id.customListeningDialogFragment)
 
             }
             btnAnswer2.setOnClickListener {
@@ -110,12 +110,9 @@ class AudioTestFragment :
             }
             btnAnswer3.setOnClickListener {
                 if (Client().getMoviesAudio()[args.positionFromMovieFragment].thirdAnswer == Client().getMoviesAudio()[args.positionFromMovieFragment].correctAnswer)
-                    CommonFunction.showCustomDialog(
-                        CustomListeningDialogFragment(),
-                        requireActivity(),
-                        "opened"
-                    )
 
+
+                    findNavController().navigate(R.id.customListeningDialogFragment)
             }
             btnAnswer4.setOnClickListener {
                 if (Client().getMoviesAudio()[args.positionFromMovieFragment].fourthAnswer == Client().getMoviesAudio()[args.positionFromMovieFragment].correctAnswer)
