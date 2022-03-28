@@ -8,6 +8,7 @@ import com.example.endo.databinding.FragmentAudioTestBinding
 import com.example.endo.dialogs.CustomListeningDialogFragment
 import com.example.endo.local.Client
 import dagger.hilt.android.AndroidEntryPoint
+import java.util.*
 
 @AndroidEntryPoint
 class AudioTestFragment :
@@ -104,7 +105,9 @@ class AudioTestFragment :
             btnAnswer2.setOnClickListener {
                 if (Client().getMoviesAudio()[args.positionFromMovieFragment].secondAnswer == Client().getMoviesAudio()[args.positionFromMovieFragment].correctAnswer) {
                     rightAnswers + 1
-                    findNavController().navigate(AudioTestFragmentDirections.actionAudioTestFragmentToCustomListeningDialogFragment())
+                    findNavController().navigate(AudioTestFragmentDirections.actionAudioTestFragmentToCustomListeningDialogFragment(rightAnswers,mistakes))
+                    val timer = Timer()
+                    timer.
 
                 } else {
                     mistakes + 1
