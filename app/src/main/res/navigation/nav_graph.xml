@@ -142,11 +142,12 @@
         android:id="@+id/audioResultFragment"
         android:name="com.example.endo.fragments.listeningflow.AudioResultFragment"
         android:label="fragment_movie_result"
-        tools:layout="@layout/fragment_audio_result" >
+        tools:layout="@layout/fragment_audio_result">
         <argument
             android:name="audioListenedTo"
             app:argType="integer" />
-        <argument android:name="time"
+        <argument
+            android:name="time"
             app:argType="integer" />
         <argument
             android:name="amountOfRightAnswers"
@@ -172,13 +173,18 @@
         <argument
             android:name="timeFromTests"
             app:argType="integer" />
-        <argument android:name="amountOfRightAnswers"
+        <argument
+            android:name="amountOfRightAnswers"
             app:argType="integer" />
-        <argument android:name="amountOfMistakes"
+        <argument
+            android:name="amountOfMistakes"
             app:argType="integer" />
         <argument
             android:name="totalAudioListened"
             app:argType="integer" />
+        <argument
+            android:name="rightOrNot"
+            app:argType="boolean" />
     </dialog>
 
 </navigation>

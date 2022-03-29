@@ -3,17 +3,14 @@ package com.example.endo.fragments.listeningflow
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.core.base.BaseFragment
-import com.example.endo.R
 import com.example.endo.databinding.FragmentAudioTestBinding
-import com.example.endo.dialogs.CustomListeningDialogFragment
 import com.example.endo.local.Client
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class AudioTestFragment :
     BaseFragment<FragmentAudioTestBinding>(FragmentAudioTestBinding::inflate) {
-    val dialog = CustomListeningDialogFragment()
-    private var currentPos = 0
+
     private var rightAnswers = 0
     private var mistakes = 0
     private var time = 0
@@ -26,6 +23,19 @@ class AudioTestFragment :
     }
 
     private fun getArgs() {
+        getMusicArgs()
+        getMovieArgs()
+        getBooksArgs()
+
+    }
+
+    private fun getMusicArgs() {
+        when(args.positionFromMovieFragment) {
+
+        }
+    }
+
+    private fun getMovieArgs() {
         when (args.positionFromMovieFragment) {
 
             0 -> {
@@ -56,9 +66,7 @@ class AudioTestFragment :
             }
             2 -> {
                 binding.tvQuestion.text =
-
                     Client().getMoviesAudio()[2].question
-
 
                 binding.btnAnswer1.text =
                     Client().getMoviesAudio()[2].firstAnswer
@@ -86,7 +94,11 @@ class AudioTestFragment :
 
     }
 
+    private fun getBooksArgs() {
+    }
+
     override fun initObserver() {
+
 
     }
 
@@ -94,44 +106,133 @@ class AudioTestFragment :
     override fun initClickers() {
         binding.apply {
             btnAnswer1.setOnClickListener {
-                if (Client().getMoviesAudio()[args.positionFromMovieFragment].firstAnswer == Client().getMoviesAudio()[args.positionFromMovieFragment].correctAnswer)
-                    rightAnswers + 1
+                if (Client().getMoviesAudio()[args.positionFromMovieFragment].firstAnswer == Client().getMoviesAudio()[args.positionFromMovieFragment].correctAnswer) {
 
+                    findNavController().navigate(
+                        AudioTestFragmentDirections.actionAudioTestFragmentToCustomListeningDialogFragment(
+                            args.positionFromMovieFragment,
+                            0,
+                            rightAnswers,
+                            mistakes,
+                            args.amountOfAudioListenedTo,
+                            true
+                        )
+                    )
 
-                findNavController().navigate(R.id.customListeningDialogFragment)
+                } else {
+                    mistakes + 1
+
+                    findNavController().navigate(
+                        AudioTestFragmentDirections.actionAudioTestFragmentToCustomListeningDialogFragment(
+                            args.positionFromMovieFragment,
+                            0,
+                            rightAnswers,
+                            mistakes,
+                            args.amountOfAudioListenedTo,
+                            false
+                        )
+                    )
+                }
+                args.positionFromMovieFragment + 1
+                args.amountOfAudioListenedTo + 1
+
 
             }
             btnAnswer2.setOnClickListener {
                 if (Client().getMoviesAudio()[args.positionFromMovieFragment].secondAnswer == Client().getMoviesAudio()[args.positionFromMovieFragment].correctAnswer) {
                     rightAnswers + 1
-                    findNavController().navigate(AudioTestFragmentDirections.actionAudioTestFragmentToCustomListeningDialogFragment())
+
+
+                    findNavController().navigate(
+                        AudioTestFragmentDirections.actionAudioTestFragmentToCustomListeningDialogFragment(
+                            args.positionFromMovieFragment,
+                            0,
+                            rightAnswers,
+                            mistakes,
+                            args.amountOfAudioListenedTo,
+                            true
+                        )
+                    )
 
                 } else {
                     mistakes + 1
-                    findNavController().navigate(AudioTestFragmentDirections.actionAudioTestFragmentToCustomListeningDialogFragment())
+
+                    findNavController().navigate(
+                        AudioTestFragmentDirections.actionAudioTestFragmentToCustomListeningDialogFragment(
+                            args.positionFromMovieFragment,
+                            0,
+                            rightAnswers,
+                            mistakes,
+                            args.amountOfAudioListenedTo,
+                            false
+                        )
+                    )
                 }
+                args.amountOfAudioListenedTo + 1
+
+                args.positionFromMovieFragment + 1
 
             }
             btnAnswer3.setOnClickListener {
                 if (Client().getMoviesAudio()[args.positionFromMovieFragment].thirdAnswer == Client().getMoviesAudio()[args.positionFromMovieFragment].correctAnswer) {
-
                     rightAnswers + 1
-                    findNavController().navigate(AudioTestFragmentDirections.actionAudioTestFragmentToCustomListeningDialogFragment())
+
+                    findNavController().navigate(
+                        AudioTestFragmentDirections.actionAudioTestFragmentToCustomListeningDialogFragment(
+                            args.positionFromMovieFragment,
+                            0,
+                            rightAnswers,
+                            mistakes,
+                            args.amountOfAudioListenedTo,
+                            true
+                        )
+                    )
                 } else {
                     mistakes + 1
-                    findNavController().navigate(AudioTestFragmentDirections.actionAudioTestFragmentToCustomListeningDialogFragment())
+                    findNavController().navigate(
+                        AudioTestFragmentDirections.actionAudioTestFragmentToCustomListeningDialogFragment(
+                            args.positionFromMovieFragment,
+                            0,
+                            rightAnswers,
+                            mistakes,
+                            args.amountOfAudioListenedTo,
+                            false
+                        )
+                    )
                 }
-
+                args.positionFromMovieFragment + 1
+                args.amountOfAudioListenedTo + 1
 
             }
             btnAnswer4.setOnClickListener {
                 if (Client().getMoviesAudio()[args.positionFromMovieFragment].fourthAnswer == Client().getMoviesAudio()[args.positionFromMovieFragment].correctAnswer) {
                     rightAnswers + 1
-                    findNavController().navigate(AudioTestFragmentDirections.actionAudioTestFragmentToCustomListeningDialogFragment())
+                    findNavController().navigate(
+                        AudioTestFragmentDirections.actionAudioTestFragmentToCustomListeningDialogFragment(
+                            args.positionFromMovieFragment,
+                            0,
+                            rightAnswers,
+                            mistakes,
+                            args.amountOfAudioListenedTo,
+                            false
+                        )
+                    )
                 } else {
                     mistakes + 1
-                    findNavController().navigate(AudioTestFragmentDirections.actionAudioTestFragmentToCustomListeningDialogFragment())
+                    findNavController().navigate(
+                        AudioTestFragmentDirections.actionAudioTestFragmentToCustomListeningDialogFragment(
+                            args.positionFromMovieFragment,
+                            0,
+                            rightAnswers,
+                            mistakes,
+                            args.amountOfAudioListenedTo,
+                            false
+                        )
+                    )
+
                 }
+                args.positionFromMovieFragment + 1
+                args.amountOfAudioListenedTo + 1
 
 
             }
@@ -139,14 +240,4 @@ class AudioTestFragment :
 
     }
 
-
 }
-
-
-
-
-
-
-
-
-

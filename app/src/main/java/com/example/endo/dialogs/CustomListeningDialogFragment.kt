@@ -32,13 +32,25 @@ class CustomListeningDialogFragment : DialogFragment(
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initListeners()
-        iconReplacementDependingOnArgs()
-    }
-
-    private fun iconReplacementDependingOnArgs() {
-
+        setupViews()
 
     }
+
+    private fun setupViews() {
+
+
+        viewsReplacementDependingOnArgs()
+    }
+
+    private fun viewsReplacementDependingOnArgs() {
+        if (!args.rightOrNot) {
+            binding.tvRightOrNot.text = "Попробуем еще раз?"
+            binding.imRightOrNot.setImageResource(R.drawable.mistake_icon)
+        }
+
+
+    }
+
 
     private fun initListeners() = with(binding) {
         btnContinue.setOnClickListener {
@@ -54,7 +66,15 @@ class CustomListeningDialogFragment : DialogFragment(
 
         btnHaveARest.setOnClickListener {
             dismiss()
-            findNavController().navigate(R.id.audioResultFragment)
+            findNavController().navigate(
+                CustomListeningDialogFragmentDirections.actionCustomListeningDialogFragmentToAudioResultFragment(
+                    args.totalAudioListened,
+                    args.timeFromTests,
+                    args.amountOfRightAnswers,
+                    args.amountOfMistakes
+                )
+            )
+
 
         }
 

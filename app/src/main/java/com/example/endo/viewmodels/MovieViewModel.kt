@@ -10,9 +10,10 @@ import javax.inject.Inject
 @HiltViewModel
 class MovieViewModel @Inject constructor(
     private val playerRepository: PlayerRepository,
+) : ViewModel() {
 
-    ) : ViewModel() {
     fun play(@ApplicationContext context: Context, audio: Int): Int =
+
 
         playerRepository.playAMovie(context, audio)
 

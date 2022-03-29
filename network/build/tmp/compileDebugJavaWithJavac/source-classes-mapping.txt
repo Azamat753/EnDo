@@ -1,0 +1,14 @@
+com/example/network/di/NetworkModule_ProvideTranslationApiFactory.java
+ com.example.network.di.NetworkModule_ProvideTranslationApiFactory
+ com.example.network.di.NetworkModule_ProvideTranslationApiFactory$InstanceHolder
+com/example/network/di/NetworkModule_ProvidePixabayApiFactory.java
+ com.example.network.di.NetworkModule_ProvidePixabayApiFactory
+ com.example.network.di.NetworkModule_ProvidePixabayApiFactory$InstanceHolder
+com/example/network/BuildConfig.java
+ com.example.network.BuildConfig
+com/example/network/repository/PixabayRepository_Factory.java
+ com.example.network.repository.PixabayRepository_Factory
+com/example/network/repository/TranslationRepository_Factory.java
+ com.example.network.repository.TranslationRepository_Factory
+hilt_aggregated_deps/_com_example_network_di_NetworkModule.java
+ hilt_aggregated_deps._com_example_network_di_NetworkModule
