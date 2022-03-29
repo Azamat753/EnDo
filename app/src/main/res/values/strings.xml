@@ -16,7 +16,6 @@
     <string name="understood">Понял</string>
     <string name="results">Результаты</string>
     <string name="achievements">Достижения</string>
-<<<<<<< HEAD
     <string name="music">Песни</string>
     <string name="films">Фильмы</string>
     <string name="books">Книги</string>
@@ -58,8 +57,8 @@
     <string name="amount_of_mistakes">Ошибся:</string>
     <string name="total_time">Время:</string>
 
-=======
+
     <string name="an_excerpt_from_the_song_if_i_were_a_boy_beyounce">An excerpt from the Song If i were a boy (Beyounce)</string>
     <string name="if_i_were_a_boy_beyounce">Отрывокиз Песни If i were a boy (Beyounce)</string>
->>>>>>> 773286bbf8e9be2f428d5a056e17c866367f4a9c
+    <string name="back_to_main">На главную</string>
 </resources>

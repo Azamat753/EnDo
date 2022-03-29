@@ -36,6 +36,7 @@ class CustomListeningDialogFragment : DialogFragment(
     }
 
     private fun iconReplacementDependingOnArgs() {
+        binding.imDone.setImageResource(R.drawable.mistake_icon)
 
 
     }
@@ -54,7 +55,15 @@ class CustomListeningDialogFragment : DialogFragment(
 
         btnHaveARest.setOnClickListener {
             dismiss()
-            findNavController().navigate(R.id.audioResultFragment)
+            findNavController().navigate(
+                CustomListeningDialogFragmentDirections.actionCustomListeningDialogFragmentToAudioResultFragment(
+                    args.totalAudioListened,
+                    args.timeFromTests,
+                    args.amountOfRightAnswers,
+                    args.amountOfMistakes
+                )
+            )
+
 
         }
 
