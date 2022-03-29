@@ -23,6 +23,19 @@ class AudioTestFragment :
     }
 
     private fun getArgs() {
+        getMusicArgs()
+        getMovieArgs()
+        getBooksArgs()
+
+    }
+
+    private fun getMusicArgs() {
+        when(args.positionFromMovieFragment) {
+
+        }
+    }
+
+    private fun getMovieArgs() {
         when (args.positionFromMovieFragment) {
 
             0 -> {
@@ -53,9 +66,7 @@ class AudioTestFragment :
             }
             2 -> {
                 binding.tvQuestion.text =
-
                     Client().getMoviesAudio()[2].question
-
 
                 binding.btnAnswer1.text =
                     Client().getMoviesAudio()[2].firstAnswer
@@ -81,6 +92,9 @@ class AudioTestFragment :
 
         }
 
+    }
+
+    private fun getBooksArgs() {
     }
 
     override fun initObserver() {
@@ -226,15 +240,4 @@ class AudioTestFragment :
 
     }
 
-
 }
-
-
-
-
-
-
-
-
-
-
