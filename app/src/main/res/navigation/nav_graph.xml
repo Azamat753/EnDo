@@ -182,6 +182,9 @@
         <argument
             android:name="totalAudioListened"
             app:argType="integer" />
+        <argument
+            android:name="rightOrNot"
+            app:argType="boolean" />
     </dialog>
 
 </navigation>

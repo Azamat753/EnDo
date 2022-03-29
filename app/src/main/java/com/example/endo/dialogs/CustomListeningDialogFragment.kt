@@ -32,14 +32,25 @@ class CustomListeningDialogFragment : DialogFragment(
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initListeners()
-        iconReplacementDependingOnArgs()
-    }
-
-    private fun iconReplacementDependingOnArgs() {
-        binding.imDone.setImageResource(R.drawable.mistake_icon)
-
+        setupViews()
 
     }
+
+    private fun setupViews() {
+
+
+        viewsReplacementDependingOnArgs()
+    }
+
+    private fun viewsReplacementDependingOnArgs() {
+        if (!args.rightOrNot) {
+            binding.tvRightOrNot.text = "Попробуем еще раз?"
+            binding.imRightOrNot.setImageResource(R.drawable.mistake_icon)
+        }
+
+
+    }
+
 
     private fun initListeners() = with(binding) {
         btnContinue.setOnClickListener {

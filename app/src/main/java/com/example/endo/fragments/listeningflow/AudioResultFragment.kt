@@ -23,10 +23,10 @@ class AudioResultFragment :
 
     override fun setupViews() {
 
-        setupResult()
+        showResult()
     }
 
-    private fun setupResult() {
+    private fun showResult() {
 
         binding.apply {
             tvListenedInTotal.text = args.audioListenedTo.toString()
