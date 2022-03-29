@@ -4,6 +4,7 @@ import android.content.res.ColorStateList
 import android.graphics.Color
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import com.example.core.base.BaseFragment
 import com.example.core.extensions.requireAudioPermission
 import com.example.endo.databinding.FragmentMovieBinding
@@ -16,7 +17,9 @@ import dagger.hilt.android.AndroidEntryPoint
 class MovieFragment : BaseFragment<FragmentMovieBinding>(FragmentMovieBinding::inflate) {
     private val viewModel: MovieViewModel by viewModels()
 
+    private val args: MovieFragmentArgs by navArgs()
     private var currentPos = 0
+    private var audioListenedTo: Int = 0
 
     override fun initObserver() {
 
@@ -30,6 +33,15 @@ class MovieFragment : BaseFragment<FragmentMovieBinding>(FragmentMovieBinding::i
                 btnContinue.backgroundTintList = ColorStateList.valueOf(Color.parseColor("#12aaf0"))
                 btnContinue.isEnabled = true
             }
+
+            args.positionFromDialog?.let {
+                visualizerBar.setPlayer(
+                    viewModel.play(
+                        requireContext(),
+                        Client().getMoviesAudio()[args.positionFromDialog].audio
+                    )
+                )
+            }
             requireActivity().requireAudioPermission(requireContext(), requireActivity())
             visualizerBar.setColor(Color.parseColor("#1DAAF0"))
             visualizerBar.setPlayer(
@@ -37,8 +49,10 @@ class MovieFragment : BaseFragment<FragmentMovieBinding>(FragmentMovieBinding::i
                     requireContext(),
                     Client().getMoviesAudio()[0].audio
                 )
+
             )
 
+            audioListenedTo++
 
         }
 
@@ -51,7 +65,7 @@ class MovieFragment : BaseFragment<FragmentMovieBinding>(FragmentMovieBinding::i
         btnContinue.setOnClickListener {
             findNavController().navigate(
                 MovieFragmentDirections.actionMovieFragmentToAudioTestFragment(
-                    currentPos, currentPos
+                    currentPos, audioListenedTo
                 )
             )
 
