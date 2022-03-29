@@ -4,17 +4,13 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.core.base.BaseFragment
 import com.example.endo.databinding.FragmentAudioTestBinding
-import com.example.endo.dialogs.CustomListeningDialogFragment
 import com.example.endo.local.Client
 import dagger.hilt.android.AndroidEntryPoint
-import java.util.*
 
 @AndroidEntryPoint
 class AudioTestFragment :
     BaseFragment<FragmentAudioTestBinding>(FragmentAudioTestBinding::inflate) {
-    val dialog = CustomListeningDialogFragment()
-    private var rightOrNot: Boolean = false
-    private var currentPos = 0
+
     private var rightAnswers = 0
     private var mistakes = 0
     private var time = 0
@@ -89,6 +85,7 @@ class AudioTestFragment :
 
     override fun initObserver() {
 
+
     }
 
 
@@ -96,117 +93,132 @@ class AudioTestFragment :
         binding.apply {
             btnAnswer1.setOnClickListener {
                 if (Client().getMoviesAudio()[args.positionFromMovieFragment].firstAnswer == Client().getMoviesAudio()[args.positionFromMovieFragment].correctAnswer) {
-                    args.positionFromMovieFragment + 1
-                    rightAnswers + 1
-                    rightOrNot = true
 
                     findNavController().navigate(
                         AudioTestFragmentDirections.actionAudioTestFragmentToCustomListeningDialogFragment(
                             args.positionFromMovieFragment,
+                            0,
                             rightAnswers,
                             mistakes,
-                            args.amountOfAudioListenedTo, 0, rightOrNot
+                            args.amountOfAudioListenedTo,
+                            true
                         )
                     )
 
                 } else {
-                    rightOrNot = false
-
                     mistakes + 1
+
                     findNavController().navigate(
                         AudioTestFragmentDirections.actionAudioTestFragmentToCustomListeningDialogFragment(
                             args.positionFromMovieFragment,
+                            0,
                             rightAnswers,
                             mistakes,
-                            args.amountOfAudioListenedTo
+                            args.amountOfAudioListenedTo,
+                            false
                         )
                     )
                 }
+                args.positionFromMovieFragment + 1
+                args.amountOfAudioListenedTo + 1
 
 
             }
             btnAnswer2.setOnClickListener {
                 if (Client().getMoviesAudio()[args.positionFromMovieFragment].secondAnswer == Client().getMoviesAudio()[args.positionFromMovieFragment].correctAnswer) {
                     rightAnswers + 1
-                    args.amountOfAudioListenedTo + 1
-                    rightOrNot = true
+
+
                     findNavController().navigate(
                         AudioTestFragmentDirections.actionAudioTestFragmentToCustomListeningDialogFragment(
                             args.positionFromMovieFragment,
+                            0,
                             rightAnswers,
                             mistakes,
-                            args.amountOfAudioListenedTo, 0, rightOrNot
+                            args.amountOfAudioListenedTo,
+                            true
                         )
                     )
-                    val timer = Timer()
 
                 } else {
-                    rightOrNot = false
                     mistakes + 1
+
                     findNavController().navigate(
                         AudioTestFragmentDirections.actionAudioTestFragmentToCustomListeningDialogFragment(
                             args.positionFromMovieFragment,
+                            0,
                             rightAnswers,
                             mistakes,
-                            args.amountOfAudioListenedTo, 0, rightOrNot
+                            args.amountOfAudioListenedTo,
+                            false
                         )
                     )
                 }
+                args.amountOfAudioListenedTo + 1
+
+                args.positionFromMovieFragment + 1
 
             }
             btnAnswer3.setOnClickListener {
                 if (Client().getMoviesAudio()[args.positionFromMovieFragment].thirdAnswer == Client().getMoviesAudio()[args.positionFromMovieFragment].correctAnswer) {
-
                     rightAnswers + 1
-                    rightOrNot = true
+
                     findNavController().navigate(
                         AudioTestFragmentDirections.actionAudioTestFragmentToCustomListeningDialogFragment(
                             args.positionFromMovieFragment,
+                            0,
                             rightAnswers,
                             mistakes,
-                            args.amountOfAudioListenedTo, 0, rightOrNot
+                            args.amountOfAudioListenedTo,
+                            true
                         )
                     )
                 } else {
                     mistakes + 1
-                    rightOrNot = false
                     findNavController().navigate(
                         AudioTestFragmentDirections.actionAudioTestFragmentToCustomListeningDialogFragment(
                             args.positionFromMovieFragment,
+                            0,
                             rightAnswers,
                             mistakes,
-                            args.amountOfAudioListenedTo, 0, rightOrNot
+                            args.amountOfAudioListenedTo,
+                            false
                         )
                     )
                 }
-
+                args.positionFromMovieFragment + 1
+                args.amountOfAudioListenedTo + 1
 
             }
             btnAnswer4.setOnClickListener {
                 if (Client().getMoviesAudio()[args.positionFromMovieFragment].fourthAnswer == Client().getMoviesAudio()[args.positionFromMovieFragment].correctAnswer) {
                     rightAnswers + 1
-                    rightOrNot = true
-                    args.amountOfAudioListenedTo + 1
                     findNavController().navigate(
                         AudioTestFragmentDirections.actionAudioTestFragmentToCustomListeningDialogFragment(
                             args.positionFromMovieFragment,
+                            0,
                             rightAnswers,
                             mistakes,
-                            args.amountOfAudioListenedTo, 0, rightOrNot
+                            args.amountOfAudioListenedTo,
+                            false
                         )
                     )
                 } else {
                     mistakes + 1
-                    rightOrNot = false
                     findNavController().navigate(
                         AudioTestFragmentDirections.actionAudioTestFragmentToCustomListeningDialogFragment(
                             args.positionFromMovieFragment,
+                            0,
                             rightAnswers,
                             mistakes,
-                            args.amountOfAudioListenedTo, 0, rightOrNot
+                            args.amountOfAudioListenedTo,
+                            false
                         )
+                    )
 
                 }
+                args.positionFromMovieFragment + 1
+                args.amountOfAudioListenedTo + 1
 
 
             }
@@ -216,6 +228,7 @@ class AudioTestFragment :
 
 
 }
+
 
 
 
