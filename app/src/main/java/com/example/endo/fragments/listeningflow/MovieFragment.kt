@@ -23,18 +23,13 @@ class MovieFragment : BaseFragment<FragmentMovieBinding>(FragmentMovieBinding::i
     override fun initClickers() = with(binding) {
         btnPlay.setOnClickListener {
             btnContinue.backgroundTintList = ColorStateList.valueOf(Color.parseColor("#12aaf0"))
-
             requireActivity().requireAudioPermission(requireContext(), requireActivity())
-
-            visualizerBar.isEnabled
             visualizerBar.setColor(Color.parseColor("#1DAAF0"))
-            visualizerBar.setDensity(65F)
-            visualizerBar.setPlayer(viewModel.play(requireContext(), R.raw.john_wick))
+            visualizerBar.setPlayer(viewModel.play(requireContext(), R.raw.wonder))
 
         }
 
         btnStop.setOnClickListener {
-
             viewModel.pause()
             visualizerBar.release()
 
@@ -42,11 +37,21 @@ class MovieFragment : BaseFragment<FragmentMovieBinding>(FragmentMovieBinding::i
         }
         btnContinue.setOnClickListener {
             findNavController().navigate(R.id.audioMaterialsFragment)
+            val action = MovieFragmentDirections.actionMovieFragmentToAudioTestFragment(
+                R.raw.wonder
+            )
+//            findNavController().navigate(action)
+            viewModel.pause()
+            visualizerBar.release()
 
         }
 
+    }
+
+    override fun setArgsValue() {
 
     }
+
 
     override fun onDestroy() = with(binding) {
         super.onDestroy()

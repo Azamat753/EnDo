@@ -10,20 +10,26 @@
         android:id="@+id/tv_question"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="120dp"
         android:gravity="center"
-        android:text="@string/hello_blank_fragment"
         android:textSize="@dimen/sp_18"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@tools:sample/lorem" />
+
 
     <Button
+
         android:id="@+id/btn_answer_1"
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
+        android:background="@drawable/test_button_background_no_corners"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_18"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_question"
@@ -31,9 +37,13 @@
 
     <Button
         android:id="@+id/btn_answer_2"
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
+        android:background="@drawable/test_button_background_no_corners"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_18"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btn_answer_1"
@@ -42,20 +52,27 @@
 
     <Button
         android:id="@+id/btn_answer_3"
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
+        android:background="@drawable/test_button_background_no_corners"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_18"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btn_answer_2"
-
         tools:text="@tools:sample/lorem" />
 
     <Button
         android:id="@+id/btn_answer_4"
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
+        android:background="@drawable/test_button_background_no_corners"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_18"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btn_answer_3"
@@ -70,7 +87,9 @@
         android:background="@drawable/button_rectangle_gradient_background"
         android:backgroundTint="#666666"
         android:text="@string/answer"
+        android:textAllCaps="false"
         android:textColor="@color/white"
+        android:textSize="@dimen/sp_18"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

@@ -104,11 +104,30 @@
         android:id="@+id/movieFragment"
         android:name="com.example.endo.fragments.listeningflow.MovieFragment"
         android:label="fragment_movie"
-        tools:layout="@layout/fragment_movie" />
+        tools:layout="@layout/fragment_movie">
+        <action
+            android:id="@+id/action_movieFragment_to_audioTestFragment"
+            app:destination="@id/audioTestFragment" />
+    </fragment>
     <fragment
         android:id="@+id/audioBooksFragment"
         android:name="com.example.endo.fragments.listeningflow.AudioBooksFragment"
         android:label="fragment_audio_books"
         tools:layout="@layout/fragment_audio_books" />
+    <fragment
+        android:id="@+id/audioTestFragment"
+        android:name="com.example.endo.fragments.listeningflow.AudioTestFragment"
+        android:label="fragment_audio_test"
+        tools:layout="@layout/fragment_audio_test">
+
+        <argument
+            android:name="audioFromMovieFragment"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/movieResultFragment"
+        android:name="com.example.endo.fragments.listeningflow.MovieResultFragment"
+        android:label="fragment_movie_result"
+        tools:layout="@layout/fragment_movie_result" />
 
 </navigation>

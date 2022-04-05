@@ -1,4 +1,4 @@
-package com.example.endo.bottomsheetdialogs
+package com.example.endo.dialogs
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -17,6 +17,23 @@ class ListeningBottomSheetDialogFragment : DialogFragment(
     ): View? {
         binding = FragmentListeningBottomSheetDialogBinding.inflate(inflater, container, false)
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        initListeners()
+    }
+
+    private fun initListeners() = with(binding) {
+        btnContinue.setOnClickListener {
+            dismiss()
+
+        }
+
+        btnHaveARest.setOnClickListener {
+
+        }
+
     }
 
 }

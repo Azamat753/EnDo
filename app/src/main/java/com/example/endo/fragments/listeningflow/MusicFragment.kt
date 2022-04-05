@@ -52,9 +52,9 @@ class MusicFragment : BaseFragment<FragmentMusicBinding>(FragmentMusicBinding::i
     }
 
     override fun onDestroy() = with(binding) {
-        super.onDestroy()
         visualizerBar.release()
         viewModel.releasePlayer()
+        super.onDestroy()
     }
 
 }

@@ -6,11 +6,13 @@ import dagger.hilt.android.qualifiers.ApplicationContext
 import javax.inject.Inject
 
 class PlayerRepository @Inject constructor(
-    private var mediaPlayer: MediaPlayer?
+    private var mediaPlayer: MediaPlayer?,
+//    private var audioModel: AudioModel
 ) {
     fun playAMovie(@ApplicationContext context: Context, audio: Int): Int {
         mediaPlayer = MediaPlayer.create(context, audio)
         mediaPlayer?.start()
+//        audioModel = AudioModel(audio)
         return mediaPlayer!!.audioSessionId
     }
 
@@ -22,6 +24,11 @@ class PlayerRepository @Inject constructor(
         mediaPlayer?.release()
         mediaPlayer = null
     }
+
+//    fun getAudio(): Int {
+//        return audioModel.audio
+//
+//    }
 
 
 }
