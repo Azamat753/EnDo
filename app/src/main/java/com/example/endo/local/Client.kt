@@ -4,9 +4,9 @@ import com.example.endo.R
 import com.example.endo.models.QuestionModel
 
 class Client {
-    fun getMoviesAudio(): List<QuestionModel> {
+    fun getMovies(): List<QuestionModel> {
 
-        var list = ArrayList<QuestionModel>()
+        val list = ArrayList<QuestionModel>()
         list.add(
             QuestionModel(
                 R.raw.john_wick,
@@ -53,5 +53,16 @@ class Client {
         )
         return list
 
+    }
+
+    fun getBooks(): List<QuestionModel> {
+
+        val list = ArrayList<QuestionModel>()
+
+        list.add(QuestionModel(R.raw.three_questions_tolstoy, "", "", "", "", "", ""))
+        list.add(QuestionModel(R.raw.on_the_rainy_river, "", "", "", "", "", ""))
+        list.add(QuestionModel(R.raw.the_boat, "", "", "", "", "", ""))
+        list.add(QuestionModel(R.raw.art_of_war, "", "", "", "", "", ""))
+        return list
     }
 }

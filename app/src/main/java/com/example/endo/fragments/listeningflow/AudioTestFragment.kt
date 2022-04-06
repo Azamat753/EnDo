@@ -30,7 +30,8 @@ class AudioTestFragment :
     }
 
     private fun getMusicArgs() {
-        when(args.positionFromMovieFragment) {
+        when (args.positionFromMovieFragment) {
+
 
         }
     }
@@ -40,54 +41,54 @@ class AudioTestFragment :
 
             0 -> {
                 binding.tvQuestion.text =
-                    Client().getMoviesAudio()[0].question
+                    Client().getMovies()[0].question
 
                 binding.btnAnswer1.text =
-                    Client().getMoviesAudio()[0].firstAnswer
+                    Client().getMovies()[0].firstAnswer
                 binding.btnAnswer2.text =
-                    Client().getMoviesAudio()[0].secondAnswer
+                    Client().getMovies()[0].secondAnswer
                 binding.btnAnswer3.text =
-                    Client().getMoviesAudio()[0].thirdAnswer
+                    Client().getMovies()[0].thirdAnswer
                 binding.btnAnswer4.text =
-                    Client().getMoviesAudio()[0].fourthAnswer
+                    Client().getMovies()[0].fourthAnswer
             }
             1 -> {
                 binding.tvQuestion.text =
-                    Client().getMoviesAudio()[1].question
+                    Client().getMovies()[1].question
                 binding.btnAnswer1.text =
-                    Client().getMoviesAudio()[1].firstAnswer
+                    Client().getMovies()[1].firstAnswer
                 binding.btnAnswer2.text =
-                    Client().getMoviesAudio()[1].secondAnswer
+                    Client().getMovies()[1].secondAnswer
                 binding.btnAnswer3.text =
-                    Client().getMoviesAudio()[1].thirdAnswer
+                    Client().getMovies()[1].thirdAnswer
                 binding.btnAnswer4.text =
-                    Client().getMoviesAudio()[1].fourthAnswer
+                    Client().getMovies()[1].fourthAnswer
 
             }
             2 -> {
                 binding.tvQuestion.text =
-                    Client().getMoviesAudio()[2].question
+                    Client().getMovies()[2].question
 
                 binding.btnAnswer1.text =
-                    Client().getMoviesAudio()[2].firstAnswer
+                    Client().getMovies()[2].firstAnswer
                 binding.btnAnswer2.text =
-                    Client().getMoviesAudio()[2].secondAnswer
+                    Client().getMovies()[2].secondAnswer
                 binding.btnAnswer3.text =
-                    Client().getMoviesAudio()[2].thirdAnswer
+                    Client().getMovies()[2].thirdAnswer
                 binding.btnAnswer4.text =
-                    Client().getMoviesAudio()[2].fourthAnswer
+                    Client().getMovies()[2].fourthAnswer
             }
             3 -> {
                 binding.tvQuestion.text =
-                    Client().getMoviesAudio()[3].question
+                    Client().getMovies()[3].question
                 binding.btnAnswer1.text =
-                    Client().getMoviesAudio()[3].firstAnswer
+                    Client().getMovies()[3].firstAnswer
                 binding.btnAnswer2.text =
-                    Client().getMoviesAudio()[3].secondAnswer
+                    Client().getMovies()[3].secondAnswer
                 binding.btnAnswer3.text =
-                    Client().getMoviesAudio()[3].thirdAnswer
+                    Client().getMovies()[3].thirdAnswer
                 binding.btnAnswer4.text =
-                    Client().getMoviesAudio()[3].fourthAnswer
+                    Client().getMovies()[3].fourthAnswer
             }
 
         }
@@ -106,7 +107,7 @@ class AudioTestFragment :
     override fun initClickers() {
         binding.apply {
             btnAnswer1.setOnClickListener {
-                if (Client().getMoviesAudio()[args.positionFromMovieFragment].firstAnswer == Client().getMoviesAudio()[args.positionFromMovieFragment].correctAnswer) {
+                if (Client().getMovies()[args.positionFromMovieFragment].firstAnswer == Client().getMovies()[args.positionFromMovieFragment].correctAnswer) {
 
                     findNavController().navigate(
                         AudioTestFragmentDirections.actionAudioTestFragmentToCustomListeningDialogFragment(
@@ -139,7 +140,7 @@ class AudioTestFragment :
 
             }
             btnAnswer2.setOnClickListener {
-                if (Client().getMoviesAudio()[args.positionFromMovieFragment].secondAnswer == Client().getMoviesAudio()[args.positionFromMovieFragment].correctAnswer) {
+                if (Client().getMovies()[args.positionFromMovieFragment].secondAnswer == Client().getMovies()[args.positionFromMovieFragment].correctAnswer) {
                     rightAnswers + 1
 
 
@@ -174,7 +175,7 @@ class AudioTestFragment :
 
             }
             btnAnswer3.setOnClickListener {
-                if (Client().getMoviesAudio()[args.positionFromMovieFragment].thirdAnswer == Client().getMoviesAudio()[args.positionFromMovieFragment].correctAnswer) {
+                if (Client().getMovies()[args.positionFromMovieFragment].thirdAnswer == Client().getMovies()[args.positionFromMovieFragment].correctAnswer) {
                     rightAnswers + 1
 
                     findNavController().navigate(
@@ -205,7 +206,7 @@ class AudioTestFragment :
 
             }
             btnAnswer4.setOnClickListener {
-                if (Client().getMoviesAudio()[args.positionFromMovieFragment].fourthAnswer == Client().getMoviesAudio()[args.positionFromMovieFragment].correctAnswer) {
+                if (Client().getMovies()[args.positionFromMovieFragment].fourthAnswer == Client().getMovies()[args.positionFromMovieFragment].correctAnswer) {
                     rightAnswers + 1
                     findNavController().navigate(
                         AudioTestFragmentDirections.actionAudioTestFragmentToCustomListeningDialogFragment(

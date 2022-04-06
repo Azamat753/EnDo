@@ -118,7 +118,13 @@
         android:id="@+id/audioBooksFragment"
         android:name="com.example.endo.fragments.listeningflow.AudioBooksFragment"
         android:label="fragment_audio_books"
-        tools:layout="@layout/fragment_audio_books" />
+        tools:layout="@layout/fragment_audio_books" >
+        <argument android:name="positionFromDialog"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_audioBooksFragment_to_audioTestFragment"
+            app:destination="@id/audioTestFragment" />
+    </fragment>
     <fragment
         android:id="@+id/audioTestFragment"
         android:name="com.example.endo.fragments.listeningflow.AudioTestFragment"
@@ -126,7 +132,7 @@
         tools:layout="@layout/fragment_audio_test">
 
         <argument
-            android:name="positionFromMovieFragment"
+            android:name="positionFromAudioFragments"
             app:argType="integer" />
         <action
             android:id="@+id/action_audioTestFragment_to_movieFragment"
@@ -185,6 +191,9 @@
         <argument
             android:name="rightOrNot"
             app:argType="boolean" />
+        <action
+            android:id="@+id/action_customListeningDialogFragment_to_audioBooksFragment"
+            app:destination="@id/audioBooksFragment" />
     </dialog>
 
 </navigation>

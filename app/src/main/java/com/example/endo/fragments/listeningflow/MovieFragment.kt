@@ -16,17 +16,14 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class MovieFragment : BaseFragment<FragmentMovieBinding>(FragmentMovieBinding::inflate) {
     private val viewModel: MovieViewModel by viewModels()
-
     private val args: MovieFragmentArgs by navArgs()
     private var currentPos = 0
     private var audioListenedTo: Int = 0
-
     override fun initObserver() {
 
     }
 
     override fun initClickers() = with(binding) {
-        btnContinue.isEnabled = false
         btnPlay.setOnClickListener {
             if (btnPlay.isPressed) {
 
@@ -34,26 +31,30 @@ class MovieFragment : BaseFragment<FragmentMovieBinding>(FragmentMovieBinding::i
                 btnContinue.isEnabled = true
             }
 
-            args.positionFromDialog?.let {
+
+            requireAudioPermission(requireContext(), requireActivity())
+            if (args.positionFromDialog != null) {
                 visualizerBar.setPlayer(
                     viewModel.play(
                         requireContext(),
-                        Client().getMoviesAudio()[args.positionFromDialog].audio
+                        Client().getMovies()[args.positionFromDialog].audio
                     )
+
                 )
+
+            } else {
+
+                visualizerBar.setPlayer(
+                    viewModel.play(
+                        requireContext(),
+                        Client().getMovies()[0].audio
+                    )
+
+                )
+
             }
-            requireActivity().requireAudioPermission(requireContext(), requireActivity())
             visualizerBar.setColor(Color.parseColor("#1DAAF0"))
-            visualizerBar.setPlayer(
-                viewModel.play(
-                    requireContext(),
-                    Client().getMoviesAudio()[0].audio
-                )
-
-            )
-
             audioListenedTo++
-
         }
 
         btnStop.setOnClickListener {
@@ -76,10 +77,8 @@ class MovieFragment : BaseFragment<FragmentMovieBinding>(FragmentMovieBinding::i
 
     }
 
-
     override fun onDestroyView() {
         super.onDestroyView()
-
         viewModel.releasePlayer()
     }
 
