@@ -8,7 +8,7 @@ import androidx.navigation.fragment.navArgs
 import com.example.core.base.BaseFragment
 import com.example.core.extensions.requireAudioPermission
 import com.example.endo.common.Constants.AUDIO_BOOKS
-import com.example.endo.dataFragmentAudioBooksBinding
+import com.example.endo.databinding.FragmentAudioBooksBinding
 import com.example.endo.local.Client
 import com.example.endo.viewmodels.AudioBooksViewModel
 

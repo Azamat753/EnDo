@@ -234,7 +234,7 @@ class AudioTestFragment :
                                 rightAnswers,
                                 mistakes,
                                 args.amountOfAudioListenedTo,
-                                true
+                                true, args.questionsToShow
                             )
                         )
 
@@ -248,7 +248,7 @@ class AudioTestFragment :
                                 rightAnswers,
                                 mistakes,
                                 args.amountOfAudioListenedTo,
-                                false
+                                false, args.questionsToShow
                             )
                         )
                     }
@@ -264,7 +264,7 @@ class AudioTestFragment :
                                 rightAnswers,
                                 mistakes,
                                 args.amountOfAudioListenedTo,
-                                true
+                                true, args.questionsToShow
                             )
                         )
 
@@ -278,7 +278,7 @@ class AudioTestFragment :
                                 rightAnswers,
                                 mistakes,
                                 args.amountOfAudioListenedTo,
-                                false
+                                false, args.questionsToShow
                             )
                         )
                     }
@@ -294,7 +294,7 @@ class AudioTestFragment :
                                 rightAnswers,
                                 mistakes,
                                 args.amountOfAudioListenedTo,
-                                true
+                                true, args.questionsToShow
                             )
                         )
 
@@ -308,7 +308,7 @@ class AudioTestFragment :
                                 rightAnswers,
                                 mistakes,
                                 args.amountOfAudioListenedTo,
-                                false
+                                false, args.questionsToShow
                             )
                         )
                     }
@@ -327,7 +327,7 @@ class AudioTestFragment :
                                 rightAnswers,
                                 mistakes,
                                 args.amountOfAudioListenedTo,
-                                true
+                                true, args.questionsToShow
                             )
                         )
 
@@ -341,7 +341,7 @@ class AudioTestFragment :
                                 rightAnswers,
                                 mistakes,
                                 args.amountOfAudioListenedTo,
-                                false
+                                false, args.questionsToShow
                             )
                         )
                     }
@@ -357,7 +357,7 @@ class AudioTestFragment :
                                 rightAnswers,
                                 mistakes,
                                 args.amountOfAudioListenedTo,
-                                true
+                                true, args.questionsToShow
                             )
                         )
 
@@ -371,7 +371,7 @@ class AudioTestFragment :
                                 rightAnswers,
                                 mistakes,
                                 args.amountOfAudioListenedTo,
-                                false
+                                false, args.questionsToShow
                             )
                         )
                     }
@@ -387,7 +387,7 @@ class AudioTestFragment :
                                 rightAnswers,
                                 mistakes,
                                 args.amountOfAudioListenedTo,
-                                true
+                                true, args.questionsToShow
                             )
                         )
 
@@ -401,7 +401,7 @@ class AudioTestFragment :
                                 rightAnswers,
                                 mistakes,
                                 args.amountOfAudioListenedTo,
-                                false
+                                false, args.questionsToShow
                             )
                         )
                     }
@@ -420,7 +420,7 @@ class AudioTestFragment :
                                 rightAnswers,
                                 mistakes,
                                 args.amountOfAudioListenedTo,
-                                true
+                                true, args.questionsToShow
                             )
                         )
 
@@ -434,7 +434,7 @@ class AudioTestFragment :
                                 rightAnswers,
                                 mistakes,
                                 args.amountOfAudioListenedTo,
-                                false
+                                false, args.questionsToShow
                             )
                         )
                     }
@@ -450,7 +450,7 @@ class AudioTestFragment :
                                 rightAnswers,
                                 mistakes,
                                 args.amountOfAudioListenedTo,
-                                true
+                                true, args.questionsToShow
                             )
                         )
 
@@ -464,7 +464,7 @@ class AudioTestFragment :
                                 rightAnswers,
                                 mistakes,
                                 args.amountOfAudioListenedTo,
-                                false
+                                false, args.questionsToShow
                             )
                         )
                     }
@@ -480,7 +480,7 @@ class AudioTestFragment :
                                 rightAnswers,
                                 mistakes,
                                 args.amountOfAudioListenedTo,
-                                true
+                                true, args.questionsToShow
                             )
                         )
 
@@ -494,7 +494,7 @@ class AudioTestFragment :
                                 rightAnswers,
                                 mistakes,
                                 args.amountOfAudioListenedTo,
-                                false
+                                false, args.questionsToShow
                             )
                         )
                     }
@@ -513,7 +513,7 @@ class AudioTestFragment :
                                 rightAnswers,
                                 mistakes,
                                 args.amountOfAudioListenedTo,
-                                true
+                                true, args.questionsToShow
                             )
                         )
 
@@ -527,7 +527,7 @@ class AudioTestFragment :
                                 rightAnswers,
                                 mistakes,
                                 args.amountOfAudioListenedTo,
-                                false
+                                false, args.questionsToShow
                             )
                         )
                     }
@@ -543,7 +543,7 @@ class AudioTestFragment :
                                 rightAnswers,
                                 mistakes,
                                 args.amountOfAudioListenedTo,
-                                true
+                                true, args.questionsToShow
                             )
                         )
 
@@ -557,7 +557,7 @@ class AudioTestFragment :
                                 rightAnswers,
                                 mistakes,
                                 args.amountOfAudioListenedTo,
-                                false
+                                false, args.questionsToShow
                             )
                         )
                     }
@@ -573,7 +573,7 @@ class AudioTestFragment :
                                 rightAnswers,
                                 mistakes,
                                 args.amountOfAudioListenedTo,
-                                true
+                                true, args.questionsToShow
                             )
                         )
 
@@ -587,7 +587,7 @@ class AudioTestFragment :
                                 rightAnswers,
                                 mistakes,
                                 args.amountOfAudioListenedTo,
-                                false
+                                false, args.questionsToShow
                             )
                         )
                     }

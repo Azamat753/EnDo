@@ -4,7 +4,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.core.base.BaseFragment
 import com.example.endo.R
-import com.example.endo.dataFragmentAudioResultBinding
+import com.example.endo.databinding.FragmentAudioResultBinding
 
 
 class AudioResultFragment :
@@ -16,7 +16,7 @@ class AudioResultFragment :
     }
 
     override fun initClickers() {
-        btnBackToMain.setOnClickListener {
+        binding.btnBackToMain.setOnClickListener {
             findNavController().navigate(R.id.learnFragment)
         }
     }
@@ -28,7 +28,7 @@ class AudioResultFragment :
 
     private fun showResult() {
 
-        apply {
+        binding.apply {
             tvListenedInTotal.text = args.audioListenedTo.toString()
             tvAmountOfRightAnswers.text = args.amountOfRightAnswers.toString()
             tvAmountOfMistakes.text = args.amountOfMistakes.toString()

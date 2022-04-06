@@ -213,6 +213,9 @@
         <action
             android:id="@+id/action_customListeningDialogFragment_to_audioBooksFragment2"
             app:destination="@id/audioBooksFragment" />
+        <argument
+            android:name="whichAudioWasListenedTo"
+            app:argType="string" />
     </dialog>
 
 </navigation>
