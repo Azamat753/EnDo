@@ -9,6 +9,9 @@ import androidx.fragment.app.DialogFragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.endo.R
+import com.example.endo.common.Constants.AUDIO_BOOKS
+import com.example.endo.common.Constants.MOVIES
+import com.example.endo.common.Constants.MUSIC
 import com.example.endo.databinding.FragmentListeningBottomSheetDialogBinding
 
 class CustomListeningDialogFragment : DialogFragment(
@@ -55,11 +58,30 @@ class CustomListeningDialogFragment : DialogFragment(
     private fun initListeners() = with(binding) {
         btnContinue.setOnClickListener {
             dismiss()
-            findNavController().navigate(
-                CustomListeningDialogFragmentDirections.actionCustomListeningDialogFragmentToMovieFragment(
-                    args.positionFromAudioTest
-                )
-            )
+            when (args.whichAudioWasListenedTo) {
+                MUSIC -> {
+                    findNavController().navigate(
+                        CustomListeningDialogFragmentDirections.actionCustomListeningDialogFragmentToMusicFragment(
+                            args.positionFromAudioTest
+                        )
+                    )
+                }
+                MOVIES -> {
+                    findNavController().navigate(
+                        CustomListeningDialogFragmentDirections.actionCustomListeningDialogFragmentToMovieFragment(
+                            args.positionFromAudioTest
+                        )
+                    )
+                }
+                AUDIO_BOOKS -> {
+                    findNavController().navigate(
+                        CustomListeningDialogFragmentDirections.actionCustomListeningDialogFragmentToAudioBooksFragment(
+                            args.positionFromAudioTest
+                        )
+                    )
+
+                }
+            }
 
 
         }

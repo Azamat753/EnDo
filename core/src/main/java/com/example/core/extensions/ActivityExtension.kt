@@ -6,10 +6,12 @@ import android.content.Context
 import android.content.pm.PackageManager
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.fragment.app.Fragment
 import com.example.core.base.showToast
 
 
-fun Activity.requireAudioPermission(context: Context, activity: Activity) {
+fun Fragment.requireAudioPermission(context: Context, activity: Activity) {
+
     if (ContextCompat.checkSelfPermission(
             context,
             Manifest.permission.RECORD_AUDIO

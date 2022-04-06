@@ -89,6 +89,7 @@
         android:layout_marginBottom="60dp"
         android:background="@drawable/button_rectangle_gradient_background"
         android:backgroundTint="#666666"
+        android:enabled="false"
         android:text="@string/got_it"
         android:textAllCaps="false"
         android:textColor="@color/white"
