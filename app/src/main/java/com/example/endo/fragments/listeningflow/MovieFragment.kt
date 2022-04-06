@@ -7,6 +7,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.core.base.BaseFragment
 import com.example.core.extensions.requireAudioPermission
+import com.example.endo.common.Constants.MOVIES
 import com.example.endo.databinding.FragmentMovieBinding
 import com.example.endo.local.Client
 import com.example.endo.viewmodels.MovieViewModel
@@ -66,7 +67,7 @@ class MovieFragment : BaseFragment<FragmentMovieBinding>(FragmentMovieBinding::i
         btnContinue.setOnClickListener {
             findNavController().navigate(
                 MovieFragmentDirections.actionMovieFragmentToAudioTestFragment(
-                    currentPos, audioListenedTo
+                    currentPos, audioListenedTo,  MOVIES
                 )
             )
 

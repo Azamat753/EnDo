@@ -150,6 +150,10 @@
         <action
             android:id="@+id/action_audioTestFragment_to_customListeningDialogFragment"
             app:destination="@id/customListeningDialogFragment" />
+        <argument
+            android:name="questionsToShow"
+            app:argType="string"
+            app:nullable="true" />
     </fragment>
     <fragment
         android:id="@+id/audioResultFragment"
