@@ -7,7 +7,7 @@ import com.example.core.base.BaseAdapter
 import com.example.core.base.BaseFragment
 import com.example.endo.R
 import com.example.endo.adapters.CategoryAdapter
-import com.example.endo.databinding.FragmentAudioMaterialsBinding
+import com.example.endo.dataFragmentAudioMaterialsBinding
 import com.example.endo.models.CategoryModel
 
 
@@ -41,7 +41,7 @@ class AudioMaterialsFragment :
     override fun initAdapter() {
         adapter.listener = this
         adapter.setData(getMaterialList())
-        binding.audioRecycler.adapter = adapter
+        audioRecycler.adapter = adapter
 
     }
 

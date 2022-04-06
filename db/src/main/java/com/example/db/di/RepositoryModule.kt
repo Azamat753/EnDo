@@ -21,7 +21,7 @@ object RepositoryModule {
 
     @Singleton
     @Provides
-    fun provideMovieRepository(mediaPlayer: MediaPlayer): PlayerRepository {
+    fun providePlayerRepository(mediaPlayer: MediaPlayer): PlayerRepository {
         return PlayerRepository(mediaPlayer)
     }
 

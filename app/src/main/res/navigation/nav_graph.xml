@@ -99,7 +99,7 @@
         android:id="@+id/musicFragment"
         android:name="com.example.endo.fragments.listeningflow.MusicFragment"
         android:label="fragment_music"
-        tools:layout="@layout/fragment_music" >
+        tools:layout="@layout/fragment_music">
         <action
             android:id="@+id/action_musicFragment_to_audioTestFragment"
             app:destination="@id/audioTestFragment" />
@@ -125,8 +125,9 @@
         android:id="@+id/audioBooksFragment"
         android:name="com.example.endo.fragments.listeningflow.AudioBooksFragment"
         android:label="fragment_audio_books"
-        tools:layout="@layout/fragment_audio_books" >
-        <argument android:name="positionFromDialog"
+        tools:layout="@layout/fragment_audio_books">
+        <argument
+            android:name="positionFromDialog"
             app:argType="integer" />
         <action
             android:id="@+id/action_audioBooksFragment_to_audioTestFragment"
@@ -154,6 +155,7 @@
             android:name="questionsToShow"
             app:argType="string"
             app:nullable="true" />
+
     </fragment>
     <fragment
         android:id="@+id/audioResultFragment"
