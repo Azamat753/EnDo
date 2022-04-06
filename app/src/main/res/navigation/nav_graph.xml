@@ -205,13 +205,10 @@
             android:name="rightOrNot"
             app:argType="boolean" />
         <action
-            android:id="@+id/action_customListeningDialogFragment_to_audioBooksFragment"
-            app:destination="@id/audioBooksFragment" />
-        <action
             android:id="@+id/action_customListeningDialogFragment_to_musicFragment"
             app:destination="@id/musicFragment" />
         <action
-            android:id="@+id/action_customListeningDialogFragment_to_audioBooksFragment2"
+            android:id="@+id/action_customListeningDialogFragment_to_audioBooksFragment"
             app:destination="@id/audioBooksFragment" />
         <argument
             android:name="whichAudioWasListenedTo"
