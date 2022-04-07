@@ -67,7 +67,7 @@ class MovieFragment : BaseFragment<FragmentMovieBinding>(FragmentMovieBinding::i
         btnContinue.setOnClickListener {
             findNavController().navigate(
                 MovieFragmentDirections.actionMovieFragmentToAudioTestFragment(
-                    currentPos, audioListenedTo, MOVIES
+                    currentPos, audioListenedTo, MOVIES, viewModel.getTime()
                 )
             )
 

@@ -16,7 +16,6 @@ class AudioTestFragment :
 
     private var rightAnswers = 0
     private var mistakes = 0
-    private var time = 0
     private val args: AudioTestFragmentArgs by navArgs()
 
 

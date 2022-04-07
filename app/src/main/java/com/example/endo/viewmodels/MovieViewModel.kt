@@ -22,6 +22,8 @@ class MovieViewModel @Inject constructor(
         playerRepository.pauseAMovie()
     }
 
+    fun getTime() = playerRepository.getTimeFromChronometer()
+
     fun releasePlayer() {
         playerRepository.releasePlayer()
     }

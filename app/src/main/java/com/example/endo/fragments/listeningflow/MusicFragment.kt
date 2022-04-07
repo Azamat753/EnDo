@@ -65,7 +65,7 @@ class MusicFragment : BaseFragment<FragmentMusicBinding>(FragmentMusicBinding::i
         btnContinue.setOnClickListener {
             findNavController().navigate(
                 MusicFragmentDirections.actionMusicFragmentToAudioTestFragment(
-                    currentPos, audioListenedTo, MUSIC
+                    currentPos, audioListenedTo, MUSIC, viewModel.getTime()
                 )
             )
 

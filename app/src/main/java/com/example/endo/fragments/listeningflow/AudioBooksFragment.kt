@@ -65,7 +65,7 @@ class AudioBooksFragment :
         btnContinue.setOnClickListener {
             findNavController().navigate(
                 AudioBooksFragmentDirections.actionAudioBooksFragmentToAudioTestFragment(
-                    currentPos, audioListenedTo, AUDIO_BOOKS
+                    currentPos, audioListenedTo, AUDIO_BOOKS, viewModel.getTime()
                 )
             )
 
