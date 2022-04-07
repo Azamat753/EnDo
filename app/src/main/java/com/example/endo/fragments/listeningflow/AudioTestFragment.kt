@@ -229,7 +229,7 @@ class AudioTestFragment :
                         findNavController().navigate(
                             AudioTestFragmentDirections.actionAudioTestFragmentToCustomListeningDialogFragment(
                                 args.positionFromAudioFragments,
-                                0,
+                                args.time.toInt(),
                                 rightAnswers,
                                 mistakes,
                                 args.amountOfAudioListenedTo,
@@ -243,7 +243,7 @@ class AudioTestFragment :
                         findNavController().navigate(
                             AudioTestFragmentDirections.actionAudioTestFragmentToCustomListeningDialogFragment(
                                 args.positionFromAudioFragments,
-                                0,
+                                args.time.toInt(),
                                 rightAnswers,
                                 mistakes,
                                 args.amountOfAudioListenedTo,
@@ -259,7 +259,7 @@ class AudioTestFragment :
                         findNavController().navigate(
                             AudioTestFragmentDirections.actionAudioTestFragmentToCustomListeningDialogFragment(
                                 args.positionFromAudioFragments,
-                                0,
+                                args.time.toInt(),
                                 rightAnswers,
                                 mistakes,
                                 args.amountOfAudioListenedTo,
@@ -273,7 +273,7 @@ class AudioTestFragment :
                         findNavController().navigate(
                             AudioTestFragmentDirections.actionAudioTestFragmentToCustomListeningDialogFragment(
                                 args.positionFromAudioFragments,
-                                0,
+                                args.time.toInt(),
                                 rightAnswers,
                                 mistakes,
                                 args.amountOfAudioListenedTo,
@@ -289,7 +289,7 @@ class AudioTestFragment :
                         findNavController().navigate(
                             AudioTestFragmentDirections.actionAudioTestFragmentToCustomListeningDialogFragment(
                                 args.positionFromAudioFragments,
-                                0,
+                                args.time.toInt(),
                                 rightAnswers,
                                 mistakes,
                                 args.amountOfAudioListenedTo,
@@ -303,7 +303,7 @@ class AudioTestFragment :
                         findNavController().navigate(
                             AudioTestFragmentDirections.actionAudioTestFragmentToCustomListeningDialogFragment(
                                 args.positionFromAudioFragments,
-                                0,
+                                args.time.toInt(),
                                 rightAnswers,
                                 mistakes,
                                 args.amountOfAudioListenedTo,
@@ -322,7 +322,7 @@ class AudioTestFragment :
                         findNavController().navigate(
                             AudioTestFragmentDirections.actionAudioTestFragmentToCustomListeningDialogFragment(
                                 args.positionFromAudioFragments,
-                                0,
+                                args.time.toInt(),
                                 rightAnswers,
                                 mistakes,
                                 args.amountOfAudioListenedTo,
@@ -336,7 +336,7 @@ class AudioTestFragment :
                         findNavController().navigate(
                             AudioTestFragmentDirections.actionAudioTestFragmentToCustomListeningDialogFragment(
                                 args.positionFromAudioFragments,
-                                0,
+                                args.time.toInt(),
                                 rightAnswers,
                                 mistakes,
                                 args.amountOfAudioListenedTo,
@@ -352,7 +352,7 @@ class AudioTestFragment :
                         findNavController().navigate(
                             AudioTestFragmentDirections.actionAudioTestFragmentToCustomListeningDialogFragment(
                                 args.positionFromAudioFragments,
-                                0,
+                                args.time.toInt(),
                                 rightAnswers,
                                 mistakes,
                                 args.amountOfAudioListenedTo,
@@ -366,7 +366,7 @@ class AudioTestFragment :
                         findNavController().navigate(
                             AudioTestFragmentDirections.actionAudioTestFragmentToCustomListeningDialogFragment(
                                 args.positionFromAudioFragments,
-                                0,
+                                args.time.toInt(),
                                 rightAnswers,
                                 mistakes,
                                 args.amountOfAudioListenedTo,
@@ -382,7 +382,7 @@ class AudioTestFragment :
                         findNavController().navigate(
                             AudioTestFragmentDirections.actionAudioTestFragmentToCustomListeningDialogFragment(
                                 args.positionFromAudioFragments,
-                                0,
+                                args.time.toInt(),
                                 rightAnswers,
                                 mistakes,
                                 args.amountOfAudioListenedTo,
@@ -396,7 +396,7 @@ class AudioTestFragment :
                         findNavController().navigate(
                             AudioTestFragmentDirections.actionAudioTestFragmentToCustomListeningDialogFragment(
                                 args.positionFromAudioFragments,
-                                0,
+                                args.time.toInt(),
                                 rightAnswers,
                                 mistakes,
                                 args.amountOfAudioListenedTo,
@@ -415,7 +415,7 @@ class AudioTestFragment :
                         findNavController().navigate(
                             AudioTestFragmentDirections.actionAudioTestFragmentToCustomListeningDialogFragment(
                                 args.positionFromAudioFragments,
-                                0,
+                                args.time.toInt(),
                                 rightAnswers,
                                 mistakes,
                                 args.amountOfAudioListenedTo,
@@ -429,7 +429,7 @@ class AudioTestFragment :
                         findNavController().navigate(
                             AudioTestFragmentDirections.actionAudioTestFragmentToCustomListeningDialogFragment(
                                 args.positionFromAudioFragments,
-                                0,
+                                args.time.toInt(),
                                 rightAnswers,
                                 mistakes,
                                 args.amountOfAudioListenedTo,
@@ -445,7 +445,7 @@ class AudioTestFragment :
                         findNavController().navigate(
                             AudioTestFragmentDirections.actionAudioTestFragmentToCustomListeningDialogFragment(
                                 args.positionFromAudioFragments,
-                                0,
+                                args.time.toInt(),
                                 rightAnswers,
                                 mistakes,
                                 args.amountOfAudioListenedTo,
@@ -459,7 +459,7 @@ class AudioTestFragment :
                         findNavController().navigate(
                             AudioTestFragmentDirections.actionAudioTestFragmentToCustomListeningDialogFragment(
                                 args.positionFromAudioFragments,
-                                0,
+                                args.time.toInt(),
                                 rightAnswers,
                                 mistakes,
                                 args.amountOfAudioListenedTo,
@@ -475,7 +475,7 @@ class AudioTestFragment :
                         findNavController().navigate(
                             AudioTestFragmentDirections.actionAudioTestFragmentToCustomListeningDialogFragment(
                                 args.positionFromAudioFragments,
-                                0,
+                                args.time.toInt(),
                                 rightAnswers,
                                 mistakes,
                                 args.amountOfAudioListenedTo,
@@ -489,7 +489,7 @@ class AudioTestFragment :
                         findNavController().navigate(
                             AudioTestFragmentDirections.actionAudioTestFragmentToCustomListeningDialogFragment(
                                 args.positionFromAudioFragments,
-                                0,
+                                args.time.toInt(),
                                 rightAnswers,
                                 mistakes,
                                 args.amountOfAudioListenedTo,
@@ -508,7 +508,7 @@ class AudioTestFragment :
                         findNavController().navigate(
                             AudioTestFragmentDirections.actionAudioTestFragmentToCustomListeningDialogFragment(
                                 args.positionFromAudioFragments,
-                                0,
+                                args.time.toInt(),
                                 rightAnswers,
                                 mistakes,
                                 args.amountOfAudioListenedTo,
@@ -522,7 +522,7 @@ class AudioTestFragment :
                         findNavController().navigate(
                             AudioTestFragmentDirections.actionAudioTestFragmentToCustomListeningDialogFragment(
                                 args.positionFromAudioFragments,
-                                0,
+                                args.time.toInt(),
                                 rightAnswers,
                                 mistakes,
                                 args.amountOfAudioListenedTo,
@@ -538,7 +538,7 @@ class AudioTestFragment :
                         findNavController().navigate(
                             AudioTestFragmentDirections.actionAudioTestFragmentToCustomListeningDialogFragment(
                                 args.positionFromAudioFragments,
-                                0,
+                                args.time.toInt(),
                                 rightAnswers,
                                 mistakes,
                                 args.amountOfAudioListenedTo,
@@ -552,7 +552,7 @@ class AudioTestFragment :
                         findNavController().navigate(
                             AudioTestFragmentDirections.actionAudioTestFragmentToCustomListeningDialogFragment(
                                 args.positionFromAudioFragments,
-                                0,
+                                args.time.toInt(),
                                 rightAnswers,
                                 mistakes,
                                 args.amountOfAudioListenedTo,
@@ -568,7 +568,7 @@ class AudioTestFragment :
                         findNavController().navigate(
                             AudioTestFragmentDirections.actionAudioTestFragmentToCustomListeningDialogFragment(
                                 args.positionFromAudioFragments,
-                                0,
+                                args.time.toInt(),
                                 rightAnswers,
                                 mistakes,
                                 args.amountOfAudioListenedTo,
@@ -582,7 +582,7 @@ class AudioTestFragment :
                         findNavController().navigate(
                             AudioTestFragmentDirections.actionAudioTestFragmentToCustomListeningDialogFragment(
                                 args.positionFromAudioFragments,
-                                0,
+                                args.time.toInt(),
                                 rightAnswers,
                                 mistakes,
                                 args.amountOfAudioListenedTo,

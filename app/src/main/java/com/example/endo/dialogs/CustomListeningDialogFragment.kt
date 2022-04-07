@@ -91,7 +91,7 @@ class CustomListeningDialogFragment : DialogFragment(
             findNavController().navigate(
                 CustomListeningDialogFragmentDirections.actionCustomListeningDialogFragmentToAudioResultFragment(
                     args.totalAudioListened,
-                    args.timeFromTests,
+                    args.time.toInt(),
                     args.amountOfRightAnswers,
                     args.amountOfMistakes
                 )
