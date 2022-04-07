@@ -30,6 +30,9 @@
     <string name="if_i_were_a_boy_beyounce">Отрывокиз Песни If i were a boy (Beyounce)</string>
 >>>>>>> 38259f3 (implement music)
 =======
+=======
+
+>>>>>>> 79b5c21c3e260d1d8a0eaae4f773b646e6437e3b
     <string name="questionForJohnWick">Что значит фраза "You stabbed the devil in the back"?</string>
     <string name="firstAnswerForJohnWick">Пустить ему нож в спину</string>
     <string name="secondAnswerForJohnWick">Попытаться убить демона</string>
@@ -54,5 +57,18 @@
     <string name="thirdAnswerForWonder">Почему я хочу им быть</string>
     <string name="fourthAnswerForWonder">Потому что я хочу им быть</string>
 
->>>>>>> 7e34c10f01191018193a52473380c6689110ba5a
+=======
+    <string name="have_a_rest">На сегодня хватит</string>
+    <string name="of_course">Конечно!</string>
+    <string name="result">Результат</string>
+    <string name="listened_in_total">Всего прослушано:</string>
+    <string name="right_answers">Правильно:</string>
+    <string name="amount_of_mistakes">Ошибся:</string>
+    <string name="total_time">Время:</string>
+
+
+    <string name="an_excerpt_from_the_song_if_i_were_a_boy_beyounce">An excerpt from the Song If i were a boy (Beyounce)</string>
+    <string name="if_i_were_a_boy_beyounce">Отрывокиз Песни If i were a boy (Beyounce)</string>
+    <string name="back_to_main">На главную</string>
+>>>>>>> 79b5c21c3e260d1d8a0eaae4f773b646e6437e3b
 </resources>

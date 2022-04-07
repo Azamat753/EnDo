@@ -7,7 +7,10 @@ import javax.inject.Inject
 
 class PlayerRepository @Inject constructor(
     private var mediaPlayer: MediaPlayer?,
+<<<<<<< HEAD
 //    private var audioModel: AudioModel
+=======
+>>>>>>> 79b5c21c3e260d1d8a0eaae4f773b646e6437e3b
 ) {
     fun playAMovie(@ApplicationContext context: Context, audio: Int): Int {
         mediaPlayer = MediaPlayer.create(context, audio)

@@ -10,11 +10,21 @@ import javax.inject.Inject
 @HiltViewModel
 class MovieViewModel @Inject constructor(
     private val playerRepository: PlayerRepository,
+<<<<<<< HEAD
 
     ) : ViewModel() {
     fun play(@ApplicationContext context: Context, audio: Int): Int {
         return playerRepository.playAMovie(context, audio)
     }
+=======
+) : ViewModel() {
+
+    fun play(@ApplicationContext context: Context, audio: Int): Int =
+
+
+        playerRepository.playAMovie(context, audio)
+
+>>>>>>> 79b5c21c3e260d1d8a0eaae4f773b646e6437e3b
 
     fun pause() {
         playerRepository.pauseAMovie()

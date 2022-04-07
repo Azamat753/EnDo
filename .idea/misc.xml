@@ -90,10 +90,15 @@
         <entry key="..\:/Users/Clar1fy/AndroidStudioProjects/EnDo/app/src/main/res/layout/activity_main.xml" value="0.14074074074074075" />
         <entry key="..\:/Users/Clar1fy/AndroidStudioProjects/EnDo/app/src/main/res/layout/fragment_add_words_sheet_diaolg.xml" value="0.18564102564102564" />
         <entry key="..\:/Users/Clar1fy/AndroidStudioProjects/EnDo/app/src/main/res/layout/fragment_audio_materials.xml" value="0.18854166666666666" />
+<<<<<<< HEAD
+=======
+        <entry key="..\:/Users/Clar1fy/AndroidStudioProjects/EnDo/app/src/main/res/layout/fragment_audio_result.xml" value="0.1" />
+>>>>>>> 79b5c21c3e260d1d8a0eaae4f773b646e6437e3b
         <entry key="..\:/Users/Clar1fy/AndroidStudioProjects/EnDo/app/src/main/res/layout/fragment_audio_test.xml" value="0.22" />
         <entry key="..\:/Users/Clar1fy/AndroidStudioProjects/EnDo/app/src/main/res/layout/fragment_check_grammar.xml" value="0.1" />
         <entry key="..\:/Users/Clar1fy/AndroidStudioProjects/EnDo/app/src/main/res/layout/fragment_learn.xml" value="0.14074074074074075" />
-        <entry key="..\:/Users/Clar1fy/AndroidStudioProjects/EnDo/app/src/main/res/layout/fragment_listening_bottom_sheet_dialog.xml" value="0.22" />
+        <entry key="..\:/Users/Clar1fy/AndroidStudioProjects/EnDo/app/src/main/res/layout/fragment_listening.xml" value="0.1" />
+        <entry key="..\:/Users/Clar1fy/AndroidStudioProjects/EnDo/app/src/main/res/layout/fragment_listening_bottom_sheet_dialog.xml" value="0.2" />
         <entry key="..\:/Users/Clar1fy/AndroidStudioProjects/EnDo/app/src/main/res/layout/fragment_movie.xml" value="0.25" />
         <entry key="..\:/Users/Clar1fy/AndroidStudioProjects/EnDo/app/src/main/res/layout/fragment_movie_result.xml" value="0.18854166666666666" />
         <entry key="..\:/Users/Clar1fy/AndroidStudioProjects/EnDo/app/src/main/res/layout/fragment_movie_test.xml" value="0.22" />

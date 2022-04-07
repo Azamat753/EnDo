@@ -108,6 +108,14 @@
         <action
             android:id="@+id/action_movieFragment_to_audioTestFragment"
             app:destination="@id/audioTestFragment" />
+<<<<<<< HEAD
+=======
+        <argument
+            android:name="positionFromDialog"
+            app:argType="integer" />
+
+
+>>>>>>> 79b5c21c3e260d1d8a0eaae4f773b646e6437e3b
     </fragment>
     <fragment
         android:id="@+id/audioBooksFragment"
@@ -121,6 +129,7 @@
         tools:layout="@layout/fragment_audio_test">
 
         <argument
+<<<<<<< HEAD
             android:name="audioFromMovieFragment"
             app:argType="integer" />
     </fragment>
@@ -129,5 +138,67 @@
         android:name="com.example.endo.fragments.listeningflow.MovieResultFragment"
         android:label="fragment_movie_result"
         tools:layout="@layout/fragment_movie_result" />
+=======
+            android:name="positionFromMovieFragment"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_audioTestFragment_to_movieFragment"
+            app:destination="@id/movieFragment" />
+        <argument
+            android:name="amountOfAudioListenedTo"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_audioTestFragment_to_customListeningDialogFragment"
+            app:destination="@id/customListeningDialogFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/audioResultFragment"
+        android:name="com.example.endo.fragments.listeningflow.AudioResultFragment"
+        android:label="fragment_movie_result"
+        tools:layout="@layout/fragment_audio_result">
+        <argument
+            android:name="audioListenedTo"
+            app:argType="integer" />
+        <argument
+            android:name="time"
+            app:argType="integer" />
+        <argument
+            android:name="amountOfRightAnswers"
+            app:argType="integer" />
+        <argument
+            android:name="amountOfMistakes"
+            app:argType="integer" />
+    </fragment>
+    <dialog
+        android:id="@+id/customListeningDialogFragment"
+        android:name="com.example.endo.dialogs.CustomListeningDialogFragment"
+        android:label="fragment_listening_bottom_sheet_dialog"
+        tools:layout="@layout/fragment_listening_bottom_sheet_dialog">
+        <action
+            android:id="@+id/action_customListeningDialogFragment_to_movieFragment"
+            app:destination="@id/movieFragment" />
+        <argument
+            android:name="positionFromAudioTest"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_customListeningDialogFragment_to_audioResultFragment"
+            app:destination="@id/audioResultFragment" />
+        <argument
+            android:name="timeFromTests"
+            app:argType="integer" />
+        <argument
+            android:name="amountOfRightAnswers"
+            app:argType="integer" />
+        <argument
+            android:name="amountOfMistakes"
+            app:argType="integer" />
+        <argument
+            android:name="totalAudioListened"
+            app:argType="integer" />
+        <argument
+            android:name="rightOrNot"
+            app:argType="boolean" />
+    </dialog>
+>>>>>>> 79b5c21c3e260d1d8a0eaae4f773b646e6437e3b
 
 </navigation>
