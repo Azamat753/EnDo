@@ -4,6 +4,10 @@ import com.example.endo.R
 import com.example.endo.models.QuestionModel
 
 class Client {
+    fun getMusicByIndex(index: Int) {
+        Client().getMusic().get(index).audio
+    }
+
     fun getMusic(): List<QuestionModel> {
 
         val list = ArrayList<QuestionModel>()
