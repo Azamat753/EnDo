@@ -9,7 +9,7 @@ data class AchievementsModel(
     val id: Int? = null,
     var rank: String,
     var condition: String,
-    var currentAmountForProgressBar:Int,
-    var maxAmountForProgressBar:Int,
-    var image:String
+    var currentAmountForProgressBar: Int,
+    var maxAmountForProgressBar: Int,
+    var image: String
 )

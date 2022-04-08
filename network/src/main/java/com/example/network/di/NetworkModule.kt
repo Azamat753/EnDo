@@ -21,6 +21,7 @@ object NetworkModule {
         return Retrofit.Builder().addConverterFactory(GsonConverterFactory.create())
             .baseUrl(Constants.PIXABAY_BASE_URL).build().create(PixabayApi::class.java)
     }
+
     @Singleton
     @Provides
     fun provideTranslationApi(): TranslationApi {

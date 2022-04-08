@@ -131,11 +131,11 @@
 
     <Button
         android:id="@+id/on_main_btn"
-        android:background="@drawable/blue_gradient"
         style="@style/buttonGradientStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="132dp"
+        android:background="@drawable/blue_gradient"
         android:text="На главную"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

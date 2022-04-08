@@ -3,9 +3,7 @@ package com.example.endo.viewmodels
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.db.models.DictionaryCategoryModel
-import com.example.db.models.WordsModel
 import com.example.db.repositories.DictionaryCategoryRepositories
-import com.example.db.repositories.WordsRepositories
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -19,7 +17,8 @@ class DictionaryCategoryViewModel @Inject constructor(
     private val repositories: DictionaryCategoryRepositories
 ) : ViewModel() {
 
-    private val _dictionaryCategoryModel: MutableStateFlow<List<DictionaryCategoryModel>?> = MutableStateFlow(null)
+    private val _dictionaryCategoryModel: MutableStateFlow<List<DictionaryCategoryModel>?> =
+        MutableStateFlow(null)
     val dictionaryCategoryModel = _dictionaryCategoryModel.asStateFlow()
 
     fun insertData(model: DictionaryCategoryModel) =

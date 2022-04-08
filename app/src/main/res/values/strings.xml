@@ -16,4 +16,49 @@
     <string name="understood">Понял</string>
     <string name="results">Результаты</string>
     <string name="achievements">Достижения</string>
+    <string name="music">Песни</string>
+    <string name="films">Фильмы</string>
+    <string name="books">Книги</string>
+    <string name="understand">Понял</string>
+    <string name="got_it">Got it</string>
+    <string name="play_audio_material">play audio material</string>
+    <string name="pause_audio_material">pause audio material</string>
+    <string name="answer">Answer</string>
+    <string name="icon">icon</string>
+
+    <string name="questionForJohnWick">Что значит фраза "You stabbed the devil in the back"?</string>
+    <string name="firstAnswerForJohnWick">Пустить ему нож в спину</string>
+    <string name="secondAnswerForJohnWick">Попытаться убить демона</string>
+    <string name="thirdAnswerForJohnWick">Вы ударили демона в спину</string>
+    <string name="fourthAnswerForJohnWick">Убить демона</string>
+
+    <string name="questionForDentist">Как переводится "Sir,there is no need for violence"</string>
+    <string name="firstAnswerForDentist">Сэр,здесь нету отсутствует нужда в насилии</string>
+    <string name="secondAnswerForDentist">Сэр,тут нету нужды в насилии</string>
+    <string name="thirdAnswerForDentist">Сэр,нужда в насилиии есть</string>
+    <string name="fourthAnswerForDentist">Сэр,насилии в нужда есть</string>
+
+    <string name="questionForHarryPotter">Что значит "Excuse me, do you mind, everywhere else is full"</string>
+    <string name="firstAnswerForHarryPotter">Извините,вы не против,везде все переполнено</string>
+    <string name="secondAnswerForHarryPotter">Простите,вы против,все уже полно</string>
+    <string name="thirdAnswerForHarryPotter">Не прощаю,все не заполнено</string>
+    <string name="fourthAnswerForHarryPotter">Прощаю,все полно</string>
+
+    <string name="questionForWonder">Что значит "Who is it that I aspire to be"?</string>
+    <string name="firstAnswerForWonder">Кем я желаю стать</string>
+    <string name="secondAnswerForWonder">Что бы я хотел делать</string>
+    <string name="thirdAnswerForWonder">Почему я хочу им быть</string>
+    <string name="fourthAnswerForWonder">Потому что я хочу им быть</string>
+    <string name="have_a_rest">На сегодня хватит</string>
+    <string name="of_course">Конечно!</string>
+    <string name="result">Результат</string>
+    <string name="listened_in_total">Всего прослушано:</string>
+    <string name="right_answers">Правильно:</string>
+    <string name="amount_of_mistakes">Ошибся:</string>
+    <string name="total_time">Время:</string>
+
+
+    <string name="an_excerpt_from_the_song_if_i_were_a_boy_beyounce">An excerpt from the Song If i were a boy (Beyounce)</string>
+    <string name="if_i_were_a_boy_beyounce">Отрывокиз Песни If i were a boy (Beyounce)</string>
+    <string name="back_to_main">На главную</string>
 </resources>

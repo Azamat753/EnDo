@@ -5,14 +5,13 @@ import android.view.View
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.viewModelScope
 import androidx.navigation.fragment.findNavController
-import com.example.core.utils.CommonFunction.showBottomSheet
 import com.example.core.base.BaseAdapter
 import com.example.core.base.BaseFragment
+import com.example.core.utils.CommonFunction.showBottomSheet
 import com.example.db.models.DictionaryCategoryModel
 import com.example.endo.adapters.DictionaryCategoryAdapter
 import com.example.endo.bottomsheetdialogs.AddDictionaryCategorySheetDialogFragment
 import com.example.endo.databinding.FragmentDictionaryCategoryBinding
-import com.example.endo.fragments.synonyms.SynonymsFragment
 import com.example.endo.viewmodels.DictionaryCategoryViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collect
@@ -38,7 +37,7 @@ class DictionaryCategoryFragment :
 
     override fun initClickers() {
         binding.addWordFab.setOnClickListener {
-            showBottomSheet(AddDictionaryCategorySheetDialogFragment(), requireActivity(),"")
+            showBottomSheet(AddDictionaryCategorySheetDialogFragment(), requireActivity(), "")
         }
     }
 
@@ -48,7 +47,6 @@ class DictionaryCategoryFragment :
                 model
             )
         findNavController().navigate(action)
-
     }
 
     override fun initObserver() {
