@@ -1,12 +1,10 @@
-package com.example.endo.local
+package com.example.local
 
 import com.example.db.R
 import com.example.db.models.QuestionModel
 
 class Client {
-    fun getMusicByIndex(index: Int) {
-        Client().getMusic().get(index).audio
-    }
+
 
     fun getMusic(): List<QuestionModel> {
 
@@ -128,11 +126,11 @@ class Client {
             QuestionModel(
                 R.raw.on_the_rainy_river,
                 "Что значит This is one story I've never told before",
-                "",
-                "",
-                "",
-                "",
-                ""
+                "Это одна история, которую я никогда не рассказывал до этого",
+                "История, которую я рассказывал до этого никогда",
+                "Рассказывал историю до этого всегда",
+                "Всегда рассказывал всегда до этого",
+                "Это одна история, которую я никогда не рассказывал до этого"
             )
         )
         list.add(QuestionModel(R.raw.the_boat, "", "", "", "", "", ""))

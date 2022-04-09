@@ -7,7 +7,7 @@ import com.example.endo.common.Constants.AUDIO_BOOKS
 import com.example.endo.common.Constants.MOVIES
 import com.example.endo.common.Constants.MUSIC
 import com.example.endo.databinding.FragmentAudioTestBinding
-import com.example.endo.local.Client
+import com.example.local.Client
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
