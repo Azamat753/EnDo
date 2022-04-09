@@ -1,17 +1,21 @@
-package com.example.endo.fragments.dictionaryflow
+package com.example.endo.fragments.antonyms
 
 import android.os.Bundle
+import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.core.base.BaseAdapter
 import com.example.core.base.BaseFragment
 import com.example.endo.R
 import com.example.endo.adapters.CategoryAdapter
-import com.example.endo.databinding.FragmentDictionaryBinding
+import com.example.endo.databinding.FragmentAntonymsBinding
+import com.example.endo.databinding.FragmentSynonymsBinding
 import com.example.endo.models.CategoryModel
 
-class DictionaryFragment :
-    BaseFragment<FragmentDictionaryBinding>(FragmentDictionaryBinding::inflate),
+class AntonymsFragment :
+    BaseFragment<FragmentAntonymsBinding>(FragmentAntonymsBinding::inflate),
     BaseAdapter.IBaseAdapterClickListener<CategoryModel> {
     private val adapter = CategoryAdapter()
 
@@ -22,22 +26,17 @@ class DictionaryFragment :
     override fun initAdapter() {
         adapter.listener = this
         adapter.setData(getDictionaryCategories())
-        binding.dictionaryRecycler.adapter = adapter
+        binding.antonymsCategoryRecycler.adapter = adapter
     }
 
     override fun onClick(model: CategoryModel, position: Int) {
         when (model.category) {
-            getString(R.string.my_dictionary) -> findNavController().navigate(R.id.myDictionaryFragment)
-            getString(R.string.synonyms) -> findNavController().navigate(R.id.myDictionaryFragment)
-            getString(R.string.antonyms) -> findNavController().navigate(R.id.myDictionaryFragment)
-
+            getString(R.string.antonyms) -> findNavController().navigate(R.id.antonymsCategoryFragment)
         }
     }
 
     private fun getDictionaryCategories(): List<CategoryModel> {
         val list: ArrayList<CategoryModel> = arrayListOf()
-        list.add(CategoryModel(getString(R.string.my_dictionary)))
-        list.add(CategoryModel(getString(R.string.synonyms)))
         list.add(CategoryModel(getString(R.string.antonyms)))
         return list
     }
@@ -51,3 +50,4 @@ class DictionaryFragment :
 
     }
 }
+
