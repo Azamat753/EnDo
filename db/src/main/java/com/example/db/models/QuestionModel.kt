@@ -1,4 +1,4 @@
-package com.example.endo.models
+package com.example.db.models
 
 data class QuestionModel(
     val audio: Int,

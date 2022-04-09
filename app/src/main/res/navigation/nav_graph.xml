@@ -155,6 +155,9 @@
             android:name="questionsToShow"
             app:argType="string"
             app:nullable="true" />
+        <argument
+            android:name="time"
+            app:argType="long" />
 
     </fragment>
     <fragment

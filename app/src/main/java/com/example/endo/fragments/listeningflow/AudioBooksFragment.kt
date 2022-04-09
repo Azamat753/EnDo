@@ -9,7 +9,7 @@ import com.example.core.base.BaseFragment
 import com.example.core.extensions.requireAudioPermission
 import com.example.endo.common.Constants.AUDIO_BOOKS
 import com.example.endo.databinding.FragmentAudioBooksBinding
-import com.example.endo.local.Client
+import com.example.local.Client
 import com.example.endo.viewmodels.AudioBooksViewModel
 
 class AudioBooksFragment :
@@ -65,7 +65,7 @@ class AudioBooksFragment :
         btnContinue.setOnClickListener {
             findNavController().navigate(
                 AudioBooksFragmentDirections.actionAudioBooksFragmentToAudioTestFragment(
-                    currentPos, audioListenedTo, AUDIO_BOOKS
+                    currentPos, audioListenedTo, AUDIO_BOOKS, viewModel.getTime()
                 )
             )
 
