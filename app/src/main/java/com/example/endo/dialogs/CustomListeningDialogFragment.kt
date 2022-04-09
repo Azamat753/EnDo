@@ -31,10 +31,9 @@ class CustomListeningDialogFragment : DialogFragment(
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         binding = FragmentListeningBottomSheetDialogBinding.inflate(LayoutInflater.from(context))
-        val builder = AlertDialog.Builder(activity)
+        return AlertDialog.Builder(activity)
             .setView(binding.root)
             .create()
-        return builder
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

@@ -113,10 +113,41 @@ class Client {
 
         val list = ArrayList<QuestionModel>()
 
-        list.add(QuestionModel(R.raw.three_questions_tolstoy, "", "", "", "", "", ""))
-        list.add(QuestionModel(R.raw.on_the_rainy_river, "", "", "", "", "", ""))
+        list.add(
+            QuestionModel(
+                R.raw.three_questions_tolstoy,
+                "If you always knew the right time to begin everything, if you knew who with the right people to listen to, and whom to avoid, and above all if you always knew what was the most important thing to do , he would never fail in anything he might undertake ",
+                "Если ты всегда знал правильное время чтобы начать все, если ты знал к кому с правильными людьми прислушаться, и кого избегать, и превыше всего если ты всегда знал какую самую важную вещь надо сделать, он бы никогда не ошибся в том что он мог начать",
+                "Всегда знал время правильно начать знал обратиться к кому",
+                "Знал всегда время начать",
+                "Начать время всегда знал",
+                "Если ты всегда знал правильное время чтобы начать все, если ты знал к кому с правильными людьми прислушаться, и кого избегать, и превыше всего если ты всегда знал какую самую важную вещь надо сделать, он бы никогда не ошибся в том что он мог начать"
+            )
+        )
+        list.add(
+            QuestionModel(
+                R.raw.on_the_rainy_river,
+                "Что значит This is one story I've never told before",
+                "",
+                "",
+                "",
+                "",
+                ""
+            )
+        )
         list.add(QuestionModel(R.raw.the_boat, "", "", "", "", "", ""))
-        list.add(QuestionModel(R.raw.art_of_war, "", "", "", "", "", ""))
+        list.add(
+            QuestionModel(
+                R.raw.art_of_war,
+                "Что значит It is a matter of life and death, a road either to safety or to ruin",
+                "Дорога жизнь смерти к умереть",
+                "Смерть дорога умереть",
+                "Это вопрос жизни и смерти, дорога к безопасности либо к разрушению",
+                "Разрушение смерть дорога",
+                "Это вопрос жизни и смерти, дорога к безопасности либо к разрушению"
+
+            )
+        )
         return list
     }
 
