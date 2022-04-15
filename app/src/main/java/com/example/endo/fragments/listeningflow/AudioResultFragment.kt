@@ -22,19 +22,16 @@ class AudioResultFragment :
     }
 
     override fun setupViews() {
-
         showResult()
     }
 
     private fun showResult() {
 
         binding.apply {
-            tvListenedInTotal.text = args.audioListenedTo.toString()
-            tvAmountOfRightAnswers.text = args.amountOfRightAnswers.toString()
-            tvAmountOfMistakes.text = args.amountOfMistakes.toString()
-            tvTotalTime.text = args.time.toString()
-
-
+            tvListenedInTotal.text = "Всего прослушано: ${args.audioListenedTo}"
+            tvAmountOfRightAnswers.text = "Правильно:${args.amountOfRightAnswers}"
+            tvAmountOfMistakes.text = "Ошибся ${args.amountOfMistakes}"
+            tvTotalTime.text = "Время: ${args.time}"
         }
     }
 

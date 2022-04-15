@@ -9,8 +9,8 @@ import com.example.core.base.BaseFragment
 import com.example.core.extensions.requireAudioPermission
 import com.example.endo.common.Constants.MUSIC
 import com.example.endo.databinding.FragmentMusicBinding
-import com.example.local.Client
 import com.example.endo.viewmodels.MusicViewModel
+import com.example.local.Client
 
 
 class MusicFragment : BaseFragment<FragmentMusicBinding>(FragmentMusicBinding::inflate) {
@@ -40,6 +40,7 @@ class MusicFragment : BaseFragment<FragmentMusicBinding>(FragmentMusicBinding::i
                     )
 
                 )
+                binding.chronometer.start()
 
             } else {
 
@@ -50,6 +51,7 @@ class MusicFragment : BaseFragment<FragmentMusicBinding>(FragmentMusicBinding::i
                     )
 
                 )
+                binding.chronometer.start()
 
             }
             visualizerBar.setColor(Color.parseColor("#1DAAF0"))
@@ -59,16 +61,18 @@ class MusicFragment : BaseFragment<FragmentMusicBinding>(FragmentMusicBinding::i
         btnStop.setOnClickListener {
             viewModel.pause()
             visualizerBar.release()
+            binding.chronometer.stop()
 
 
         }
         btnContinue.setOnClickListener {
             findNavController().navigate(
                 MusicFragmentDirections.actionMusicFragmentToAudioTestFragment(
-                    currentPos, audioListenedTo, MUSIC, viewModel.getTime()
+                    currentPos, audioListenedTo, MUSIC, binding.chronometer.text.toString()
                 )
             )
 
+            binding.chronometer.stop()
             viewModel.pause()
             visualizerBar.release()
 

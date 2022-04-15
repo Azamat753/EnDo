@@ -9,8 +9,8 @@ import com.example.core.base.BaseFragment
 import com.example.core.extensions.requireAudioPermission
 import com.example.endo.common.Constants.AUDIO_BOOKS
 import com.example.endo.databinding.FragmentAudioBooksBinding
-import com.example.local.Client
 import com.example.endo.viewmodels.AudioBooksViewModel
+import com.example.local.Client
 
 class AudioBooksFragment :
     BaseFragment<FragmentAudioBooksBinding>(FragmentAudioBooksBinding::inflate) {
@@ -40,6 +40,7 @@ class AudioBooksFragment :
                     )
 
                 )
+                chronometer.start()
 
             } else {
 
@@ -51,6 +52,7 @@ class AudioBooksFragment :
 
                 )
 
+                chronometer.start()
             }
             visualizerBar.setColor(Color.parseColor("#1DAAF0"))
             audioListenedTo++
@@ -58,6 +60,7 @@ class AudioBooksFragment :
 
         btnStop.setOnClickListener {
             viewModel.pause()
+            binding.chronometer.stop()
             visualizerBar.release()
 
 
@@ -65,10 +68,11 @@ class AudioBooksFragment :
         btnContinue.setOnClickListener {
             findNavController().navigate(
                 AudioBooksFragmentDirections.actionAudioBooksFragmentToAudioTestFragment(
-                    currentPos, audioListenedTo, AUDIO_BOOKS, viewModel.getTime()
+                    currentPos, audioListenedTo, AUDIO_BOOKS, binding.chronometer.text.toString()
                 )
             )
 
+            binding.chronometer.stop()
             viewModel.pause()
             visualizerBar.release()
 
