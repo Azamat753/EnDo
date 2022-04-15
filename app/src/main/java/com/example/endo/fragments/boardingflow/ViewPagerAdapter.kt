@@ -3,8 +3,8 @@ package com.example.endo.fragments.boardingflow
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.core.base.gone
-import com.example.core.base.visible
+import com.example.core.extensions.gone
+import com.example.core.extensions.visible
 import com.example.endo.databinding.ItemBoardBinding
 import com.example.endo.models.BoardModel
 

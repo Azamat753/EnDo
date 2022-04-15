@@ -1,13 +1,12 @@
 package com.example.endo.activity
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
-import com.example.core.base.gone
-import com.example.core.base.visible
+import com.example.core.extensions.gone
+import com.example.core.extensions.visible
 import com.example.endo.R
 import com.example.endo.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -57,8 +56,14 @@ class MainActivity : AppCompatActivity() {
                 R.id.dictionaryCategoryFragment -> {
                     binding.toolbarMain.title = getString(R.string.categories)
                 }
-                R.id.privateOfficeFragment->{
+                R.id.privateOfficeFragment -> {
                     binding.toolbarMain.title = getString(R.string.private_office)
+                }
+                R.id.colloquialFragment -> {
+                    binding.toolbarMain.title = getString(R.string.speaking_learn)
+                }
+                R.id.pronunciationFragment -> {
+                    binding.toolbarMain.title = getString(R.string.pronunciation)
                 }
             }
         }

@@ -3,6 +3,7 @@ package com.example.network.di
 import com.example.core.utils.Constants
 import com.example.network.api.PixabayApi
 import com.example.network.api.TranslationApi
+import com.example.network.client.PronunciationClient
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -26,5 +27,10 @@ object NetworkModule {
     fun provideTranslationApi(): TranslationApi {
         return Retrofit.Builder().addConverterFactory(GsonConverterFactory.create())
             .baseUrl(Constants.TRANSLATION_BASE_URL).build().create(TranslationApi::class.java)
+    }
+    @Singleton
+    @Provides
+    fun providePronunciationClient(): PronunciationClient.Companion {
+        return PronunciationClient.Companion
     }
 }

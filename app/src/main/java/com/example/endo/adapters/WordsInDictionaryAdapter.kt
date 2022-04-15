@@ -1,11 +1,8 @@
 package com.example.endo.adapters
 
-import android.annotation.SuppressLint
-import androidx.core.view.isVisible
-import coil.load
 import com.example.core.base.BaseAdapter
-import com.example.core.base.gone
-import com.example.core.base.visible
+import com.example.core.extensions.gone
+import com.example.core.extensions.visible
 import com.example.db.models.WordsModel
 import com.example.endo.R
 import com.example.endo.databinding.ItemRecentlyAddedWordsBinding

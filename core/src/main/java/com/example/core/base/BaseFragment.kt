@@ -45,8 +45,8 @@ abstract class BaseFragment<T : ViewBinding>(private val inflate: (LayoutInflate
 
     }
 
-    abstract fun initObserver()
-    abstract fun initClickers()
+     protected open fun initObserver(){}
+    protected open fun initClickers(){}
     open fun initAdapter(){
 
         fun <T> observeResponse(

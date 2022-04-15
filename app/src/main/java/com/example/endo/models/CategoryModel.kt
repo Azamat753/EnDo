@@ -1,5 +1,6 @@
 package com.example.endo.models
 
-data class CategoryModel (
-    val category:String
-        )
+data class CategoryModel(
+    val category: String
+)
+

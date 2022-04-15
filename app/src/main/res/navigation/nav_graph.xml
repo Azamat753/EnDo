@@ -90,5 +90,62 @@
             app:argType="com.example.db.models.DictionaryCategoryModel" />
 
     </fragment>
+    <fragment
+        android:id="@+id/colloquialFragment"
+        android:name="com.example.endo.fragments.colloquial.ColloquialFragment"
+        android:label="fragment_colloquial"
+        tools:layout="@layout/fragment_colloquial" />
+    <fragment
+        android:id="@+id/pronunciationFragment"
+        android:name="com.example.endo.fragments.pronunciation.PronunciationFragment"
+        android:label="fragment_pronunciation"
+        tools:layout="@layout/fragment_pronunciation">
+        <action
+            android:id="@+id/action_pronunciationFragment_to_pronunciationSheetDialogFragment"
+            app:destination="@id/pronunciationSheetDialogFragment" />
+
+    </fragment>
+    <dialog
+        android:id="@+id/pronunciationSheetDialogFragment"
+        android:name="com.example.endo.bottomsheetdialogs.PronunciationSheetDialogFragment"
+        android:label="PronunciationSheetDialogFragment"
+        tools:layout="@layout/fragment_pronunciation_sheet_dialog">
+        <argument
+            android:name="isCorrect"
+            android:defaultValue="false"
+            app:argType="boolean" />
+        <action
+            android:id="@+id/action_pronunciationSheetDialogFragment_to_colloquialFragment"
+            app:destination="@id/colloquialFragment" />
+        <argument
+            android:name="lastPosition"
+            android:defaultValue="-1"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_pronunciationSheetDialogFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+        <argument
+            android:name="listNotCorrect"
+            app:argType="boolean[]" />
+        <argument
+            android:name="time"
+            app:argType="string" />
+    </dialog>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.example.endo.result.ResultFragment"
+        android:label="fragment_result"
+        tools:layout="@layout/fragment_result">
+
+        <action
+            android:id="@+id/action_resultFragment_to_colloquialFragment"
+            app:destination="@id/colloquialFragment" />
+        <argument
+            android:name="listNotCorrect"
+            app:argType="boolean[]" />
+        <argument
+            android:name="time"
+            app:argType="string" />
+    </fragment>
 
 </navigation>

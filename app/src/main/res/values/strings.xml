@@ -16,4 +16,14 @@
     <string name="understood">Понял</string>
     <string name="results">Результаты</string>
     <string name="achievements">Достижения</string>
+    <string name="pronunciation">Произношение</string>
+    <string name="correspondence">Переписка</string>
+    <string name="livechat">Лайф-чат</string>
+    <string name="it_is_her_first_performance">It is her first performance</string>
+    <string name="d">Вы :</string>
+    <string name="dd">Происнесите вслух:</string>
+    <string name="mvm">Нажмите на микрофон Как будете готовы</string>
+    <string name="t">Конечно</string>
+    <string name="tt">Принять</string>
+    <string name="ttt">На главную</string>
 </resources>

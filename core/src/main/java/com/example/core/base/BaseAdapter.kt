@@ -13,8 +13,7 @@ import com.example.core.R
 abstract class BaseAdapter<T, Binding : ViewBinding>(
     private val holderLayoutId: Int,
     var data: List<T>,
-    private val inflater: (LayoutInflater) -> Binding
-) : RecyclerView.Adapter<BaseAdapter<T, Binding>.BaseViewHolder>() {
+    private val inflater: (LayoutInflater) -> Binding) : RecyclerView.Adapter<BaseAdapter<T, Binding>.BaseViewHolder>() {
 
     var listener: IBaseAdapterClickListener<T>? = null
     private var _binding: Binding? = null
