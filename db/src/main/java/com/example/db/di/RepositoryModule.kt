@@ -30,9 +30,8 @@ object RepositoryModule {
     @Provides
     fun providePlayerRepository(
         mediaPlayer: MediaPlayer,
-        chronometer: Chronometer
     ): PlayerRepository {
-        return PlayerRepository(mediaPlayer, chronometer)
+        return PlayerRepository(mediaPlayer)
     }
 
 

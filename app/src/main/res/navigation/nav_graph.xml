@@ -157,7 +157,7 @@
             app:nullable="true" />
         <argument
             android:name="time"
-            app:argType="long" />
+            app:argType="string" />
 
     </fragment>
     <fragment
@@ -170,7 +170,7 @@
             app:argType="integer" />
         <argument
             android:name="time"
-            app:argType="integer" />
+            app:argType="string" />
         <argument
             android:name="amountOfRightAnswers"
             app:argType="integer" />
@@ -194,7 +194,7 @@
             app:destination="@id/audioResultFragment" />
         <argument
             android:name="timeFromTests"
-            app:argType="integer" />
+            app:argType="string" />
         <argument
             android:name="amountOfRightAnswers"
             app:argType="integer" />
@@ -207,6 +207,7 @@
         <argument
             android:name="rightOrNot"
             app:argType="boolean" />
+
         <action
             android:id="@+id/action_customListeningDialogFragment_to_musicFragment"
             app:destination="@id/musicFragment" />
@@ -214,8 +215,9 @@
             android:id="@+id/action_customListeningDialogFragment_to_audioBooksFragment"
             app:destination="@id/audioBooksFragment" />
         <argument
-            android:name="whichAudioWasListenedTo"
+            android:name="whichAudioToShow"
             app:argType="string" />
+
     </dialog>
 
 </navigation>

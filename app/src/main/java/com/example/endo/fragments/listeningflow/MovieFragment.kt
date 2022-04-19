@@ -9,8 +9,8 @@ import com.example.core.base.BaseFragment
 import com.example.core.extensions.requireAudioPermission
 import com.example.endo.common.Constants.MOVIES
 import com.example.endo.databinding.FragmentMovieBinding
-import com.example.local.Client
 import com.example.endo.viewmodels.MovieViewModel
+import com.example.local.Client
 import dagger.hilt.android.AndroidEntryPoint
 
 
@@ -42,6 +42,7 @@ class MovieFragment : BaseFragment<FragmentMovieBinding>(FragmentMovieBinding::i
                     )
 
                 )
+                chronometer.start()
 
             } else {
 
@@ -52,6 +53,7 @@ class MovieFragment : BaseFragment<FragmentMovieBinding>(FragmentMovieBinding::i
                     )
 
                 )
+                chronometer.stop()
 
             }
             visualizerBar.setColor(Color.parseColor("#1DAAF0"))
@@ -61,15 +63,17 @@ class MovieFragment : BaseFragment<FragmentMovieBinding>(FragmentMovieBinding::i
         btnStop.setOnClickListener {
             viewModel.pause()
             visualizerBar.release()
+            chronometer.stop()
 
 
         }
         btnContinue.setOnClickListener {
             findNavController().navigate(
                 MovieFragmentDirections.actionMovieFragmentToAudioTestFragment(
-                    currentPos, audioListenedTo, MOVIES, viewModel.getTime()
+                    currentPos, audioListenedTo, MOVIES, binding.chronometer.text.toString()
                 )
             )
+            chronometer.stop()
 
             viewModel.pause()
             visualizerBar.release()

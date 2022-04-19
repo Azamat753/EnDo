@@ -14,7 +14,9 @@ import com.example.endo.common.Constants.AUDIO_BOOKS
 import com.example.endo.common.Constants.MOVIES
 import com.example.endo.common.Constants.MUSIC
 import com.example.endo.databinding.FragmentListeningBottomSheetDialogBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class CustomListeningDialogFragment : DialogFragment(
 ) {
 
@@ -58,7 +60,7 @@ class CustomListeningDialogFragment : DialogFragment(
 
     private fun initListeners() = with(binding) {
         btnContinue.setOnClickListener {
-            when (args.whichAudioWasListenedTo) {
+            when (args.whichAudioToShow) {
                 MUSIC -> {
                     findNavController().navigate(
                         CustomListeningDialogFragmentDirections.actionCustomListeningDialogFragmentToMusicFragment(
