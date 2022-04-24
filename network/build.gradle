@@ -11,8 +11,6 @@ android {
     defaultConfig {
         minSdk 21
         targetSdk 32
-        versionCode 1
-        versionName "1.0"
         buildConfigField("String", "PIXABAY_KEY", PIXABAY_KEY)
         buildConfigField("String", "TRANSLATION_KEY", TRANSLATION_KEY)
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"

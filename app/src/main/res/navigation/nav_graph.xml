@@ -90,5 +90,42 @@
             app:argType="com.example.db.models.DictionaryCategoryModel" />
 
     </fragment>
+    <fragment
+        android:id="@+id/antonymsFragment"
+        android:name="com.example.endo.fragments.antonymsflow.AntonymsFragment"
+        android:label="fragment_antonyms"
+        tools:layout="@layout/fragment_antonyms" >
+        <argument
+            android:name="antonymsCategoryModel"
+            app:argType="com.example.db.models.AntonymsCategoryModel"/>
+    </fragment>
+    <fragment
+        android:id="@+id/antonymsCategoryFragment"
+        android:name="com.example.endo.fragments.antonymsflow.AntonymsCategoryFragment"
+        android:label="fragment_antonyms_category"
+        tools:layout="@layout/fragment_antonyms_category" >
+        <action
+            android:id="@+id/action_antonymsCategoryFragment_to_antonymsFragment"
+            app:destination="@id/antonymsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/synonymsFragment"
+        android:name="com.example.endo.fragments.synonymsflow.SynonymsFragment"
+        android:label="fragment_synonyms"
+        tools:layout="@layout/fragment_synonyms" >
+        <argument
+            android:name="synonymsCategoryModel"
+            app:argType="com.example.db.models.SynonymsCategoryModel"/>
+
+    </fragment>
+    <fragment
+        android:id="@+id/synonymsCategoryFragment"
+        android:name="com.example.endo.fragments.synonymsflow.SynonymsCategoryFragment"
+        android:label="fragment_synonyms_category"
+        tools:layout="@layout/fragment_synonyms_category" >
+        <action
+            android:id="@+id/action_synonymsCategoryFragment_to_synonymsFragment"
+            app:destination="@id/synonymsFragment" />
+    </fragment>
 
 </navigation>

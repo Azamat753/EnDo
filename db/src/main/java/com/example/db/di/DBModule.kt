@@ -26,11 +26,28 @@ object DBModule {
 
     @Provides
     @Singleton
+    fun provideSynonyms(appDataBase: AppDataBase) = appDataBase.synonymsDao()
+
+    @Provides
+    @Singleton
+    fun provideAntonyms(appDataBase: AppDataBase) = appDataBase.antonymsDao()
+
+    @Provides
+    @Singleton
     fun provideAchievementDao(appDataBase: AppDataBase) = appDataBase.achievementDao()
 
     @Provides
     @Singleton
     fun provideDictionaryCategoryDao(appDataBase: AppDataBase) = appDataBase.dictionaryDao()
+
+    @Provides
+    @Singleton
+    fun  provideSynonymsCategoryDao(appDataBase: AppDataBase) = appDataBase.synonymsCategoryDao()
+
+    @Provides
+    @Singleton
+    fun  provideAntonymsCategoryDao(appDataBase: AppDataBase) = appDataBase.antonymsCategoryDao()
+
 
 
 }

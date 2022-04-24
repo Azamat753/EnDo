@@ -7,4 +7,6 @@ object Constants {
     const val TRANSLATION_BASE_URL =
         "https://translated-mymemory---translation-memory.p.rapidapi.com"
     const val TRANSLATION_KEY = "78bb8ecc8dmsha71f7db1db6c66cp1338f5jsn2ae3a25d70d2"
+    const val SYNONYMS_BASE_URL = "https://www.wordsapi.com/#try"
+    const val ANTONYMS_BASE_URL = "https://wordsapiv1.p.mashape.com/"
 }

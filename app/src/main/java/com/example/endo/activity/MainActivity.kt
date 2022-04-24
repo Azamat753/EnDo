@@ -60,6 +60,13 @@ class MainActivity : AppCompatActivity() {
                 R.id.privateOfficeFragment->{
                     binding.toolbarMain.title = getString(R.string.private_office)
                 }
+                R.id.synonymsCategoryFragment -> {
+                    binding.toolbarMain.title = getString(R.string.categories)
+                }
+                R.id.antonymsCategoryFragment -> {
+                    binding.toolbarMain.title = getString(R.string.categories)
+                }
+
             }
         }
     }
