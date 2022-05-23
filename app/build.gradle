@@ -67,7 +67,10 @@ dependencies {
     implementation 'com.airbnb.android:lottie:4.2.2'
     //dotsIndicators
     implementation 'com.tbuonomo:dotsindicator:4.2'
+    implementation 'com.chibde:audiovisualizer:2.2.0'
 
+    // Audio visualizer chibde
+    implementation 'com.chibde:audiovisualizer:2.2.0'
 
 
 }

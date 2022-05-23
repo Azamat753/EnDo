@@ -7,8 +7,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.viewbinding.ViewBinding
-import com.example.core.utils.Response
 import com.example.core.extensions.launchWhenStarted
+import com.example.core.utils.Response
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.onEach
 
@@ -39,15 +39,20 @@ abstract class BaseFragment<T : ViewBinding>(private val inflate: (LayoutInflate
         setArgsValue()
         initObserver()
         initAdapter()
+        setupViews()
     }
 
     open fun setArgsValue() {
 
     }
 
+    open fun setupViews() {
+
+    }
+
     abstract fun initObserver()
     abstract fun initClickers()
-    open fun initAdapter(){
+    open fun initAdapter() {
 
         fun <T> observeResponse(
             stateFlow: StateFlow<Response<T>?>,

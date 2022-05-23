@@ -5,11 +5,10 @@ import android.view.View
 import androidx.navigation.fragment.findNavController
 import com.example.core.base.BaseAdapter
 import com.example.core.base.BaseFragment
-import com.example.endo.models.CategoryModel
 import com.example.endo.R
 import com.example.endo.adapters.CategoryAdapter
 import com.example.endo.databinding.FragmentDictionaryBinding
-import java.util.ArrayList
+import com.example.endo.models.CategoryModel
 
 class DictionaryFragment :
     BaseFragment<FragmentDictionaryBinding>(FragmentDictionaryBinding::inflate),
@@ -29,6 +28,9 @@ class DictionaryFragment :
     override fun onClick(model: CategoryModel, position: Int) {
         when (model.category) {
             getString(R.string.my_dictionary) -> findNavController().navigate(R.id.myDictionaryFragment)
+            getString(R.string.synonyms) -> findNavController().navigate(R.id.myDictionaryFragment)
+            getString(R.string.antonyms) -> findNavController().navigate(R.id.myDictionaryFragment)
+
         }
     }
 
@@ -41,6 +43,7 @@ class DictionaryFragment :
     }
 
     override fun initClickers() {
+
 
     }
 

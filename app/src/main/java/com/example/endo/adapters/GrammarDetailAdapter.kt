@@ -1,10 +1,9 @@
 package com.example.endo.adapters
 
 import com.example.core.base.BaseAdapter
-import com.example.endo.models.CategoryModel
 import com.example.endo.R
-import com.example.endo.databinding.ItemButtonsBinding
 import com.example.endo.databinding.ItemGrammarBinding
+import com.example.endo.models.CategoryModel
 
 class GrammarDetailAdapter : BaseAdapter<CategoryModel, ItemGrammarBinding>(
     R.layout.item_grammar,

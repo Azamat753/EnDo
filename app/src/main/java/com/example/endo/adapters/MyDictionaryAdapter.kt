@@ -1,10 +1,9 @@
 package com.example.endo.adapters
 
 import com.example.core.base.BaseAdapter
-import com.example.endo.models.CategoryModel
 import com.example.endo.R
-import com.example.endo.databinding.ItemButtonsBinding
 import com.example.endo.databinding.ItemDictionaryCategoryBinding
+import com.example.endo.models.CategoryModel
 
 class MyDictionaryAdapter : BaseAdapter<CategoryModel, ItemDictionaryCategoryBinding>(
     R.layout.item_dictionary_category,

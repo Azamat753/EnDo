@@ -1,10 +1,7 @@
 package com.example.endo.fragments.grammarflow
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.core.base.BaseAdapter
 import com.example.core.base.BaseFragment
@@ -12,7 +9,6 @@ import com.example.endo.R
 import com.example.endo.adapters.GrammarAdapter
 import com.example.endo.databinding.FragmentGrammarBinding
 import com.example.endo.models.CategoryModel
-import java.util.ArrayList
 
 
 class GrammarFragment : BaseFragment<FragmentGrammarBinding>(FragmentGrammarBinding::inflate),
@@ -28,7 +24,7 @@ class GrammarFragment : BaseFragment<FragmentGrammarBinding>(FragmentGrammarBind
 
     override fun initAdapter() {
         binding.grammarRecycler.adapter = adapter
-        adapter.listener=this
+        adapter.listener = this
         adapter.setData(getGrammarCategories())
     }
 

@@ -3,13 +3,14 @@ package com.example.endo.fragments.boardingflow
 import android.os.Bundle
 import android.view.View
 import androidx.navigation.fragment.findNavController
-import com.example.core.utils.CacheManager
 import com.example.core.base.BaseFragment
+import com.example.core.utils.CacheManager
 import com.example.endo.R
 import com.example.endo.databinding.FragmentOnBoardBinding
 import com.example.endo.models.BoardModel
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
+
 @AndroidEntryPoint
 class OnBoardFragment : BaseFragment<FragmentOnBoardBinding>(FragmentOnBoardBinding::inflate),
     PagerListener {
@@ -60,7 +61,7 @@ class OnBoardFragment : BaseFragment<FragmentOnBoardBinding>(FragmentOnBoardBind
 
     override fun onStartClick() {
         cacheManager.setBoardShowed()
-        findNavController().popBackStack(R.id.splashFragment,true)
+        findNavController().popBackStack(R.id.splashFragment, true)
         findNavController().navigate(R.id.todayFragment)
     }
 

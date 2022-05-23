@@ -9,10 +9,10 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.viewModelScope
 import androidx.navigation.fragment.navArgs
 import coil.load
-import com.example.core.utils.CommonFunction
 import com.example.core.base.BaseAdapter
 import com.example.core.base.BaseFragment
 import com.example.core.extensions.getDialog
+import com.example.core.utils.CommonFunction
 import com.example.db.models.WordsModel
 import com.example.endo.R
 import com.example.endo.activity.MainActivity

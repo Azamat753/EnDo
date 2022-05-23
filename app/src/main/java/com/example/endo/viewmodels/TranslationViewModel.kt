@@ -1,10 +1,10 @@
 package com.example.endo.viewmodels
 
 import androidx.lifecycle.viewModelScope
-import com.example.core.utils.Response
 import com.example.core.base.BaseNetworkViewModel
-import com.example.network.repository.TranslationRepository
+import com.example.core.utils.Response
 import com.example.network.models.translation.TranslationModel
+import com.example.network.repository.TranslationRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow

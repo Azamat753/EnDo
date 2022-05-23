@@ -5,13 +5,13 @@ import com.google.gson.annotations.SerializedName
 
 data class ImageResult(
     @SerializedName("total") @Expose
-     var total: Int? = null,
+    var total: Int? = null,
     @SerializedName("totalHits")
     @Expose
-     val totalHits: Int? = null,
+    val totalHits: Int? = null,
 
     @SerializedName("hits")
     @Expose
-     val hits: List<Hit>? = null
+    val hits: List<Hit>? = null
 
 )

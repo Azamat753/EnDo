@@ -1,6 +1,5 @@
 package com.example.endo.adapters
 
-import android.annotation.SuppressLint
 import com.example.core.base.BaseAdapter
 import com.example.db.models.WordsModel
 import com.example.endo.R

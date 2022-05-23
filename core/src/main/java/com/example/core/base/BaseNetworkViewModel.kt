@@ -7,7 +7,7 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 
 
-open class BaseNetworkViewModel : ViewModel(){
+open class BaseNetworkViewModel : ViewModel() {
 
     private val _loadingState: MutableStateFlow<Boolean> =
         MutableStateFlow(false)
@@ -22,7 +22,8 @@ open class BaseNetworkViewModel : ViewModel(){
     protected inline fun <reified T> handleResponse(
         response: Response<T>,
         mutableStateFlow: MutableStateFlow<T>? = null,
-        onSuccess: (T?) -> Unit = {}) {
+        onSuccess: (T?) -> Unit = {}
+    ) {
         showLoading()
         if (response is Response.Success) {
             onSuccess(response.data)
